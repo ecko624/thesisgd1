@@ -7,7 +7,7 @@ public class InteractionDetector : MonoBehaviour
 {
     private IInteractable interactableInRange = null;
     public GameObject interactionIcon;
-    // Start is called before the first frame update
+
     void Start()
     {
         interactionIcon.SetActive(false);
@@ -15,17 +15,16 @@ public class InteractionDetector : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && interactableInRange != null)
         {
-            interactableInRange?.Interact();
             if (interactableInRange.CanInteract())
             {
+                interactableInRange.Interact();
                 interactionIcon.SetActive(false);
             }
         }
     }
 
-    // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.TryGetComponent(out IInteractable interactable) && interactable.CanInteract())
@@ -37,7 +36,7 @@ public class InteractionDetector : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-         if(collision.TryGetComponent(out IInteractable interactable) && interactable == interactableInRange)
+        if(collision.TryGetComponent(out IInteractable interactable) && interactable == interactableInRange)
         {
             interactableInRange = null;
             interactionIcon.SetActive(false);

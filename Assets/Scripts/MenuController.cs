@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -8,15 +9,15 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      menuCanvas.SetActive(false);  
+        menuCanvas.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(!menuCanvas.activeSelf && PauseController.IsGamePaused)
+            if (!menuCanvas.activeSelf && PauseController.IsGamePaused)
             {
                 return; // Prevent opening menu if game is paused
             }
@@ -24,4 +25,13 @@ public class MenuController : MonoBehaviour
             PauseController.SetPause(menuCanvas.activeSelf);
         }
     }
+
+        public void GoToMainMenu()
+    {
+        PauseController.SetPause(false); // Ensure game is unpaused before loading
+        SceneManager.LoadScene("SampleScene"); // Replace with your main menu scene name
+    }
+    
 }
+
+
