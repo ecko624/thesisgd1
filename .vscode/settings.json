@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ThesisDatingSimulator.sln"
+    "dotnet.defaultSolution": "thesisgd1.sln"
 }
