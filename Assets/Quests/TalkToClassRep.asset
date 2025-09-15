@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddef9427699035a4c9a638eebbf14c9e, type: 3}
+  m_Name: TalkToClassRep
+  m_EditorClassIdentifier: 
+  questID: Tde9f8b6b-56ce-4efa-afb3-c3074aed46bc
+  questName: TalkToClassRep
+  description: Talk to class rep
+  objectives:
+  - objectiveID: Class Rep
+    description: Talk to class rep
+    type: 1
+    requiredAmount: 1
+    currentAmount: 0
