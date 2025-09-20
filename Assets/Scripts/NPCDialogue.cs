@@ -11,4 +11,14 @@ public class NPCDialogue : ScriptableObject
     public bool[] autoProgressLines;
     public float autoProgressDelay = 1.5f; // Delay before automatically progressing to the next line
     public float typingSpeed = 0.05f; // Speed at which dialogue appears
+
+    public DialogueChoice[] choices;
+}
+
+[System.Serializable]
+public class DialogueChoice
+{
+    public int dialogueIndex; //Dialogue line where choices appear
+    public string[] choices; //Player response options
+    public int[] nextDialogueIndexes; //Where choice leads
 }

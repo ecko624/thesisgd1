@@ -29,7 +29,7 @@ public class QuestUI : MonoBehaviour
         //Destroy existing quest entries
         foreach (Transform child in questListContent)
         {
-            Destroy(child.GameObject);
+            Destroy(child.gameObject);
         }
 
         //Build quest entries

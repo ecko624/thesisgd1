@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee479e226cb81244ab46e804e16927b7, type: 3}
-  m_Name: Class Rep
+  m_Name: GrandpaDialogue
   m_EditorClassIdentifier: 
-  npcName: Class Rep
-  npcPortrait: {fileID: 21300000, guid: fbeaa7c6ed581554184c13902ff3a5ef, type: 3}
+  npcName: Grandpa
+  npcPortrait: {fileID: 21300000, guid: 7eeb9eb5d06871244ac1c702185bcc4d, type: 3}
   dialogueLines:
-  - Hello Ren!
-  - Are you ready?
-  - Great!
-  - Thank your time!
+  - Hello there Ren!
+  - Are you ready for school?
+  - Great!!
+  - You need to be ready...
   autoProgressLines: 0100
   autoProgressDelay: 1.5
   typingSpeed: 0.05
