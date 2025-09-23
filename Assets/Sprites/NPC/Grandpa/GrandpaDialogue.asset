@@ -17,9 +17,11 @@ MonoBehaviour:
   dialogueLines:
   - Hello there Ren!
   - Are you ready for school?
-  - Great!!
+  - Great!
+  - Goodluck on your first day!
   - You need to be ready...
-  autoProgressLines: 0100
+  autoProgressLines: 0100000000
+  endDialogueLines: 0000000101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   choices:
@@ -27,4 +29,4 @@ MonoBehaviour:
     choices:
     - Yes
     - No
-    nextDialogueIndexes: 0200000003000000
+    nextDialogueIndexes: 0200000004000000

@@ -44,7 +44,7 @@ public class NPC : MonoBehaviour, IInteractable
         dialogueUI.ShowDialogueUI(true);
         PauseController.SetPause(true);
 
-        StartCoroutine(TypeLine());
+        DisplayCurrentLine();
     }
 
     void NextLine()
@@ -55,14 +55,36 @@ public class NPC : MonoBehaviour, IInteractable
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
         }
-        else if (++dialogueIndex < dialogueData.dialogueLines.Length)
-        {
-            StartCoroutine(TypeLine());
-        }
-        else
+
+        //Clear Choices
+        dialogueUI.ClearChoices();
+
+        //Check endDialogueLines
+        if (dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
         {
             EndDialogue();
+            return;
         }
+
+        //Check if choices & display them
+        foreach (DialogueChoice dialogueChoice in dialogueData.choices)
+        {
+            if (dialogueChoice.dialogueIndex == dialogueIndex)
+            {
+                //Display choices
+                DisplayChoices(dialogueChoice);
+                return;
+            }
+        }
+
+            if (++dialogueIndex < dialogueData.dialogueLines.Length)
+            {
+            DisplayCurrentLine();
+            }
+            else
+            {
+                EndDialogue();
+            }
     }
 
     IEnumerator TypeLine()
@@ -82,6 +104,28 @@ public class NPC : MonoBehaviour, IInteractable
             NextLine();
         }
     }
+
+    void DisplayChoices(DialogueChoice choice)
+    {
+        for (int i = 0; i < choice.choices.Length; i++)
+        {
+            int nextIndex = choice.nextDialogueIndexes[i];
+            dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
+        }
+    }
+
+    void ChooseOption(int nextIndex)
+    {
+        dialogueIndex = nextIndex;
+        dialogueUI.ClearChoices();
+        DisplayCurrentLine();
+    }
+
+    void DisplayCurrentLine()
+    {
+        StopAllCoroutines();
+        StartCoroutine(TypeLine());
+    }
     
     public void EndDialogue()
     {
@@ -90,6 +134,6 @@ public class NPC : MonoBehaviour, IInteractable
         dialogueUI.SetDialogueText("");
         dialogueUI.ShowDialogueUI(false);
         PauseController.SetPause(false);
-        
+
     }
 }

@@ -9,6 +9,7 @@ public class NPCDialogue : ScriptableObject
     public Sprite npcPortrait;
     public string[] dialogueLines;
     public bool[] autoProgressLines;
+    public bool[] endDialogueLines; // Mark where dialogue ends
     public float autoProgressDelay = 1.5f; // Delay before automatically progressing to the next line
     public float typingSpeed = 0.05f; // Speed at which dialogue appears
 
