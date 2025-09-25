@@ -18,10 +18,12 @@ MonoBehaviour:
   - Hello there Ren!
   - Are you ready for school?
   - Great!
-  - Goodluck on your first day!
+  - Be careful!
   - You need to be ready...
-  autoProgressLines: 0100010000
-  endDialogueLines: 0000000101
+  - Good luck on your first day!
+  - Good work on your first day, keep it up!
+  autoProgressLines: 01000100000100
+  endDialogueLines: 00000001010101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   choices:
@@ -30,3 +32,7 @@ MonoBehaviour:
     - Yes
     - No
     nextDialogueIndexes: 0200000004000000
+    givesQuest: 0100
+  questInProgressIndex: 5
+  questCompletedIndex: 6
+  quest: {fileID: 11400000, guid: c188835b26f4cb441b067b963cc23d9d, type: 2}
