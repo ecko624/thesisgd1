@@ -20,6 +20,7 @@ MonoBehaviour:
   - Great!
   - Thank your time!
   autoProgressLines: 0100
+  endDialogueLines: 00000101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   choices:
@@ -28,3 +29,7 @@ MonoBehaviour:
     - Yes
     - No
     nextDialogueIndexes: 0200000003000000
+    givesQuest: 
+  questInProgressIndex: 0
+  questCompletedIndex: 0
+  quest: {fileID: 0}
