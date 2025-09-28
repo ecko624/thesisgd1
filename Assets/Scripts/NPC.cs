@@ -28,6 +28,13 @@ public class NPC : MonoBehaviour, IInteractable
     {
         if (dialogueData == null || (PauseController.IsGamePaused && !isDialogueActive))
             return; // Exit if no dialogue data or game is paused
+
+        // Check for TalkToNPC quest completion
+        if (dialogueData != null && dialogueData.npcName != null)
+        {
+            QuestController.Instance.OnTalkToNPC(dialogueData.npcName);
+        }
+
         if (isDialogueActive)
         {
             NextLine();
@@ -38,22 +45,7 @@ public class NPC : MonoBehaviour, IInteractable
         }
     }
 
-    private void SyncQuestState()
-    {
-        if (dialogueData.quest == null) return;
-
-        string questID = dialogueData.quest.questID;
-
-        //Future update add completing quest and handing in
-        if (QuestController.Instance.IsQuestActive(questID))
-        {
-            questState = QuestState.InProgress;
-        }
-        else
-        {
-            questState = QuestState.NotStarted;
-        }
-    }
+    
 
     void StartDialogue()
     {
@@ -83,6 +75,27 @@ public class NPC : MonoBehaviour, IInteractable
         DisplayCurrentLine();
     }
 
+    private void SyncQuestState()
+    {
+        if (dialogueData.quest == null) return;
+
+        string questID = dialogueData.quest.questID;
+
+        //Future update add completing quest and handing in
+        if (QuestController.Instance.isQuestCompleted(questID))
+        {
+            questState = QuestState.Completed;
+        }
+        else if (QuestController.Instance.IsQuestActive(questID))
+        {
+            questState = QuestState.InProgress;
+        }
+        else
+        {
+            questState = QuestState.NotStarted;
+        }
+    }
+
     void NextLine()
     {
         if (isTyping)
@@ -109,6 +122,7 @@ public class NPC : MonoBehaviour, IInteractable
         // Choices and end checks will be handled after TypeLine finishes
     }
 
+    
     IEnumerator TypeLine()
     {
     Debug.Log($"TypeLine coroutine started for index {dialogueIndex}");
@@ -151,7 +165,13 @@ public class NPC : MonoBehaviour, IInteractable
     {
         Debug.Log("Displaying choices");
         dialogueUI.ClearChoices();
-        for (int i = 0; i < choice.choices.Length; i++)
+        int numChoices = choice.choices.Length;
+        if (choice.nextDialogueIndexes.Length != numChoices || choice.givesQuest.Length != numChoices)
+        {
+            Debug.LogWarning($"DialogueChoice data mismatch: choices={numChoices}, nextDialogueIndexes={choice.nextDialogueIndexes.Length}, givesQuest={choice.givesQuest.Length}");
+            numChoices = Mathf.Min(numChoices, choice.nextDialogueIndexes.Length, choice.givesQuest.Length);
+        }
+        for (int i = 0; i < numChoices; i++)
         {
             int nextIndex = choice.nextDialogueIndexes[i];
             bool givesQuest = choice.givesQuest[i];
@@ -189,4 +209,5 @@ public class NPC : MonoBehaviour, IInteractable
         PauseController.SetPause(false);
 
     }
+    
 }
