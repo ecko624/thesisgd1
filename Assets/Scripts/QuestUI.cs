@@ -24,7 +24,7 @@ public class QuestUI : MonoBehaviour
         }
 
         //Build quest entries
-    foreach (var quest in QuestController.Instance.activeQuests) //If you want to test quest use testQuests instead of QuestController.Instance.activeQuests
+        foreach (var quest in QuestController.Instance.activateQuests) //If you want to test quest use testQuests instead of QuestController.Instance.activateQuests
         {
             GameObject entry = Instantiate(questEntryPrefab, questListContent);
             TMP_Text questNameText = entry.transform.Find("QuestNameText").GetComponent<TMP_Text>();
