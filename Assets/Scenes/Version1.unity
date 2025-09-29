@@ -83440,7 +83440,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 <<<<<<< HEAD
   activeQuests: []
@@ -83449,6 +83452,9 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> e3378ffb1a961ee52d9ab0029e00a53a450db7d5
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   activateQuests: []
 --- !u!1 &1678979147
@@ -83535,11 +83541,17 @@ PolygonCollider2D:
       - {x: 35.46701, y: 11.339891}
   m_UseDelaunayMesh: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 >>>>>>> e3378ffb1a961ee52d9ab0029e00a53a450db7d5
 =======
 >>>>>>> e3378ffb1a961ee52d9ab0029e00a53a450db7d5
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &1708271885
 GameObject:
