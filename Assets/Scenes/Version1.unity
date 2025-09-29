@@ -83439,6 +83439,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fba520047b58d4fb555833040e1e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  activeQuests: []
+  handinQuestIDs: []
+  autoAssignQuest: {fileID: 11400000, guid: c188835b26f4cb441b067b963cc23d9d, type: 2}
+=======
+=======
+>>>>>>> e3378ffb1a961ee52d9ab0029e00a53a450db7d5
+>>>>>>> Stashed changes
   activateQuests: []
 --- !u!1 &1678979147
 GameObject:
@@ -83523,6 +83534,13 @@ PolygonCollider2D:
       - {x: 13.705973, y: 11.386508}
       - {x: 35.46701, y: 11.339891}
   m_UseDelaunayMesh: 0
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> e3378ffb1a961ee52d9ab0029e00a53a450db7d5
+=======
+>>>>>>> e3378ffb1a961ee52d9ab0029e00a53a450db7d5
+>>>>>>> Stashed changes
 --- !u!1 &1708271885
 GameObject:
   m_ObjectHideFlags: 0
