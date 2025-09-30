@@ -17,8 +17,8 @@ MonoBehaviour:
   dialogueLines:
   - Hello Ren!
   - Are you ready?
-  - Great!
-  - Thank your time!
+  - Great! Now let's meet at school!
+  - Take your time!
   autoProgressLines: 0100
   endDialogueLines: 00000101
   autoProgressDelay: 1.5
@@ -29,7 +29,7 @@ MonoBehaviour:
     - Yes
     - No
     nextDialogueIndexes: 0200000003000000
-    givesQuest: 
+    givesQuest: 0100
   questInProgressIndex: 0
   questCompletedIndex: 0
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: 978875ab8b962a14d97fd22fc09e505d, type: 2}

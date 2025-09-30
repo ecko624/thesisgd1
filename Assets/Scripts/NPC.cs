@@ -151,12 +151,18 @@ public class NPC : MonoBehaviour, IInteractable
     {
         Debug.Log("Displaying choices");
         dialogueUI.ClearChoices();
-        for (int i = 0; i < choice.choices.Length; i++)
+        // Safety: Use the smallest array length to avoid IndexOutOfRangeException
+        int count = Mathf.Min(choice.choices.Length, choice.nextDialogueIndexes.Length, choice.givesQuest.Length);
+        for (int i = 0; i < count; i++)
         {
             int nextIndex = choice.nextDialogueIndexes[i];
             bool givesQuest = choice.givesQuest[i];
             dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex, givesQuest));
             Debug.Log("Choice displayed: " + choice.choices[i]);
+        }
+        if (choice.choices.Length != count || choice.nextDialogueIndexes.Length != count || choice.givesQuest.Length != count)
+        {
+            Debug.LogError("DialogueChoice arrays are not the same length!");
         }
         Debug.Log("All choices should be displayed by now");
     }
@@ -167,7 +173,16 @@ public class NPC : MonoBehaviour, IInteractable
         {
             QuestController.Instance.AcceptQuest(dialogueData.quest);
             questState = QuestState.InProgress;
-        }       
+        }
+
+        // Complete the quest if this NPC is the quest target
+        if (dialogueData.quest != null && questState == QuestState.InProgress
+            && dialogueData.quest.targetNPCName == dialogueData.npcName)
+        {
+            QuestController.Instance.CompleteQuest(dialogueData.quest.questID);
+            questState = QuestState.Completed;
+        }
+
         dialogueIndex = nextIndex;
         Debug.Log($"ChooseOption called. dialogueIndex set to: {dialogueIndex}");
         dialogueUI.ClearChoices();

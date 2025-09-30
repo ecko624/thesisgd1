@@ -17,6 +17,8 @@ public class QuestUI : MonoBehaviour
 
     public void UpdateQuestUI()
     {
+        Debug.Log("UpdateQuestUI called. Active quests: " + QuestController.Instance.activateQuests.Count);
+
         //Destroy existing quest entries
         foreach (Transform child in questListContent)
         {
@@ -30,7 +32,8 @@ public class QuestUI : MonoBehaviour
             TMP_Text questNameText = entry.transform.Find("QuestNameText").GetComponent<TMP_Text>();
             Transform objectiveList = entry.transform.Find("ObjectiveList");
 
-            questNameText.text = quest.quest.name;
+            string status = quest.IsCompleted ? " (Quest Complete)" : "";
+            questNameText.text = quest.quest.name + status;
 
             foreach (var objective in quest.objectives)
             {

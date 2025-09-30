@@ -14,6 +14,7 @@ public class QuestController : MonoBehaviour
         else Destroy(gameObject);
 
         questUI = FindObjectOfType<QuestUI>();
+        Debug.Log("QuestController Awake: questUI is " + (questUI == null ? "NULL" : "FOUND"));
     }
 
     public void AcceptQuest(Quest quest)
@@ -26,4 +27,19 @@ public class QuestController : MonoBehaviour
     }
 
     public bool IsQuestActive(string questID) => activateQuests.Exists(q => q.QuestID == questID);
+
+    public void CompleteQuest(string questID)
+    {
+        var quest = activateQuests.Find(q => q.QuestID == questID);
+        if (quest != null)
+        {
+            foreach (var obj in quest.objectives)
+            {
+                obj.currentAmount = obj.requiredAmount;
+            }
+            // Remove quest from log after completion
+            activateQuests.Remove(quest);
+            questUI.UpdateQuestUI();
+        }
+    }
 }
