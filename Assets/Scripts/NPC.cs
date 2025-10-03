@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -40,19 +41,41 @@ public class NPC : MonoBehaviour, IInteractable
 
     private void SyncQuestState()
     {
-        if (dialogueData.quest == null) return;
-
-        string questID = dialogueData.quest.questID;
-
-        //Future update add completing quest and handing in
-        if (QuestController.Instance.IsQuestActive(questID))
+        // If this NPC has a quest asset assigned (quest giver), check its state
+        if (dialogueData.quest != null)
         {
-            questState = QuestState.InProgress;
+            string questID = dialogueData.quest.questID;
+            if (QuestController.Instance != null && QuestController.Instance.IsQuestActive(questID))
+            {
+                questState = QuestState.InProgress;
+                return;
+            }
         }
-        else
+
+        // Otherwise, check if any active quest targets this NPC (by name).
+        if (QuestController.Instance != null)
         {
-            questState = QuestState.NotStarted;
+            Debug.Log($"NPC '{dialogueData.npcName}': Checking active quests ({QuestController.Instance.activateQuests.Count}) for target matches.");
+            for (int i = 0; i < QuestController.Instance.activateQuests.Count; i++)
+            {
+                var qp = QuestController.Instance.activateQuests[i];
+                Debug.Log($" - Active quest[{i}] '{qp.quest.questName}' targetNPCName='{qp.quest.targetNPCName}'");
+            }
+
+            var targeted = QuestController.Instance.activateQuests.Find(qp =>
+                !string.IsNullOrEmpty(qp.quest.targetNPCName) &&
+                string.Equals(qp.quest.targetNPCName.Trim(), dialogueData.npcName?.Trim(), StringComparison.OrdinalIgnoreCase)
+            );
+
+            if (targeted != null)
+            {
+                Debug.Log($"NPC '{dialogueData.npcName}': Found targeted active quest '{targeted.quest.questName}' (ID: {targeted.QuestID}).");
+                questState = QuestState.InProgress;
+                return;
+            }
         }
+
+        questState = QuestState.NotStarted;
     }
 
     void StartDialogue()
@@ -175,12 +198,38 @@ public class NPC : MonoBehaviour, IInteractable
             questState = QuestState.InProgress;
         }
 
-        // Complete the quest if this NPC is the quest target
-        if (dialogueData.quest != null && questState == QuestState.InProgress
-            && dialogueData.quest.targetNPCName == dialogueData.npcName)
+        // Complete the quest if this NPC is the quest target. We check active quests rather
+        // than relying only on dialogueData.quest being assigned to this NPC (the giver).
+        if (questState == QuestState.InProgress && QuestController.Instance != null)
         {
-            QuestController.Instance.CompleteQuest(dialogueData.quest.questID);
-            questState = QuestState.Completed;
+            Debug.Log($"NPC '{dialogueData.npcName}': Attempting to find active quest to complete for this NPC.");
+            // Find an active quest that targets this NPC by name
+            var targeted = QuestController.Instance.activateQuests.Find(qp =>
+                !string.IsNullOrEmpty(qp.quest.targetNPCName) &&
+                string.Equals(qp.quest.targetNPCName.Trim(), dialogueData.npcName?.Trim(), StringComparison.OrdinalIgnoreCase)
+            );
+
+            if (targeted != null)
+            {
+                Debug.Log($"NPC '{dialogueData.npcName}': Completing active quest '{targeted.quest.questName}' (ID: {targeted.QuestID}).");
+                QuestController.Instance.CompleteQuest(targeted.QuestID);
+                questState = QuestState.Completed;
+            }
+            else
+            {
+                Debug.Log($"NPC '{dialogueData.npcName}': No active quest targeting this NPC found. Falling back to dialogueData.quest check.");
+                // Fallback: if this NPC has the quest assigned (giver scenario) and names match
+                if (dialogueData.quest != null && string.Equals(dialogueData.quest.targetNPCName?.Trim(), dialogueData.npcName?.Trim(), StringComparison.OrdinalIgnoreCase))
+                {
+                    Debug.Log($"NPC '{dialogueData.npcName}': Fallback completing dialogueData.quest '{dialogueData.quest.questName}' (ID: {dialogueData.quest.questID}).");
+                    QuestController.Instance.CompleteQuest(dialogueData.quest.questID);
+                    questState = QuestState.Completed;
+                }
+                else
+                {
+                    Debug.LogWarning($"NPC '{dialogueData.npcName}': Attempted to complete quest but no matching active quest or fallback found.");
+                }
+            }
         }
 
         dialogueIndex = nextIndex;
