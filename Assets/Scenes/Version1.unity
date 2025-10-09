@@ -713,6 +713,7 @@ GameObject:
   - component: {fileID: 119271815}
   - component: {fileID: 119271817}
   - component: {fileID: 119271816}
+  - component: {fileID: 119271818}
   m_Layer: 0
   m_Name: SchoolEnter_Waypoint
   m_TagString: Untagged
@@ -796,6 +797,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.834384, y: 0.40345764}
   m_EdgeRadius: 0
+--- !u!114 &119271818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119271814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fed5bf74090e7c458815216ce9a9bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locationID: School
 --- !u!1 &126019813
 GameObject:
   m_ObjectHideFlags: 0

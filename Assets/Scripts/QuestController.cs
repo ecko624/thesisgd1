@@ -73,4 +73,45 @@ public class QuestController : MonoBehaviour
             CompleteQuest(q.QuestID);
         }
     }
+
+    // Called when a location (like School) is reached by the player. Marks matching ReachLocation objectives.
+    public void OnLocationReached(string locationID)
+    {
+        if (QuestController.Instance == null) return;
+        if (activateQuests == null || activateQuests.Count == 0) return;
+
+        Debug.Log($"QuestController: Location reached: {locationID}. Checking active quests for ReachLocation objectives.");
+
+        // For each active quest, mark any ReachLocation objectives that match this locationID
+        foreach (var qp in activateQuests.ToArray())
+        {
+            bool modified = false;
+            foreach (var obj in qp.objectives)
+            {
+                if (obj.type == ObjectiveType.ReachLocation)
+                {
+                    // Match either objectiveID or description to the provided locationID (trim, case-insensitive)
+                    if (!string.IsNullOrEmpty(obj.objectiveID) && string.Equals(obj.objectiveID.Trim(), locationID.Trim(), System.StringComparison.OrdinalIgnoreCase)
+                        || (!string.IsNullOrEmpty(obj.description) && string.Equals(obj.description.Trim(), locationID.Trim(), System.StringComparison.OrdinalIgnoreCase)))
+                    {
+                        obj.currentAmount = obj.requiredAmount;
+                        modified = true;
+                        Debug.Log($"QuestController: Marked ReachLocation objective '{obj.objectiveID ?? obj.description}' complete for quest '{qp.quest.questName}' (ID: {qp.QuestID}).");
+                    }
+                }
+            }
+
+            // If any objective changed, check if the quest is now completed
+            if (modified && qp.IsCompleted)
+            {
+                Debug.Log($"QuestController: Quest '{qp.quest.questName}' completed by reaching '{locationID}'. Completing quest now.");
+                CompleteQuest(qp.QuestID);
+            }
+            else if (modified)
+            {
+                // Update UI to reflect progress if partial
+                questUI.UpdateQuestUI();
+            }
+        }
+    }
 }
