@@ -30,6 +30,6 @@ MonoBehaviour:
     - No
     nextDialogueIndexes: 0200000003000000
     givesQuest: 0100
-  questInProgressIndex: 0
-  questCompletedIndex: 0
-  quest: {fileID: 11400000, guid: 978875ab8b962a14d97fd22fc09e505d, type: 2}
+  questInProgressIndex: 3
+  questCompletedIndex: 4
+  quest: {fileID: 11400000, guid: 8aebf17b879a22849afec07251bfde4d, type: 2}

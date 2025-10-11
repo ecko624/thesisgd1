@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lib Ghost
   m_EditorClassIdentifier: 
   npcName: 
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 21300000, guid: c8b1d17a75d193447b60a54875eb95ee, type: 3}
   dialogueLines: []
   autoProgressLines: 
   endDialogueLines: 

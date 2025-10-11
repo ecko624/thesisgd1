@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro; // added for TMP usage
 
 public class QuestController : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class QuestController : MonoBehaviour
     // How often (seconds) to check for completed quests. Adjust as needed.
     private float checkInterval = 0.5f;
     private float checkTimer = 0f;
+
+    // Popup prefab to show when a quest is accepted. Assign in inspector.
+    public GameObject questAddedPopupPrefab;
+    // Optional parent (assign your Canvas or a container). If null, instantiated at root.
+    public Transform popupParent;
 
     private void Awake()
     {
@@ -26,6 +32,58 @@ public class QuestController : MonoBehaviour
         activateQuests.Add(new QuestProgress(quest));
         Debug.Log($"QuestController: Accepted quest '{quest.questName}' (ID: {quest.questID}). Active quests: {activateQuests.Count}");
         questUI.UpdateQuestUI();
+
+        // Show popup when a new quest is added
+        SpawnQuestAddedPopup(quest.questName);
+    }
+
+    // Spawn the "Quest Added" popup using the assigned prefab.
+    private void SpawnQuestAddedPopup(string questName)
+    {
+        if (questAddedPopupPrefab == null)
+        {
+            Debug.LogWarning("QuestController: questAddedPopupPrefab is not assigned. Cannot show quest popup.");
+            return;
+        }
+
+        Debug.Log($"QuestController: Spawning quest popup for '{questName}' (parent: {(popupParent==null?"NULL":popupParent.name)})");
+
+        // Instantiate under parent; use worldPositionStays = false so RectTransform anchors/local pos are preserved for UI prefabs.
+        GameObject go = Instantiate(questAddedPopupPrefab, popupParent, false);
+
+        if (go == null)
+        {
+            Debug.LogWarning("QuestController: Instantiate returned null.");
+            return;
+        }
+
+        // Ensure RectTransform anchored position is sane (center top by default)
+        var rt = go.GetComponent<RectTransform>();
+        if (rt != null)
+        {
+            rt.anchoredPosition = Vector2.zero;
+            rt.localScale = Vector3.one;
+        }
+
+        var popup = go.GetComponent<QuestAddedPopup>();
+        if (popup != null)
+        {
+            popup.Initialize($"Quest Added: {questName}");
+        }
+        else
+        {
+            // Fallback: set any TMP_Text found
+            var tmp = go.GetComponentInChildren<TMPro.TMP_Text>();
+            if (tmp != null) tmp.text = $"Quest Added: {questName}";
+            else Debug.LogWarning("QuestController: Spawned popup has no QuestAddedPopup or TMP_Text to set.");
+        }
+    }
+
+    // Helper to test popup from the inspector/context menu
+    [ContextMenu("Test Spawn Quest Popup")]
+    private void TestSpawnQuestPopup()
+    {
+        SpawnQuestAddedPopup("TEST QUEST");
     }
 
     public bool IsQuestActive(string questID) => activateQuests.Exists(q => q.QuestID == questID);

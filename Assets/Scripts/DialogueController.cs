@@ -14,6 +14,10 @@ public class DialogueController : MonoBehaviour
     public Image portraitImage;
     public Transform choiceContainer;
     public GameObject choiceButtonPrefab;
+
+    // Add this and assign the Close Button in the inspector
+    public Button closeButton;
+
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -49,5 +53,12 @@ public class DialogueController : MonoBehaviour
         choiceButton.GetComponent<Button>().onClick.AddListener(onClick);
         Debug.Log("Choices should have been shown by now");
         // return choiceButton;
+    }
+
+    // Optional helper to toggle the close button
+    public void SetCloseButtonVisible(bool visible)
+    {
+        if (closeButton != null)
+            closeButton.gameObject.SetActive(visible);
     }
 }

@@ -12,14 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee479e226cb81244ab46e804e16927b7, type: 3}
   m_Name: Free Spirit
   m_EditorClassIdentifier: 
-  npcName: 
-  npcPortrait: {fileID: 0}
-  dialogueLines: []
-  autoProgressLines: 
-  endDialogueLines: 
+  npcName: Free Spirit
+  npcPortrait: {fileID: 21300000, guid: c2488789300deec42abd23c832133e1e, type: 3}
+  dialogueLines:
+  - Oh, hi there stranger!
+  - What's your name?
+  - Nice to meet you, I'm Sora!
+  - The name's Sora!
+  - Well, then stranger! What's yours?
+  autoProgressLines: 01000001
+  endDialogueLines: 0000010001
   autoProgressDelay: 1.5
   typingSpeed: 0.05
-  choices: []
-  questInProgressIndex: 0
-  questCompletedIndex: 0
-  quest: {fileID: 0}
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - I'm Ren!
+    - You first
+    nextDialogueIndexes: 0200000003000000
+    givesQuest: 0001
+  questInProgressIndex: 4
+  questCompletedIndex: 4
+  quest: {fileID: 11400000, guid: 8aebf17b879a22849afec07251bfde4d, type: 2}
