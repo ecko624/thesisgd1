@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Version2.unity
     guid: 564a4b760ce4e9c419fa88a14c2387b8
+  - enabled: 1
+    path: Assets/Scenes/Quest1Cutscene1.2.unity
+    guid: 1d7d3154db5ff234eb5bb74c7ab8d0e1
   m_configObjects: {}
