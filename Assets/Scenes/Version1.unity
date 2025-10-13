@@ -749,9 +749,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundry: {fileID: 1678979149}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 1284390606}
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
 --- !u!61 &119271817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -821,6 +823,7 @@ GameObject:
   - component: {fileID: 126019815}
   - component: {fileID: 126019814}
   - component: {fileID: 126019816}
+  - component: {fileID: 126019817}
   m_Layer: 0
   m_Name: CmCam
   m_TagString: Untagged
@@ -876,7 +879,7 @@ Transform:
   m_GameObject: {fileID: 126019813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.57, y: 57.04, z: -10}
+  m_LocalPosition: {x: 88.1, y: 57.04, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -900,6 +903,18 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 694931831}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &126019817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126019813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455839d6023c256479e9b298e3ca4bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &127876531
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,9 +961,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundry: {fileID: 1405207119}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 1642579777}
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
 --- !u!61 &127876534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -62606,7 +62623,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.35314, y: 57.038803, z: -10}
+  m_LocalPosition: {x: 88.63433, y: 57.04104, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -62782,9 +62799,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundry: {fileID: 916010202}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 392195817}
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
 --- !u!61 &580524368
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63844,9 +63863,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundry: {fileID: 1405207119}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 238211869}
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
 --- !u!61 &820597395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63938,9 +63959,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundry: {fileID: 281226506}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 2105215646}
+  cutsceneSceneName: Quest1Cutscene1.2
+  cutsceneKey: Quest1CutscenePlayed
 --- !u!61 &894039777
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65106,6 +65129,50 @@ MonoBehaviour:
   portraitImage: {fileID: 156939931}
   choiceContainer: {fileID: 413457971}
   choiceButtonPrefab: {fileID: 156181520374318995, guid: 7ac7573be2c69f246ab9b537d815922b, type: 3}
+--- !u!1 &1320097461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320097462}
+  - component: {fileID: 1320097463}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1320097462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320097461}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.11462, y: 18.490934, z: -0.021430772}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1666712955}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1320097463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320097461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2dac815ca22536408d5d400afe9fd68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1334261315
 GameObject:
   m_ObjectHideFlags: 0
@@ -65699,7 +65766,7 @@ Transform:
   m_GameObject: {fileID: 1418304018}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.57, y: 57.04, z: 0}
+  m_LocalPosition: {x: 88.1, y: 57.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -65964,9 +66031,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundry: {fileID: 1405207119}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 1437462327}
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
 --- !u!61 &1454358199
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66330,9 +66399,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundry: {fileID: 694931831}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 1960483413}
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
 --- !u!61 &1519776588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66654,6 +66725,7 @@ Transform:
   m_Children:
   - {fileID: 1708271886}
   - {fileID: 1311931300}
+  - {fileID: 1320097462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1666712956
@@ -80581,9 +80653,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundry: {fileID: 1405207119}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 224652725}
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
 --- !u!61 &2087545721
 BoxCollider2D:
   m_ObjectHideFlags: 0
