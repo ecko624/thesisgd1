@@ -29,6 +29,13 @@ public class MapTransition : MonoBehaviour
 
         confiner.m_BoundingShape2D = mapBoundary;
 
+        // Notify the persistent camera (if present) so it can persist this boundary across scenes.
+        // Use the boundary GameObject name so the PersistentCamera can re-find it after scene loads.
+        if (PersistentCamera.Instance != null && mapBoundary != null)
+        {
+            PersistentCamera.Instance.SetConfinerBoundsByName(mapBoundary.gameObject.name);
+        }
+
         // ✅ If this teleporter triggers a cutscene (only if name is filled)
         if (!string.IsNullOrEmpty(cutsceneSceneName))
         {
