@@ -39,24 +39,37 @@ public class MapTransition : MonoBehaviour
         // ✅ If this teleporter triggers a cutscene (only if name is filled)
         if (!string.IsNullOrEmpty(cutsceneSceneName))
         {
-            // Check if cutscene already played
-            if (PlayerPrefs.GetInt(cutsceneKey, 0) == 1)
+            // If we just returned from this cutscene, skip re-triggering immediately.
+            // This transient flag is set when leaving and cleared here to prevent a loop.
+            if (PlayerPrefs.GetInt("JustLeftForCutscene", 0) == 1)
             {
-                Debug.Log("🎬 Cutscene already played, skipping...");
-                UpdatePlayerPosition(collision.gameObject); // just teleport normally
+                Debug.Log("⤴️ Returning from cutscene — skipping teleporter to avoid loop.");
+                PlayerPrefs.DeleteKey("JustLeftForCutscene");
+                PlayerPrefs.Save();
+                UpdatePlayerPosition(collision.gameObject);
                 return;
             }
+            // TEMPORARY CHANGE FOR TESTING: always play the cutscene even if it was played before.
+            // TODO: revert this after testing or gate behind a debug flag.
 
-            // Save current scene name and player position (after teleport)
-            PlayerPrefs.SetString("NextSceneAfterCutscene", SceneManager.GetActiveScene().name);
+            // Save target scene (Version1) and player position (after teleport)
+            // After the cutscene finishes, the game will load the scene stored in this key.
+            // We intentionally send the player to the 'Version1' scene instead of returning
+            // to the originating scene.
+            PlayerPrefs.SetString("NextSceneAfterCutscene", "Version1");
             PlayerPrefs.SetFloat("PlayerX", collision.transform.position.x);
             PlayerPrefs.SetFloat("PlayerY", collision.transform.position.y);
             PlayerPrefs.SetFloat("PlayerZ", collision.transform.position.z);
             PlayerPrefs.Save();
 
-            // Mark this cutscene as played
+            // Mark this cutscene as played so normal flow won't replay it (unless you
+            // clear the key). Also set a transient flag so when the player returns
+            // we can ignore the originating teleporter once to avoid immediate retrigger.
             PlayerPrefs.SetInt(cutsceneKey, 1);
+            PlayerPrefs.SetInt("JustLeftForCutscene", 1);
             PlayerPrefs.Save();
+
+            Debug.Log($"MapTransition: Starting cutscene '{cutsceneSceneName}'. NextSceneAfterCutscene set to 'Version1'. Player position saved ({collision.transform.position.x}, {collision.transform.position.y}, {collision.transform.position.z}).");
 
             // Load the cutscene scene
             SceneManager.LoadScene(cutsceneSceneName);

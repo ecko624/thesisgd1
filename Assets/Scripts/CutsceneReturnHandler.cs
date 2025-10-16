@@ -6,10 +6,10 @@ public class CutsceneReturnHandler : MonoBehaviour
 {
     private void Start()
     {
-        string nextScene = PlayerPrefs.GetString("NextSceneAfterCutscene", "");
-        if (string.IsNullOrEmpty(nextScene)) return;
-
-        SceneManager.LoadScene(nextScene);
+        // Intentionally do NOT auto-load the next scene here. The cutscene scene
+        // should allow the PlayableDirector to run to completion; when it stops,
+        // CutsceneEndHandler will handle loading the next scene. Removing the
+        // immediate load prevents the cutscene from being skipped.
     }
 
     private void OnEnable()
