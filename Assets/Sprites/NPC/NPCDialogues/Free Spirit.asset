@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee479e226cb81244ab46e804e16927b7, type: 3}
-  m_Name: Class Rep
+  m_Name: Free Spirit
   m_EditorClassIdentifier: 
-  npcName: Class Rep
-  npcPortrait: {fileID: 21300000, guid: fbeaa7c6ed581554184c13902ff3a5ef, type: 3}
+  npcName: Sora
+  npcPortrait: {fileID: 21300000, guid: c8b1d17a75d193447b60a54875eb95ee, type: 3}
   dialogueLines:
-  - Hello Ren! I'm Aya the class rep. Nice to meet you!
-  - Are you ready for your first day of school?
-  - Great! Now let's do our best!
-  - I'm here if you need anything, don't worry!
-  autoProgressLines: 0100
-  endDialogueLines: 00000101
+  - Hi! I'm Sora, nice to meet you!
+  - You like drawing or sketching stuff?
+  - Great! The waves here are great you can draw them!
+  - If you ever want someone to bond with just go here, I'm always here hehe
+  - Oh. Weird..
+  autoProgressLines: 010001
+  endDialogueLines: 0000000101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   choices:
@@ -28,8 +29,8 @@ MonoBehaviour:
     choices:
     - Yes
     - No
-    nextDialogueIndexes: 0200000003000000
-    givesQuest: 0000
+    nextDialogueIndexes: 0200000004000000
+    givesQuest: 
   questInProgressIndex: 0
   questCompletedIndex: 0
-  quest: {fileID: 11400000, guid: 978875ab8b962a14d97fd22fc09e505d, type: 2}
+  quest: {fileID: 0}
