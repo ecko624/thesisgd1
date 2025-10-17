@@ -10,16 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee479e226cb81244ab46e804e16927b7, type: 3}
-  m_Name: V1A2 Grandpa
+  m_Name: Lib Ghost
   m_EditorClassIdentifier: 
-  npcName: 
-  npcPortrait: {fileID: 0}
-  dialogueLines: []
-  autoProgressLines: 
-  endDialogueLines: 
+  npcName: Mika
+  npcPortrait: {fileID: 21300000, guid: c8b1d17a75d193447b60a54875eb95ee, type: 3}
+  dialogueLines:
+  - Hi.. I'm Mika.. Nice to meet you..
+  - Are you interested in books?
+  - If you need my help finding books.. You can ask me..
+  - Oh, sorry...
+  autoProgressLines: 0100
+  endDialogueLines: 00000101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
-  choices: []
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - Yes
+    - No
+    nextDialogueIndexes: 0200000003000000
+    givesQuest: 0000
   questInProgressIndex: 0
   questCompletedIndex: 0
   quest: {fileID: 0}
