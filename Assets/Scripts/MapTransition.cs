@@ -31,13 +31,6 @@ public class MapTransition : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player")) return;
 
-        // Check if there's a quest requirement and if it's active
-        if (!string.IsNullOrEmpty(requiredQuestId) && !QuestController.Instance.IsQuestActive(requiredQuestId))
-        {
-            Debug.Log($"MapTransition: Cannot use teleporter - requires quest '{requiredQuestId}' to be active.");
-            return;
-        }
-
         confiner.m_BoundingShape2D = mapBoundary;
 
         // Notify the persistent camera (if present) so it can persist this boundary across scenes.
@@ -47,8 +40,8 @@ public class MapTransition : MonoBehaviour
             PersistentCamera.Instance.SetConfinerBoundsByName(mapBoundary.gameObject.name);
         }
 
-        // ✅ If this teleporter triggers a cutscene (only if name is filled)
-        if (!string.IsNullOrEmpty(cutsceneSceneName))
+        // Check if we have a quest-specific cutscene and if that quest is active
+        if (!string.IsNullOrEmpty(cutsceneSceneName) && !string.IsNullOrEmpty(requiredQuestId) && QuestController.Instance.IsQuestActive(requiredQuestId))
         {
             // If we just returned from this cutscene, skip re-triggering immediately.
             // This transient flag is set when leaving and cleared here to prevent a loop.
@@ -60,8 +53,6 @@ public class MapTransition : MonoBehaviour
                 UpdatePlayerPosition(collision.gameObject);
                 return;
             }
-            // TEMPORARY CHANGE FOR TESTING: always play the cutscene even if it was played before.
-            // TODO: revert this after testing or gate behind a debug flag.
 
             // Save target scene (Version1) and player position (after teleport)
             // After the cutscene finishes, the game will load the scene stored in this key.
@@ -80,14 +71,14 @@ public class MapTransition : MonoBehaviour
             PlayerPrefs.SetInt("JustLeftForCutscene", 1);
             PlayerPrefs.Save();
 
-            Debug.Log($"MapTransition: Starting cutscene '{cutsceneSceneName}'. NextSceneAfterCutscene set to 'Version1'. Player position saved ({collision.transform.position.x}, {collision.transform.position.y}, {collision.transform.position.z}).");
+            Debug.Log($"MapTransition: Quest '{requiredQuestId}' active - Starting cutscene '{cutsceneSceneName}'. NextSceneAfterCutscene set to 'Version1'. Player position saved ({collision.transform.position.x}, {collision.transform.position.y}, {collision.transform.position.z}).");
 
             // Load the cutscene scene
             SceneManager.LoadScene(cutsceneSceneName);
             return;
         }
 
-        // Normal teleport
+        // If no quest is active or required, just do a normal teleport
         UpdatePlayerPosition(collision.gameObject);
     }
 
