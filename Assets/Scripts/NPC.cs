@@ -12,6 +12,9 @@ public class NPC : MonoBehaviour, IInteractable
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
 
+    // New: delay before actually closing the dialogue UI so player can read final line
+    public float endDialogueDelay = 2f;
+
     private enum QuestState { NotStarted, InProgress, Completed}
     private QuestState questState = QuestState.NotStarted;
 
@@ -147,6 +150,7 @@ public class NPC : MonoBehaviour, IInteractable
         // After typing, check for endDialogueLines
         if (dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
         {
+            
             EndDialogue();
             yield break;
         }
@@ -168,6 +172,7 @@ public class NPC : MonoBehaviour, IInteractable
             yield return new WaitForSeconds(dialogueData.autoProgressDelay);
             NextLine();
         }
+        
     }
 
     void DisplayChoices(DialogueChoice choice)
@@ -244,13 +249,23 @@ public class NPC : MonoBehaviour, IInteractable
         StartCoroutine(TypeLine());
     }
     
+    // Replace the old EndDialogue implementation with delayed closing
     public void EndDialogue()
     {
+        // stop ongoing typing/choice coroutines so we don't have overlapping actions
         StopAllCoroutines();
+        // start a coroutine that waits then hides the UI
+        StartCoroutine(EndDialogueDelayed());
+    }
+
+    private IEnumerator EndDialogueDelayed()
+    {
+        // keep dialogue visible for a short delay so player can read
+        yield return new WaitForSeconds(endDialogueDelay);
+
         isDialogueActive = false;
         dialogueUI.SetDialogueText("");
         dialogueUI.ShowDialogueUI(false);
         PauseController.SetPause(false);
-
     }
 }
