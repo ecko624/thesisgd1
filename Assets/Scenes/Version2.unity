@@ -3912,6 +3912,7 @@ GameObject:
   - component: {fileID: 389650567}
   - component: {fileID: 389650570}
   - component: {fileID: 389650569}
+  - component: {fileID: 389650571}
   m_Layer: 0
   m_Name: NPC_Grandpa
   m_TagString: Untagged
@@ -3931,7 +3932,8 @@ Transform:
   m_LocalPosition: {x: 84.64, y: 52.36, z: 0.031829976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2135198821}
   m_Father: {fileID: 1457606889}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &389650569
@@ -4031,6 +4033,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &389650571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389650566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e6fe677ec7107458ff0b781e7c5041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personalityKey: grandfather
+  npcId: Hiroshi
+  portrait: {fileID: 21300000, guid: 7eeb9eb5d06871244ac1c702185bcc4d, type: 3}
+  greeting: Hey!
+  tone: shy
+  interactPrompt: {fileID: 0}
+  interactionKey: 101
+  maxInteractDistance: 2
+  useTrigger: 1
+  addTriggerChildForDetection: 1
+  triggerChildSize: {x: 1.5, y: 2}
+  onOpenDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+  onCloseDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &392195816
 GameObject:
   m_ObjectHideFlags: 0
@@ -56967,11 +56998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef029dd2f0bc3e4d836fb3608edc04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCharacter: outgoing_class_rep
-  currentIntimacy: stranger
-  ayaIntimacy: 0
-  mikaIntimacy: 0
-  soraIntimacy: 0
 --- !u!4 &964456330
 Transform:
   m_ObjectHideFlags: 0
@@ -58066,7 +58092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8928b5bb86bd54dbfa043051828813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 1311931302}
+  dialogueController: {fileID: 1311931302}
   playerInputField: {fileID: 236183721}
 --- !u!114 &1311931302
 MonoBehaviour:
@@ -58080,16 +58106,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ed9cd6c67843a489d8072a8c3ca289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcText: {fileID: 310549969}
+  playerInputField: {fileID: 236183721}
   serverUrl: http://localhost:5000/generate
-  personality: outgoing_class_rep
-  tone: cheerful
+  personality: grandfather
+  tone: shy
+  maxNewTokens: 120
+  temperature: 0.6
+  maxContextLength: 200
   playerId: player1
   npcId: npc1
   dialoguePanel: {fileID: 1132503805}
-  npcText: {fileID: 310549969}
-  playerInputField: {fileID: 236183721}
-  maxNewTokens: 120
-  temperature: 0.6
 --- !u!1 &1334261315
 GameObject:
   m_ObjectHideFlags: 0
@@ -60110,9 +60137,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NPC, Assembly-CSharp
-        m_MethodName: EndDialogue
+      - m_Target: {fileID: 1311931302}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: CloseDialoguePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -73117,6 +73144,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 127876532}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2135198820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2135198821}
+  - component: {fileID: 2135198823}
+  - component: {fileID: 2135198822}
+  m_Layer: 0
+  m_Name: InteractionTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2135198821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135198820}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 389650567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2135198822
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135198820}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &2135198823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135198820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d2ef801b75cfba49bcfe3d459b677b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2136492556
 GameObject:
   m_ObjectHideFlags: 0

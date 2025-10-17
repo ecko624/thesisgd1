@@ -1,50 +1,74 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public int peopleMet { get; private set; }
+    public bool questActive { get; set; } // Public setter for external access
+    public Dictionary<string, string> npcMemories { get; private set; }
 
-    // simple public state used by version2 scripts
-    public string currentCharacter = "outgoing_class_rep";
-    public string currentIntimacy = "stranger";
+    // Additional fields for character state
+    public string currentCharacter { get; set; } // e.g., "outgoing_class_rep"
+    public string currentTone { get; set; } // e.g., "cheerful"
+    public string currentIntimacy { get; set; } // e.g., "strangers"
 
-    // example raw intimacy counters per NPC (persist/save as needed)
-    public int ayaIntimacy = 0;
-    public int mikaIntimacy = 0;
-    public int soraIntimacy = 0;
+    // Intimacy levels for each NPC
+    public int ayaIntimacy { get; private set; } = 0; // For "outgoing_class_rep"
+    public int mikaIntimacy { get; private set; } = 0; // For "library_ghost"
+    public int soraIntimacy { get; private set; } = 0; // For "free_spirit"
 
     void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance == null)
         {
-            Destroy(gameObject);
-            return;
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            npcMemories = new Dictionary<string, string>();
+            questActive = false; // Initialize quest state
         }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        else Destroy(gameObject);
     }
 
-    // Map raw intimacy to a label used in prompts
-    public string GetIntimacyLevel(int raw)
+    void Start()
     {
-        if (raw <= 0) return "stranger";
-        if (raw <= 3) return "acquaintance";
-        if (raw <= 6) return "friend";
-        return "close";
+        // Initialize Act 1: Trigger grandfather interaction
+        var dm = FindObjectOfType<DialogueControllerVersion2>();
+        if (dm != null) dm.StartInteraction("grandfather");
     }
 
-    // Called by DialogueManager when server returns intimacy_delta
     public void UpdateIntimacy(string personality, int delta)
     {
-        if (delta == 0) return;
-        if (personality == "outgoing_class_rep") ayaIntimacy = Mathf.Clamp(ayaIntimacy + delta, -10, 99);
-        else if (personality == "library_ghost") mikaIntimacy = Mathf.Clamp(mikaIntimacy + delta, -10, 99);
-        else if (personality == "free_spirit") soraIntimacy = Mathf.Clamp(soraIntimacy + delta, -10, 99);
-        // keep currentIntimacy in sync for convenience (optional)
-        if (personality == currentCharacter)
+        // Update intimacy based on personality
+        switch (personality)
         {
-            int raw = (personality == "outgoing_class_rep") ? ayaIntimacy : (personality == "library_ghost" ? mikaIntimacy : soraIntimacy);
-            currentIntimacy = GetIntimacyLevel(raw);
+            case "outgoing_class_rep":
+                ayaIntimacy = Mathf.Clamp(ayaIntimacy + delta, -10, 10);
+                currentIntimacy = GetIntimacyLevel(ayaIntimacy);
+                break;
+            case "library_ghost":
+                mikaIntimacy = Mathf.Clamp(mikaIntimacy + delta, -10, 10);
+                currentIntimacy = GetIntimacyLevel(mikaIntimacy);
+                break;
+            case "free_spirit":
+                soraIntimacy = Mathf.Clamp(soraIntimacy + delta, -10, 10);
+                currentIntimacy = GetIntimacyLevel(soraIntimacy);
+                break;
         }
+    }
+
+    public void IncrementPeopleMet()
+    {
+        peopleMet++;
+        questActive = peopleMet < 3; // Deactivate quest when complete
+    }
+
+    public string GetIntimacyLevel(int intimacy)
+    {
+        if (intimacy <= -3) return "strangers";
+        if (intimacy <= 2) return "acquaintance";
+        if (intimacy <= 5) return "friend";
+        if (intimacy <= 8) return "close_friend";
+        return "romantic_interest";
     }
 }

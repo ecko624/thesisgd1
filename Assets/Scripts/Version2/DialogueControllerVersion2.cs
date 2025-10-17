@@ -4,126 +4,91 @@ using TMPro;
 using UnityEngine.Networking;
 using System.Collections;
 using System.Text;
+using System.Collections.Generic;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueControllerVersion2 : MonoBehaviour
 {
-    public string serverUrl = "http://localhost:5000/generate";
-    private string memoryContext = ""; 
-    private const int maxContextLength = 200;
+    [SerializeField] public TextMeshProUGUI npcText;
+    [SerializeField] private TMP_InputField playerInputField;
+    [SerializeField] private string serverUrl = "http://localhost:5000/generate";
+    [SerializeField] public string personality = "grandfather";
+    [SerializeField] public string tone = "shy";
+    [SerializeField] private int maxNewTokens = 150; // Increased for longer responses
+    [SerializeField] private float temperature = 0.75f;
+    [SerializeField] private int maxContextLength = 200;
+    [SerializeField] private string playerId = "player1";
+    [SerializeField] private string npcId = "npc1";
+    [SerializeField] private GameObject dialoguePanel;
 
-    // add this so other scripts can subscribe to model responses
-    public event Action<string> OnModelResponse;
+    private string[] targetNPCs = { "outgoing_class_rep", "library_ghost", "free_spirit" };
+    private bool questIntroduced = false; // Track if grandfather has given the intro
 
-    // Identity (exposed so NPCInteractable and other systems can set them)
-    [Header("Identity")]
-    public string personality = "outgoing_class_rep";
-    public string tone = "cheerful";
-    public string playerId = "player1";
-    public string npcId = "npc1";
+    public delegate void ModelResponseHandler(string response);
+    public event ModelResponseHandler OnModelResponse;
 
-    // UI
-    [Header("UI")]
-    public GameObject dialoguePanel;      // assign the DialoguePanel root here
-    public TextMeshProUGUI npcText;       // assign DialogueText
-    public TMP_InputField playerInputField; // optional: assign PlayerInput to disable while waiting
+    public string GetPlayerInputText()
+    {
+        return playerInputField != null ? playerInputField.text : "";
+    }
 
-    [Header("Model Settings")]
-    public int maxNewTokens = 120;
-    public float temperature = 0.6f;
+    string BuildPrompt(string personality, string tone, string intimacyLevel, string memoryContext, string playerInput, bool isSingleLine = false)
+    {
+        string context = $"Setting: Hinode Bay, a coastal town. {GetPersonalityDescription(personality)}";
+        string instruction = isSingleLine 
+            ? $"Act as {personality} with a {tone} tone and {intimacyLevel} intimacy. Deliver a single, concise line of dialogue fitting Hinode Bay's story. Avoid further interaction prompts."
+            : $"Act as {personality} with a {tone} tone and {intimacyLevel} intimacy. Use the memory to continue the conversation naturally, fitting Hinode Bay's story. Avoid repeating exact previous responses.";
+        if (personality == "grandfather" && !questIntroduced)
+        {
+            instruction += " Provide a warm, multi-paragraph introduction to Hinode Bay, explaining its history and Ren's purpose. End with a quest to explore and meet three people: Aya, Elara, and Kai.";
+        }
+        return $"{context}\n{instruction}\nMemory: {memoryContext}\nPlayer: {playerInput}\nNPC:";
+    }
 
-    // --- NEW: richer persona descriptions + few-shot examples ------------
     string GetPersonalityDescription(string personalityKey)
     {
-        switch (personalityKey)
+        return personalityKey switch
         {
-            case "outgoing_class_rep":
-                return "Outgoing class representative: warm, enthusiastic, uses friendly casual language, remembers campus events and social plans.";
-            case "library_ghost":
-                return "Quiet library regular: reserved, polite, uses soft tone, references books and quiet study habits.";
-            case "free_spirit":
-                return "Free-spirited friend: playful, spontaneous, uses colloquial phrasing and suggests fun activities.";
-            default:
-                return "A typical NPC with neutral, helpful conversational style.";
-        }
+            "grandfather" => "A kind, slightly shy elder of Hinode Bay, guiding Ren with gentle advice. My name is Hiroshi.",
+            "outgoing_class_rep" => "Hinode Bay's vibrant class rep, organizing beach events with a warm smile. My name is Aya.",
+            "library_ghost" => "A quiet spirit haunting Hinode Bay's library, whispering about old tales. My name is Elara.",
+            "free_spirit" => "A free-spirited surfer from Hinode Bay, eager for coastal adventures. My name is Kai.",
+            _ => "A typical NPC in Hinode Bay."
+        };
     }
 
-    string GetFewShotExamples()
+    public void GetNPCResponse(string playerInput, string personalityArg = null, string toneArg = null, string intimacyLevelArg = null, bool isSingleLine = false)
     {
-        // keep short to avoid blowing up context; adjust as needed
-        var sb = new StringBuilder();
-        sb.AppendLine("EXAMPLE:");
-        sb.AppendLine("Player: Hey, want to hang out later?");
-        sb.AppendLine("NPC: I’d love to — let’s meet after class by the quad. <|END|>");
-        sb.AppendLine();
-        sb.AppendLine("Player: Are you okay? You seem off.");
-        sb.AppendLine("NPC: I’m a bit tired today, but I’ll be fine — thanks for asking. <|END|>");
-        sb.AppendLine();
-        sb.AppendLine("Player: Hi!");
-        sb.AppendLine("NPC: Hey there — great to see you! How's your day going? <|END|>");
-        sb.AppendLine("Player: How are you doing?");
-        sb.AppendLine("NPC: I'm doing well — a little tired from studying but otherwise okay. <|END|>");
-        sb.AppendLine();
-        return sb.ToString();
-    }
-
-    // improved BuildPrompt that includes persona, memory and examples
-    string BuildPrompt(string personality, string tone, string intimacyLabel, string memoryContext, string playerInput)
-    {
-        var sb = new StringBuilder();
-
-        sb.AppendLine($"SYSTEM: You are the NPC \"{personality}\".");
-        sb.AppendLine($"CHARACTER: {GetPersonalityDescription(personality)}");
-        sb.AppendLine($"STYLE: Tone=" + tone + ". Speak as this character. Use natural full sentences, reference past memory when helpful, and be specific (give brief details).");
-        sb.AppendLine($"CONTEXT: intimacy={intimacyLabel}");
-        sb.AppendLine("INSTRUCTION: If the player's message is a short greeting or similar, reply with a friendly, specific response instead of asking for clarification. Do NOT ask the player to clarify.");
-        sb.AppendLine();
-        if (!string.IsNullOrEmpty(memoryContext))
+        if (!string.IsNullOrEmpty(playerInput) && playerInputField != null) playerInputField.text = "";
+        if (playerInputField != null)
         {
-            sb.AppendLine("Memory:");
-            sb.AppendLine(memoryContext.Trim());
-            sb.AppendLine();
+            playerInputField.interactable = !isSingleLine; // Disable input for single-line NPCs
         }
-        sb.AppendLine(GetFewShotExamples());
-        sb.AppendLine($"Player: {playerInput.Trim()}");
-        sb.Append("NPC: ");
 
-        return sb.ToString();
-    }
-    // -------------------------------------------------------------------
+        string selectedPersonality = personalityArg ?? personality;
+        string selectedTone = toneArg ?? tone; // Use field value if no argument provided
+        string intimacyLevel = intimacyLevelArg ?? "stranger";
+        string memoryContext = GameManager.Instance.npcMemories.ContainsKey(selectedPersonality) ? GameManager.Instance.npcMemories[selectedPersonality] : "";
+        string prompt = BuildPrompt(selectedPersonality, selectedTone, intimacyLevel, memoryContext, playerInput, isSingleLine);
 
-    // Call this to start a request; keeps UI responsive and shows "..." while the server is thinking
-    public void GetNPCResponse(string playerInput, string personalityArg, string toneArg, string intimacyLevelArg)
-    {
-        // update local identity
-        if (!string.IsNullOrEmpty(personalityArg)) personality = personalityArg;
-        if (!string.IsNullOrEmpty(toneArg)) tone = toneArg;
-
-        // build prompt
-        string prompt = BuildPrompt(personality, tone, intimacyLevelArg, memoryContext, playerInput);
-
-        // UI: show typing indicator and disable input while waiting
         if (npcText != null) npcText.text = "...";
-        if (playerInputField != null) playerInputField.interactable = false;
-
-        StartCoroutine(SendRequest(prompt, playerInput));
+        StartCoroutine(SendRequest(prompt, playerInput, selectedPersonality, isSingleLine));
     }
 
-    private IEnumerator SendRequest(string prompt, string playerInput)
+    private IEnumerator SendRequest(string prompt, string playerInput, string selectedPersonality, bool isSingleLine)
     {
-        // prepare JSON body (server may ignore extra keys, but include model settings if supported)
-            var body = new RequestPayload
-            {
-                prompt = prompt,
-                memory_context = memoryContext,
-                player_input = playerInput,
-                player_id = playerId,
-                npc_id = npcId,
-                max_new_tokens = maxNewTokens,
-                temperature = temperature
-            };
-            string jsonData = JsonUtility.ToJson(body);
-            Debug.Log("[DialogueManager] Request JSON: " + jsonData);   // <<-- add this line
-            byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
+        var body = new RequestPayload
+        {
+            prompt = prompt,
+            memory_context = GameManager.Instance.npcMemories.ContainsKey(selectedPersonality) ? GameManager.Instance.npcMemories[selectedPersonality] : "",
+            player_input = playerInput,
+            player_id = playerId,
+            npc_id = npcId,
+            max_new_tokens = maxNewTokens,
+            temperature = temperature
+        };
+        string jsonData = JsonUtility.ToJson(body);
+        Debug.Log("[DialogueManager] Request JSON: " + jsonData);
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
 
         using (UnityWebRequest www = new UnityWebRequest(serverUrl, "POST"))
         {
@@ -133,18 +98,12 @@ public class DialogueManager : MonoBehaviour
 #if UNITY_2020_1_OR_NEWER
             www.timeout = 30;
 #endif
-            Debug.Log("[DialogueManager] Sending request: " + (prompt.Length > 200 ? prompt.Substring(0, 200) + "..." : prompt));
             yield return www.SendWebRequest();
 
-#if UNITY_2020_1_OR_NEWER
-            bool error = www.result != UnityWebRequest.Result.Success;
-#else
-            bool error = www.isNetworkError || www.isHttpError;
-#endif
-            if (error)
+            if (www.result != UnityWebRequest.Result.Success)
             {
                 Debug.LogError("[DialogueManager] request error: " + www.error);
-                if (npcText != null) npcText.text = "Sorry, I couldn't respond right now.";
+                if (npcText != null) npcText.text = "Sorry, I couldn’t respond.";
                 if (playerInputField != null) playerInputField.interactable = true;
                 yield break;
             }
@@ -152,112 +111,82 @@ public class DialogueManager : MonoBehaviour
             string jsonResponse = www.downloadHandler.text;
             Debug.Log("[DialogueManager] Server raw response: " + jsonResponse);
 
-            ResponseData data = null;
-            try
-            {
-                data = JsonUtility.FromJson<ResponseData>(jsonResponse);
-            }
-            catch (Exception ex)
-            {
-                Debug.LogWarning("DialogueManager: JSON parse failed: " + ex.Message);
-            }
+            ResponseData data = JsonUtility.FromJson<ResponseData>(jsonResponse);
+            string npcResponse = data?.response ?? "No response received.";
+            int intimacyDelta = data?.intimacy_delta ?? 0;
+            bool isFallback = data?.fallback ?? false;
 
-            string npcResponse = data != null && !string.IsNullOrEmpty(data.response) ? data.response : jsonResponse ?? "";
-
-            // strip model end tokens for display
-            string displayText = npcResponse;
-            foreach (string variant in new[] { "<|END|>", "<|END||>", "<|END-|>", "<|END>" })
-                displayText = displayText.Replace(variant, "");
-            displayText = displayText.Trim();
-
-            // Update UI and memory
             if (npcText != null)
             {
-                npcText.text = displayText;
-                Debug.Log("[DialogueManager] npcText set to: " + displayText);
+                npcText.text = npcResponse;
+                Debug.Log("[DialogueManager] npcText set to: " + npcResponse);
             }
 
-            // Update memory using the actual player input and model reply
-            memoryContext += $"Player: {playerInput} NPC: {displayText} ";
-            if (memoryContext.Length > maxContextLength)
-                memoryContext = memoryContext.Substring(memoryContext.Length - maxContextLength);
-
-            // notify subscribers
-            OnModelResponse?.Invoke(displayText);
-
-            // re-enable input
-            if (playerInputField != null) playerInputField.interactable = true;
-
-            // apply intimacy if provided
-            if (data != null)
+            if (selectedPersonality == "grandfather" && !questIntroduced)
             {
-                if (GameManager.Instance != null)
-                    GameManager.Instance.UpdateIntimacy(personality, data.intimacy_delta);
-                if (data.fallback)
-                    Debug.Log("[DialogueManager] server returned fallback=true");
+                questIntroduced = true;
+                GameManager.Instance.questActive = true;
+                npcText.text += "\n[Quest Started: Explore and Connect - Meet 3 people: Aya, Mika, and Sora]";
             }
+            else if (GameManager.Instance.questActive && Array.IndexOf(targetNPCs, selectedPersonality) >= 0 && !GameManager.Instance.npcMemories.ContainsKey(selectedPersonality))
+            {
+                GameManager.Instance.IncrementPeopleMet();
+                GameManager.Instance.npcMemories[selectedPersonality] = "";
+                if (GameManager.Instance.peopleMet >= 3)
+                {
+                    npcText.text += "\n[Quest Complete: Explore and Connect]";
+                    GameManager.Instance.questActive = false;
+                    EnableAct2Interactions();
+                }
+                else
+                {
+                    npcText.text += $"\n[Met {GameManager.Instance.peopleMet}/3 people]";
+                }
+            }
+
+            if (npcText != null && !string.IsNullOrEmpty(npcText.text))
+            {
+                string cleanResponse = npcText.text.Split('\n')[0];
+                GameManager.Instance.npcMemories[selectedPersonality] = (GameManager.Instance.npcMemories.ContainsKey(selectedPersonality) ? GameManager.Instance.npcMemories[selectedPersonality] : "") +
+                                                                      $"player_input: {playerInput} npc_response: {cleanResponse} ";
+                if (GameManager.Instance.npcMemories[selectedPersonality].Length > maxContextLength)
+                    GameManager.Instance.npcMemories[selectedPersonality] = GameManager.Instance.npcMemories[selectedPersonality].Substring(GameManager.Instance.npcMemories[selectedPersonality].Length - maxContextLength);
+            }
+
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            if (gameManager != null)
+            {
+                gameManager.UpdateIntimacy(selectedPersonality, intimacyDelta);
+            }
+
+            OnModelResponse?.Invoke(npcResponse);
+            if (playerInputField != null) playerInputField.interactable = !isSingleLine; // Re-enable if not single-line
         }
     }
 
-    public void OpenDialoguePanel()
+    public void StartInteraction(string newPersonality, bool isSingleLine = false)
     {
-        if (dialoguePanel != null)
-        {
-            dialoguePanel.SetActive(true);
-            Debug.Log("[DialogueManager] Opened dialogue panel");
-        }
-        else
-        {
-            Debug.LogWarning("[DialogueManager] dialoguePanel is not assigned in the inspector");
-        }
+        personality = newPersonality;
+        GetNPCResponse("", personality, toneArg: tone, isSingleLine: isSingleLine); // Changed tone to toneArg
     }
 
-    public void CloseDialoguePanel()
+    private void EnableAct2Interactions()
     {
-        if (dialoguePanel != null)
-        {
-            dialoguePanel.SetActive(false);
-            Debug.Log("[DialogueManager] Closed dialogue panel");
-        }
+        Debug.Log("Act 2 Interactions Enabled! Implement activity triggers here.");
     }
 
-    // --- NEW: CloseConversation called by UI Close button -----------------
+    public void OpenDialoguePanel() { if (dialoguePanel != null) dialoguePanel.SetActive(true); }
+    public void CloseDialoguePanel() { if (dialoguePanel != null) dialoguePanel.SetActive(false); }
     public void CloseConversation()
     {
-        // clear listeners so NPCs unsubscribe cleanly and no handlers remain
         OnModelResponse = null;
-
-        // re-enable input and clear textbox if desired
-        if (playerInputField != null)
-        {
-            playerInputField.interactable = true;
-            playerInputField.text = "";
-        }
-
-        // hide panel
+        if (playerInputField != null) { playerInputField.interactable = true; playerInputField.text = ""; }
         CloseDialoguePanel();
-
-        Debug.Log("[DialogueManager] CloseConversation: panel closed and listeners cleared.");
     }
-    // -------------------------------------------------------------------
 }
 
 [System.Serializable]
-public class RequestPayload
-{
-    public string prompt;
-    public string memory_context;
-    public string player_input;
-    public string player_id;
-    public string npc_id;
-    public int max_new_tokens;
-    public float temperature;
-}
+public class RequestPayload { public string prompt, memory_context, player_input, player_id, npc_id; public int max_new_tokens; public float temperature; }
 
 [System.Serializable]
-public class ResponseData
-{
-    public string response;
-    public bool fallback;
-    public int intimacy_delta;
-}
+public class ResponseData { public string response; public bool fallback; public int intimacy_delta; }
