@@ -751,6 +751,12 @@ MonoBehaviour:
   mapBoundry: {fileID: 916010202}
   direction: 4
   teleportTargetPosition: {fileID: 1284390606}
+<<<<<<< Updated upstream
+=======
+  requiredQuestId: 7f9b2df9-3f6f-4d51-9f38-7a5b4c9e8e11
+  cutsceneSceneName: Quest1Cutscene
+  cutsceneKey: Quest1CutscenePlayed
+>>>>>>> Stashed changes
 --- !u!61 &119271817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -886,6 +892,118 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 694931831}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+<<<<<<< Updated upstream
+=======
+--- !u!114 &126019817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126019813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455839d6023c256479e9b298e3ca4bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &127876531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127876532}
+  - component: {fileID: 127876534}
+  - component: {fileID: 127876533}
+  m_Layer: 0
+  m_Name: BeachExit_Waypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &127876532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127876531}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.7086773, w: 0.70553285}
+  m_LocalPosition: {x: 84.09, y: 54.05, z: 0}
+  m_LocalScale: {x: 0.4712138, y: 0.65001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2105215646}
+  m_Father: {fileID: 281226505}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.255}
+--- !u!114 &127876533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127876531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapBoundary: {fileID: 1405207119}
+  direction: 4
+  teleportTargetPosition: {fileID: 1642579777}
+  requiredQuestId: 
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
+--- !u!61 &127876534
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127876531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.1478577, y: -0.34501243}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.9184532, y: 0.45149708}
+  m_EdgeRadius: 0
+>>>>>>> Stashed changes
 --- !u!1 &156939930
 GameObject:
   m_ObjectHideFlags: 0
@@ -79967,6 +80085,12 @@ MonoBehaviour:
   mapBoundry: {fileID: 916010202}
   direction: 4
   teleportTargetPosition: {fileID: 392195817}
+<<<<<<< Updated upstream
+=======
+  requiredQuestId: 
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
+>>>>>>> Stashed changes
 --- !u!61 &580524368
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81029,6 +81153,12 @@ MonoBehaviour:
   mapBoundry: {fileID: 1405207119}
   direction: 4
   teleportTargetPosition: {fileID: 238211869}
+<<<<<<< Updated upstream
+=======
+  requiredQuestId: 
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
+>>>>>>> Stashed changes
 --- !u!61 &820597395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81074,6 +81204,106 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.870453, y: 0.47817612}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream
+=======
+--- !u!1 &894039774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 894039775}
+  - component: {fileID: 894039777}
+  - component: {fileID: 894039776}
+  m_Layer: 0
+  m_Name: BeachEnter_Waypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &894039775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894039774}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.7064496, w: 0.7077634}
+  m_LocalPosition: {x: 79.92, y: 51.93, z: 0}
+  m_LocalScale: {x: 1.9410332, y: 0.77471, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1642579777}
+  m_Father: {fileID: 281226505}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.894}
+--- !u!114 &894039776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894039774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapBoundary: {fileID: 281226506}
+  direction: 4
+  teleportTargetPosition: {fileID: 2105215646}
+  requiredQuestId: 
+  cutsceneSceneName: Quest1Cutscene1.2
+  cutsceneKey: Quest1CutscenePlayed
+--- !u!61 &894039777
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894039774}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.3680301, y: -0.112831116}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9801531, y: 0.40345764}
+  m_EdgeRadius: 0
+>>>>>>> Stashed changes
 --- !u!1 &916010200
 GameObject:
   m_ObjectHideFlags: 0
@@ -82920,6 +83150,12 @@ MonoBehaviour:
   mapBoundry: {fileID: 1405207119}
   direction: 4
   teleportTargetPosition: {fileID: 1437462327}
+<<<<<<< Updated upstream
+=======
+  requiredQuestId: 
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
+>>>>>>> Stashed changes
 --- !u!61 &1454358199
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83123,6 +83359,12 @@ MonoBehaviour:
   mapBoundry: {fileID: 694931831}
   direction: 4
   teleportTargetPosition: {fileID: 1960483413}
+<<<<<<< Updated upstream
+=======
+  requiredQuestId: 
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
+>>>>>>> Stashed changes
 --- !u!61 &1519776588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -96353,6 +96595,12 @@ MonoBehaviour:
   mapBoundry: {fileID: 1405207119}
   direction: 4
   teleportTargetPosition: {fileID: 224652725}
+<<<<<<< Updated upstream
+=======
+  requiredQuestId: 
+  cutsceneSceneName: 
+  cutsceneKey: Quest1CutscenePlayed
+>>>>>>> Stashed changes
 --- !u!61 &2087545721
 BoxCollider2D:
   m_ObjectHideFlags: 0
