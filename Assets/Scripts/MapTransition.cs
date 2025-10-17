@@ -9,6 +9,10 @@ public class MapTransition : MonoBehaviour
     [SerializeField] Direction direction;
     [SerializeField] Transform teleportTargetPosition;
 
+    [Header("Quest Requirement")]
+    [Tooltip("Leave empty if no quest is required to use this teleporter.")]
+    [SerializeField] string requiredQuestId = "";
+
     [Header("Cutscene Settings (optional)")]
     [Tooltip("Leave empty for normal teleporters. Fill only for cutscene teleporter.")]
     [SerializeField] string cutsceneSceneName = ""; // Example: Quest1Cutscene1.2
@@ -26,6 +30,13 @@ public class MapTransition : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.CompareTag("Player")) return;
+
+        // Check if there's a quest requirement and if it's active
+        if (!string.IsNullOrEmpty(requiredQuestId) && !QuestController.Instance.IsQuestActive(requiredQuestId))
+        {
+            Debug.Log($"MapTransition: Cannot use teleporter - requires quest '{requiredQuestId}' to be active.");
+            return;
+        }
 
         confiner.m_BoundingShape2D = mapBoundary;
 
