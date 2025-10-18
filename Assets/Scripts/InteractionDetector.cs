@@ -25,25 +25,21 @@ public class InteractionDetector : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        var forwarder = other.GetComponent<InteractionForwarder>();
-        if (forwarder != null)
+        if(collision.TryGetComponent(out IInteractable interactable) && interactable.CanInteract())
         {
-            interactableInRange = forwarder;
-            Debug.Log($"InteractionDetector: found interactableInRange = {forwarder.gameObject.name}");
-            if (interactionIcon != null) interactionIcon.SetActive(true);
+            interactableInRange = interactable;
+            interactionIcon.SetActive(true);
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        var forwarder = other.GetComponent<InteractionForwarder>();
-        if (forwarder != null && interactableInRange == forwarder)
+        if(collision.TryGetComponent(out IInteractable interactable) && interactable == interactableInRange)
         {
             interactableInRange = null;
-            Debug.Log("InteractionDetector: cleared interactableInRange");
-            if (interactionIcon != null) interactionIcon.SetActive(false);
+            interactionIcon.SetActive(false);
         }
     }
 }
