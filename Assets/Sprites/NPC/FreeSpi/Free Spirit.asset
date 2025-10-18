@@ -10,35 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee479e226cb81244ab46e804e16927b7, type: 3}
-  m_Name: V1A2 Free Spirit
+  m_Name: Free Spirit
   m_EditorClassIdentifier: 
   npcName: Sora
-  npcPortrait: {fileID: 21300000, guid: c2488789300deec42abd23c832133e1e, type: 3}
+  npcPortrait: {fileID: 21300000, guid: c8b1d17a75d193447b60a54875eb95ee, type: 3}
   dialogueLines:
-  - Hey! You came back! Wanna hangout?
-  - Great! Can you teach me how to draw?
-  - Really?! I'm excited! Let's start!
-  - Oh. Maybe next time then!
-  - Wow! I didn't know drawing could be this fun.
-  - Thank you for teaching me!
-  - Let's hangout again next time!
-  autoProgressLines: 00000000010100
-  endDialogueLines: 00000100000001
+  - Hi! I'm Sora, nice to meet you!
+  - You like drawing or sketching stuff?
+  - Great! The waves here are great you can draw them!
+  - Oh. Weird..
+  autoProgressLines: 0100
+  endDialogueLines: 00000101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   choices:
-  - dialogueIndex: 0
+  - dialogueIndex: 1
     choices:
     - Yes
     - No
-    nextDialogueIndexes: 0100000002000000
-    givesQuest: 0000
-  - dialogueIndex: 1
-    choices:
-    - Sure
-    - No
     nextDialogueIndexes: 0200000003000000
-    givesQuest: 0000
+    givesQuest: 
   questInProgressIndex: 0
   questCompletedIndex: 0
   quest: {fileID: 0}
