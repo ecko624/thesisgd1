@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 1947097332132414527}
-  displayDuration: 4
+  displayDuration: 2
   fadeDuration: 0.25
   canvasGroup: {fileID: 2223324584138907362}
 --- !u!1001 &244243504851664104
