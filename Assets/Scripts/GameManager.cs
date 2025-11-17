@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    
+
     public void UpdateIntimacy(string personality, int newScore)
     {
         personality = personality.ToLower();

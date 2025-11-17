@@ -1,13 +1,20 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Networking;
 
 public class DialogueControllerVersion2 : MonoBehaviour
 {
+    [Header("NPC Portraits")]
+[SerializeField] private Sprite ayaPortrait;
+[SerializeField] private Sprite mikaPortrait;
+[SerializeField] private Sprite soraPortrait;
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI npcText;
+    [SerializeField] private TextMeshProUGUI npcNameText;  // ← ADD THIS
+    [SerializeField] private Image npcPortraitImage;       // ← ADD THIS
     [SerializeField] private TMP_InputField playerInputField;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI intimacyDisplay;
@@ -33,15 +40,35 @@ public class DialogueControllerVersion2 : MonoBehaviour
 {
     currentPersonality = personality.ToLower();
 
-    // Only open panel and show greeting — DO NOT auto-send anything
+    // Set NPC name and portrait
+    SetNPCDisplay(personality);
+    
     dialoguePanel?.SetActive(true);
-    npcText.text = GetGreeting(personality);  // Just show greeting text, no server call
+    npcText.text = GetGreeting(personality);
 
-    // Optional: auto-focus input field
     if (playerInputField)
     {
         playerInputField.text = "";
         playerInputField.ActivateInputField();
+    }
+}
+
+// NEW METHOD — sets name and portrait
+private void SetNPCDisplay(string personality)
+{
+    npcNameText.text = personality.ToUpper(); // e.g. "MIKA"
+
+    switch (personality.ToLower())
+    {
+        case "aya":
+            npcPortraitImage.sprite = ayaPortrait;  // Drag Aya sprite in Inspector
+            break;
+        case "mika":
+            npcPortraitImage.sprite = mikaPortrait; // Drag Mika sprite
+            break;
+        case "sora":
+            npcPortraitImage.sprite = soraPortrait; // Drag Sora sprite
+            break;
     }
 }
 
@@ -60,10 +87,25 @@ private string GetGreeting(string personality)
     public void GetNPCResponse(string input)
     {
         if (string.IsNullOrWhiteSpace(input)) return;
+    if (input == "Type Message") return; // placeholder block
+    if (input.Length < 2) return;        // block accidental single keys
         playerInputField.interactable = false;
         playerInputField.text = "";
         StartCoroutine(Send(input.Trim()));
     }
+
+    
+
+    public void ResetConversation()
+{
+    currentPersonality = "";
+    npcText.text = "";
+    if (playerInputField)
+    {
+        playerInputField.text = "";
+        playerInputField.interactable = true;
+    }
+}
 
     private IEnumerator Send(string input)
     {
@@ -101,13 +143,14 @@ private string GetGreeting(string personality)
     }
 
     private void SaveMemory(string input, string response)
-    {
-        var mem = GameManager.Instance.npcMemories;
-        if (!mem.ContainsKey(currentPersonality)) mem[currentPersonality] = "";
-        mem[currentPersonality] += $"You: {input}\n{currentPersonality}: {response}\n\n";
-        if (mem[currentPersonality].Length > 1000)
-            mem[currentPersonality] = mem[currentPersonality][^800..];
-    }
+{
+    // COMPLETELY DISABLED — we don't need client-side memory anymore
+    // The server already handles memory perfectly
+    // This was poisoning your AI with its own garbage output
+    
+    // Just do nothing — or keep a tiny log if you want
+    // Debug.Log($"[{currentPersonality}] You: {input} → {response}");
+}
 
     public void OnSubmitInput()
     {

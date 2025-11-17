@@ -3,8 +3,11 @@ using UnityEngine.Events;
 
 public class NPCInteractable : MonoBehaviour, IInteractable
 {
+    [Header("References")]
+    [SerializeField] private GameObject dialoguePanel; // Drag your DialoguePanel here
+
     [Header("Identity")]
-    public string serverPersonality = "aya";  // MUST BE: aya, mika, sora
+    public string serverPersonality = "aya";  // MUST BE lowercase: aya, mika, sora
     [TextArea] public string greeting = "Hey!";
 
     [Header("Interaction")]
@@ -31,70 +34,92 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
-        if (!playerTransform) Debug.LogError("Player tag missing!");
+        if (!playerTransform) Debug.LogError("Player with tag 'Player' not found!");
     }
 
     void Update()
+{
+    // Always check distance
+    if (!useTrigger)
+        UpdateDistanceCheck();
+
+    // If dialogue is active, block interaction but DO NOT check panel state
+    if (isDialogueActive)
     {
-        if (!useTrigger) UpdateDistanceCheck();
-        if (!isDialogueActive && playerInRange && Input.GetKeyDown(interactionKey))
-            TryInteract();
+        SetPromptActive(false);
+        return;
     }
+
+    // Allow interaction normally
+    if (playerInRange && Input.GetKeyDown(interactionKey))
+        TryInteract();
+}
+
 
     void UpdateDistanceCheck()
     {
         if (!playerTransform) return;
         float dist = Vector2.Distance(transform.position, playerTransform.position);
         bool inRange = dist <= maxInteractDistance;
+
         if (inRange != playerInRange)
         {
             playerInRange = inRange;
-            SetPromptActive(inRange);
+            SetPromptActive(inRange && !isDialogueActive); // Only show prompt when NOT talking
         }
     }
 
     void SetPromptActive(bool active)
-{
-    if (interactPrompt != null)
-        interactPrompt.SetActive(active);
-    else
-        Debug.LogWarning($"No interactPrompt assigned on {gameObject.name}");
-}
+    {
+        if (interactPrompt != null)
+            interactPrompt.SetActive(active);
+    }
 
     public void Interact() { if (CanInteract()) TryInteract(); }
-    public bool CanInteract() => !isDialogueActive && playerInRange;
+    public bool CanInteract() => playerInRange && !isDialogueActive && (dialoguePanel == null || !dialoguePanel.activeInHierarchy);
 
     void TryInteract()
     {
-        if (dm == null) return;
         isDialogueActive = true;
+        SetPromptActive(false);
 
         GameManager.Instance.currentCharacter = serverPersonality;
         dm.StartInteraction(serverPersonality);
-        if (dm.NpcText) dm.NpcText.text = greeting;
+        dm.NpcText.text = greeting;
         dm.OpenDialoguePanel();
 
         dm.OnModelResponse += OnResponse;
         onOpenDialogue?.Invoke();
-        SetPromptActive(false);
         GameManager.Instance.TryStartMeetEveryoneQuest(serverPersonality);
     }
 
     void OnResponse(string text)
     {
+        // Optional: auto-close on certain keywords (you can remove if you want)
         if (text.ToLower().Contains("bye") || text.ToLower().Contains("see you"))
             EndConversation();
     }
 
-    void EndConversation()
+    public void EndConversation()
 {
-    dm.OnModelResponse -= OnResponse;
+    if (!isDialogueActive) return;
+
     isDialogueActive = false;
+
+    dm.OnModelResponse -= OnResponse;
+
+    dm.CloseDialoguePanel();
+    dm.ResetConversation();
+
     onCloseDialogue?.Invoke();
-    
-    // ← THIS IS THE MISSING FIX
-    SetPromptActive(true);  // Prompt reappears so you can press E again
+
+    if (playerInRange)
+        SetPromptActive(true);
 }
 
-    void OnDisable() => dm.OnModelResponse -= OnResponse;
+
+    void OnDisable()
+    {
+        dm.OnModelResponse -= OnResponse;
+    }
 }
