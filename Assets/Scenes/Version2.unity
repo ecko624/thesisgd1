@@ -4005,7 +4005,7 @@ GameObject:
   - component: {fileID: 361411837}
   - component: {fileID: 361411836}
   m_Layer: 0
-  m_Name: NPC_ClassRep (1)
+  m_Name: Aya
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4040,10 +4040,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personalityKey: Aya
-  npcId: Aya
+  serverPersonality: aya
   portrait: {fileID: 21300000, guid: fbeaa7c6ed581554184c13902ff3a5ef, type: 3}
   greeting: Hey!
-  tone: cheerful
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2
@@ -4345,10 +4344,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personalityKey: 'aya '
-  npcId: Hiroshi
+  serverPersonality: aya
   portrait: {fileID: 21300000, guid: 7eeb9eb5d06871244ac1c702185bcc4d, type: 3}
   greeting: Hey!
-  tone: interested
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2
@@ -57408,6 +57406,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef029dd2f0bc3e4d836fb3608edc04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _peopleMet: 0
+  _questActive: 0
+  _currentCharacter: aya
+  _currentIntimacyLevel: Stranger
+  _ayaIntimacy: 0
+  _mikaIntimacy: 0
+  _soraIntimacy: 0
 --- !u!4 &964456330
 Transform:
   m_ObjectHideFlags: 0
@@ -58961,8 +58966,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueController: {fileID: 1311931302}
   playerInputField: {fileID: 236183721}
-  quest: 10
   quest2: {fileID: 1891969619}
+  quest: 10
 --- !u!114 &1311931302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58978,10 +58983,10 @@ MonoBehaviour:
   npcText: {fileID: 310549969}
   playerInputField: {fileID: 236183721}
   dialoguePanel: {fileID: 1132503805}
-  personality: mika
-  tone: shy
-  intimacy: stranger
-  maxContextLength: 200
+  intimacyDisplay: {fileID: 0}
+  serverURL: http://localhost:5000/generate
+  playerID: player1
+  currentPersonality: aya
 --- !u!1 &1334261315
 GameObject:
   m_ObjectHideFlags: 0
@@ -60094,7 +60099,7 @@ GameObject:
   - component: {fileID: 1462684293}
   - component: {fileID: 1462684297}
   m_Layer: 0
-  m_Name: NPC_LibraryGhost
+  m_Name: Sora
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60241,11 +60246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e6fe677ec7107458ff0b781e7c5041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personalityKey: outgoing_class_rep
-  npcId: Sora
-  portrait: {fileID: 1725984297, guid: 1ed1279162374c84b8411adf9dcbe84c, type: 3}
+  personalityKey: Sora
+  serverPersonality: sora
+  portrait: {fileID: 21300000, guid: c2488789300deec42abd23c832133e1e, type: 3}
   greeting: Hey!
-  tone: stranger
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2
@@ -60493,7 +60497,7 @@ GameObject:
   - component: {fileID: 1560390927}
   - component: {fileID: 1560390928}
   m_Layer: 0
-  m_Name: NPC_ClassRep
+  m_Name: Mika
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60640,11 +60644,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e6fe677ec7107458ff0b781e7c5041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personalityKey: outgoing_class_rep
-  npcId: Mika
-  portrait: {fileID: 21300000, guid: fbeaa7c6ed581554184c13902ff3a5ef, type: 3}
+  personalityKey: Mika
+  serverPersonality: mika
+  portrait: {fileID: 21300000, guid: c8b1d17a75d193447b60a54875eb95ee, type: 3}
   greeting: Hey!
-  tone: shy
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2

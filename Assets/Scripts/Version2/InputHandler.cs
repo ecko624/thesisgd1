@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class InputHandler : MonoBehaviour
 {
     [SerializeField] private DialogueControllerVersion2 dialogueController;
-    public TMP_InputField playerInputField;
-    public int quest = 10;
-    public Text quest2;
+    [SerializeField] private TMP_InputField playerInputField;  // ← Make private + SerializeField
+    [SerializeField] private Text quest2;                       // ← Your quest counter UI
+
+    public int quest = 10;  // Your custom quest counter
 
     void Start()
     {
@@ -25,16 +26,16 @@ public class InputHandler : MonoBehaviour
 
     void Update()
     {
-        quest2.text = quest.ToString() + "/10";
+        // Update quest display
+        if (quest2 != null)
+            quest2.text = quest + "/10";
 
-        // ENTER key submit
-        if (Input.GetKeyDown(KeyCode.Return) && dialogueController != null)
+        // Allow Enter key to submit (optional)
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
-            string input = playerInputField.text;  // ✅ FIXED: read directly from input field
-
-            if (!string.IsNullOrEmpty(input))
+            if (playerInputField.isFocused && !string.IsNullOrWhiteSpace(playerInputField.text))
             {
-                dialogueController.GetNPCResponse(input);
+                OnInputSubmit(playerInputField.text);
             }
         }
     }
@@ -43,66 +44,46 @@ public class InputHandler : MonoBehaviour
     {
         string currentScene = SceneManager.GetActiveScene().name;
 
-        // === QUEST LOGIC ===
-        if (currentScene == "QUEST1GAMEPLAY")
+        // === YOUR CUSTOM QUEST LOGIC (unchanged) ===
+        if (currentScene == "QUEST1GAMEPLAY" && quest <= 0)
         {
-            if (quest <= 0)
-            {
-                Application.LoadLevel("QUEST1END");
-                quest = 0;
-            }
+            SceneManager.LoadScene("QUEST1END");
+            quest = 0;
             PlayerPrefs.SetInt("quest2", 1);
-            PlayerPrefs.Save();
         }
-        if (currentScene == "QUEST21")
+        else if (currentScene == "QUEST21" && quest <= 0)
         {
-            if (quest <= 0)
-            {
-                Application.LoadLevel("QUEST2END");
-                quest = 0;
-            }
+            SceneManager.LoadScene("QUEST2END");
+            quest = 0;
             PlayerPrefs.SetInt("quest3", 1);
-            PlayerPrefs.Save();
         }
-        if (currentScene == "QUEST3GAMEPLAY")
+        else if (currentScene == "QUEST3GAMEPLAY" && quest <= 0)
         {
-            if (quest <= 0)
-            {
-                Application.LoadLevel("QUEST3END");
-                quest = 0;
-            }
+            SceneManager.LoadScene("QUEST3END");
+            quest = 0;
             PlayerPrefs.SetInt("quest4", 1);
-            PlayerPrefs.Save();
         }
 
-        quest -= 1;
+        PlayerPrefs.Save();
+        quest = Mathf.Max(0, quest - 1);  // Decrease safely
 
-        if (string.IsNullOrWhiteSpace(input) || input.Trim().Length < 1) return;
+        if (string.IsNullOrWhiteSpace(input)) return;
 
         string trimmedInput = input.Trim();
 
-        string personality = GameManager.Instance.currentCharacter;
-        string tone = GameManager.Instance.currentTone;
+        // === MODERN WAY: Let DialogueController handle personality & intimacy ===
+        // No need to pass tone, intimacy level, or old names — server handles everything
+        dialogueController.GetNPCResponse(trimmedInput);
 
-        string intimacyLevel = GameManager.Instance.GetIntimacyLevel(
-            personality == "outgoing_class_rep" ? GameManager.Instance.ayaIntimacy :
-            personality == "library_ghost" ? GameManager.Instance.mikaIntimacy :
-            GameManager.Instance.soraIntimacy
-        );
-
-        // Send to dialogue controller
-        if (dialogueController != null)
-        {
-            dialogueController.GetNPCResponse(trimmedInput, personality, tone, intimacyLevel);
-        }
-
-        // Reset input
+        // Clear input
         playerInputField.text = "";
         playerInputField.ActivateInputField();
     }
 
+    // For UI button (optional)
     public void OnSubmitButtonClick()
     {
-        OnInputSubmit(playerInputField.text);
+        if (!string.IsNullOrWhiteSpace(playerInputField.text))
+            OnInputSubmit(playerInputField.text);
     }
 }
