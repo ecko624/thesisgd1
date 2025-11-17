@@ -1,0 +1,170 @@
+[title=Cutscene_0_begin]
+Mika:Um... h-hey... You haven’t played this demo before, right? It can actually, uh... save your choices... and remember what you said to me last time.
+Ren:W-Wait, really? That sounds kind of... scary. You’ll actually remember what I said?
+Mika:Hehe... yeah. So... maybe be nice to me, okay?
+Ren:I’ll try my best… but that depends on what you ask me.
+Mika:E-Eh!? O-Okay then, um... Let’s test it! 
+Mika:[question=FirstImpressionQuestion]So... w-what do you think about me so far?
+[choice]Y-You’re really cute![newtalk start=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_0_begin break=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_0_end]
+[choice]You seem... interesting. In a good way![newtalk start=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_1_begin break=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_1_end]
+
+[title=FollowUp_Cutscene_0_SaveNode_0_end]
+
+[title=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_0_begin]
+Mika:W-Wha...!? D-Don’t just say that so suddenly! My heart isn’t ready!
+Ren:I-I mean it though... it just slipped out.
+Mika:Uuuh... I-I’ll remember that... even if I pretend not to...
+[title=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_0_end]
+
+[title=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_1_begin]
+Mika:O-Oh, interesting...? I’m not sure if that’s a compliment or not, but... thank you.
+Ren:It is! I promise.
+Mika:Hehe... then I’ll try to stay interesting for you.
+[title=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_1_end]
+
+[title=FollowUp_Cutscene_0_SaveNode_1_begin]
+Mika:H-Hey, um... I remember what you said before. You called me... cute...
+Ren:Oh, I did, didn’t I...?
+Mika:You don’t have to say it again, o-okay!? My face can’t handle it...
+Ren:Haha, noted.
+[title=FollowUp_Cutscene_0_SaveNode_1_end]
+
+[title=FollowUp_Cutscene_0_SaveNode_2_begin]
+Mika:So, you’re back... You said I was “interesting,” remember?
+Ren:Heh, yeah... I still think so.
+Mika:W-Well... I’ll just have to make sure you keep thinking that way, then.
+[title=FollowUp_Cutscene_0_SaveNode_2_end]
+
+
+[title=Cutscene_1_begin]
+Mika:S-So, um... Ren... since we’re talking again, I wanted to ask you something a little... different.
+Ren:O-Oh? What is it?
+Mika:[question=DateIdeaQuestion]If we were to, you know... h-hang out... where would you want to go?
+[choice]A cozy café... sounds nice.[newtalk start=FollowUp_Cutscene_1_Choice_0_begin break=FollowUp_Cutscene_1_Choice_0_end]
+[choice]M-Maybe somewhere fun... like an arcade![newtalk start=FollowUp_Cutscene_1_Choice_1_begin break=FollowUp_Cutscene_1_Choice_1_end]
+
+[title=FollowUp_Cutscene_1_Choice_0_begin]
+Mika:A café...? That sounds really peaceful. I-I like that kind of place.
+Ren:Yeah, somewhere quiet... where we could just talk.
+Mika:Ah... I think I’d like that too... j-just the two of us, maybe...
+Ren:Heh, you’re blushing again.
+Mika:S-Stop noticing everything!
+[title=FollowUp_Cutscene_1_Choice_0_end]
+
+[title=FollowUp_Cutscene_1_Choice_1_begin]
+Mika:T-The arcade!? That sounds... fun! But I’m not very good at games...
+Ren:That’s fine. I’ll help you if you need it.
+Mika:Hehe... then maybe I’ll let you win... maybe.
+Ren:I’ll take my chances.
+[title=FollowUp_Cutscene_1_Choice_1_end]
+
+
+[title=Cutscene_2_begin]
+Mika:H-Hey Ren... c-can I ask you something kind of... personal?
+Ren:Uh... sure. Go ahead.
+Mika:[question=FeelingsQuestion]Do you... um... actually like spending time with me?
+[choice]O-Of course I do![newtalk start=FollowUp_Cutscene_2_Choice_0_begin break=FollowUp_Cutscene_2_Choice_0_end]
+[choice]Y-Yeah... I really enjoy being around you.[newtalk start=FollowUp_Cutscene_2_Choice_1_begin break=FollowUp_Cutscene_2_Choice_1_end]
+
+[title=FollowUp_Cutscene_2_Choice_0_begin]
+Mika:You... really mean that?
+Ren:Yeah. I wouldn’t say it if I didn’t.
+Mika:Oh... I-I see... That makes me... really happy.
+[title=FollowUp_Cutscene_2_Choice_0_end]
+
+[title=FollowUp_Cutscene_2_Choice_1_begin]
+Mika:Hehe... you said that so gently. I-I can tell you mean it.
+Ren:It’s true. You’re really easy to be around.
+Mika:W-Wah... s-stop saying things like that, I can’t focus...
+[title=FollowUp_Cutscene_2_Choice_1_end]
+
+
+[title=FollowUp_Cutscene_2_SaveNode_1_begin]
+Mika:Um... y-you said before that you liked spending time with me... so I tried dressing up a bit nicer today...
+Ren:You look wonderful, Mika.
+Mika:H-Hey...! You weren’t supposed to say it like that...!
+[title=FollowUp_Cutscene_2_SaveNode_1_end]
+
+[title=FollowUp_Cutscene_2_SaveNode_2_begin]
+Mika:You said you liked being around me, so... I thought maybe we could hang out more often.
+Ren:I’d like that. A lot.
+Mika:E-Eh!? I... I mean, s-same!
+[title=FollowUp_Cutscene_2_SaveNode_2_end]
+
+[title=Cutscene_2_end]
+
+
+[title=Cutscene_3_begin]
+Mika:Y-You know... every time we talk, I feel like I understand you a little more.
+Ren:R-Really? That’s... nice to hear.
+Mika:Yeah... you’re quiet sometimes, but you’re also... really kind.
+Ren:O-Oh, I, uh... thanks. That means a lot.
+Mika:[question=ComplimentQuestion]W-What about me, then...? I-Is there something you like about me?
+[choice]Your smile... it’s really warm.[newtalk start=FollowUp_Cutscene_3_Choice_0_begin break=FollowUp_Cutscene_3_Choice_0_end]
+[choice]Your laugh... it always makes me smile too.[newtalk start=FollowUp_Cutscene_3_Choice_1_begin break=FollowUp_Cutscene_3_Choice_1_end]
+
+[title=FollowUp_Cutscene_3_Choice_0_begin]
+Mika:M-My smile...? You noticed that...?
+Ren:How could I not? It makes everything feel lighter.
+Mika:Uuh... s-stop saying that... my face is all warm now!
+[title=FollowUp_Cutscene_3_Choice_0_end]
+
+[title=FollowUp_Cutscene_3_Choice_1_begin]
+Mika:M-My laugh...? You really think it’s nice?
+Ren:Yeah. It’s... comforting, I guess.
+Mika:H-Hehe... that’s really sweet of you to say.
+[title=FollowUp_Cutscene_3_Choice_1_end]
+
+
+[title=FollowUp_Cutscene_3_SaveNode_1_begin]
+Mika:Um... y-you said before that you liked my smile... so... I smiled a little extra today...
+Ren:Heh, it’s working. You’re glowing.
+Mika:S-Stop looking at me like that!
+[title=FollowUp_Cutscene_3_SaveNode_1_end]
+
+[title=FollowUp_Cutscene_3_SaveNode_2_begin]
+Mika:You said you liked my laugh, remember? So... I’ll try to laugh more, if it makes you happy.
+Ren:It does. A lot.
+Mika:Uuuh, you’re too nice sometimes!
+[title=FollowUp_Cutscene_3_SaveNode_2_end]
+
+[title=Cutscene_3_end]
+
+
+[title=Cutscene_4_begin]
+Mika:R-Ren... can I ask you something... kind of... scary?
+Ren:Scary? You’re making me nervous too now.
+Mika:I just... I was thinking... if this story ever had an ending... what would you want it to be?
+Ren:That’s... a big question.
+Mika:[question=ConfessionQuestion]Would you rather... w-we stay together...? Or... stay friends...?
+[choice]I’d want us... to stay together.[newtalk start=FollowUp_Cutscene_4_Choice_0_begin break=FollowUp_Cutscene_4_Choice_0_end]
+[choice]I think... being close friends is nice too.[newtalk start=FollowUp_Cutscene_4_Choice_1_begin break=FollowUp_Cutscene_4_Choice_1_end]
+
+[title=FollowUp_Cutscene_4_Choice_0_begin]
+Mika:T-Together!? Y-You mean like... like that!?
+Ren:Y-Yeah... like that.
+Mika:I... I don’t know what to say... b-but... maybe I’d like that too.
+Ren:Then... maybe that’s our happy ending.
+Mika:H-Hehe... you’re really unfair sometimes...
+[title=FollowUp_Cutscene_4_Choice_0_end]
+
+[title=FollowUp_Cutscene_4_Choice_1_begin]
+Mika:F-Friends... forever? That sounds... nice, too.
+Ren:Yeah. It means we’ll always be there for each other.
+Mika:Hehe... I like that. You always make things feel... safe.
+[title=FollowUp_Cutscene_4_Choice_1_end]
+
+
+[title=FollowUp_Cutscene_4_SaveNode_1_begin]
+Mika:Y-You said you wanted us to stay together... so... I made this little charm. It’s... for you.
+Ren:It’s beautiful, Mika. I’ll keep it close.
+Mika:D-Don’t say things like that, I’ll melt...
+[title=FollowUp_Cutscene_4_SaveNode_1_end]
+
+[title=FollowUp_Cutscene_4_SaveNode_2_begin]
+Mika:You said “friends forever,” right? So... I made us matching bracelets.
+Ren:Wow, that’s adorable.
+Mika:D-Don’t tease! It’s... a friendship promise.
+[title=FollowUp_Cutscene_4_SaveNode_2_end]
+
+[title=Cutscene_4_end]

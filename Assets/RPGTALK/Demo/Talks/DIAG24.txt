@@ -1,0 +1,353 @@
+[title=Cutscene_0_begin]
+Scene:The hallway is quiet, with lockers lining both sides. Aya is leaning against a locker, sketchbook in hand.
+Girl:looks up and waves Hey! Didn’t expect to see you here.
+Girl:[question=GreetingChoice]Hi
+[choice]Hey… you’re Aya, right?[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]Hi… you’re Aya, right?[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+[title=Cutscene_0_end]
+
+[title=Cutscene_0_PlayerChoice_0a_begin]
+Girl:smiles cheerfully Yeah! That’s me.
+Girl:closes sketchbook slightly I’m Aya. You are?
+Player:Ren. Hey!
+Girl:grins Go ahead, walk with me for a bit. The festival’s going to start soon, you know.
+[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0a_end]
+
+[title=Cutscene_0_PlayerChoice_0b_begin]
+Girl:looks at you with a grin Yep! That’s me.
+Girl:taps pencil I’m Aya. And you are?
+Player:Ren. Nice to meet you.
+Girl:smiles Sure! Come walk with me. The festival booths are already being set up.
+[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0b_end]
+
+[title=Cutscene_1_begin]
+Girl:flipping through her sketchbook The hallway’s unusually quiet today. But the festival decorations are already making it feel lively.
+Girl:glances at you So… what brings you here?
+Girl:[question=ReasonInLibrary]?
+[choice]Just walking around.[newtalk start=Cutscene_1_PlayerChoice_a_begin break=Cutscene_1_PlayerChoice_a_end]
+[choice]I saw you here, so I thought I’d join.[newtalk start=Cutscene_1_PlayerChoice_b_begin break=Cutscene_1_PlayerChoice_b_end]
+[title=Cutscene_1_end]
+
+[title=Cutscene_1_PlayerChoice_a_begin]
+Girl:nods That makes sense! It’s nice to stretch your legs before all the festival chaos.
+Girl:keeps doodling in her notebook You can walk with me. Just don’t distract me too much—I might start drawing festival decorations instead!
+[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_1_PlayerChoice_a_end]
+
+[title=Cutscene_1_PlayerChoice_b_begin]
+Girl:pauses with a grin …Really?
+Girl:raises brow Bold move! I like that.
+Girl:shrugs Alright, walk alongside me! But watch out—festival prep is everywhere, so don’t trip over the decorations.
+[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_1_PlayerChoice_b_end]
+
+[title=Cutscene_2_begin]
+Girl:sketching in her notebook You keep glancing at my doodles. Why?
+Girl:[question=DrawingResponse]?
+[choice]It looks really cool! You’re talented.[newtalk start=Cutscene_2_PlayerChoice_a_begin break=Cutscene_2_PlayerChoice_a_end]
+[choice]I was just curious.[newtalk start=Cutscene_2_PlayerChoice_b_begin break=Cutscene_2_PlayerChoice_b_end]
+[title=Cutscene_2_end]
+
+[title=Cutscene_2_PlayerChoice_a_begin]
+Girl:blinks lightly …Thanks!
+Girl:looks away and giggles Didn’t expect that. Maybe I’ll doodle some festival booths next.
+[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_PlayerChoice_a_end]
+
+[title=Cutscene_2_PlayerChoice_b_begin]
+Girl:Oh! Well, try not to peek too much.
+Girl:smirks It’s a little distracting. But you can help me think of festival ideas if you want.
+[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_PlayerChoice_b_end]
+
+[title=Cutscene_3_begin]
+Girl:closes sketchbook cheerfully That’s enough doodling for now.
+Girl:stands I’m heading to check on some festival booths, but if you’re around later… maybe we can walk together again!
+Girl:small shrug No promises, though.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_3_end]
+
+
+
+[title=Cutscene_4_begin]
+Scene:Walking down the hallway, Aya points at some colorful banners being hung.
+Girl:Check out these banners! They’re going to make the festival look amazing.
+Girl:[question=BannerResponse]?
+[choice]Yeah, they’re really bright![newtalk start=Cutscene_4_PlayerChoice_a_begin break=Cutscene_4_PlayerChoice_a_end]
+[choice]I like the colors, but they’re a bit messy.[newtalk start=Cutscene_4_PlayerChoice_b_begin break=Cutscene_4_PlayerChoice_b_end]
+[title=Cutscene_4_end]
+
+[title=Cutscene_4_PlayerChoice_a_begin]
+Player:Yeah, they’re really bright!
+Girl:Smiles. Exactly! I might doodle a few more decorations inspired by these colors.
+[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_4_PlayerChoice_a_end]
+
+[title=Cutscene_4_PlayerChoice_b_begin]
+Player:I like the colors, but they’re a bit messy.
+Girl:Laughs. True, but that’s part of the charm. Festivals aren’t supposed to be perfect!
+[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_4_PlayerChoice_b_end]
+
+[title=Cutscene_5_begin]
+Girl:See that food stall being set up? Smells incredible already.
+Girl:[question=FoodResponse]?
+[choice]I can’t wait to try everything.[newtalk start=Cutscene_5_PlayerChoice_a_begin break=Cutscene_5_PlayerChoice_a_end]
+[choice]I hope it’s not too crowded tomorrow.[newtalk start=Cutscene_5_PlayerChoice_b_begin break=Cutscene_5_PlayerChoice_b_end]
+[title=Cutscene_5_end]
+
+[title=Cutscene_5_PlayerChoice_a_begin]
+Player:I can’t wait to try everything.
+Girl:Laughs. You better save some room—you’ll want dessert too!
+[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
+[title=Cutscene_5_PlayerChoice_a_end]
+
+[title=Cutscene_5_PlayerChoice_b_begin]
+Player:I hope it’s not too crowded tomorrow.
+Girl:Nods. Yeah, it’ll get busy fast… but that’s part of the fun!
+[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
+[title=Cutscene_5_PlayerChoice_b_end]
+
+[title=Cutscene_6_begin]
+Girl:Points toward a game booth. This ring toss is going to be tricky for beginners.
+Girl:[question=RingTossResponse]?
+[choice]I think I could win![newtalk start=Cutscene_6_PlayerChoice_a_begin break=Cutscene_6_PlayerChoice_a_end]
+[choice]Better not try, I’d probably fail.[newtalk start=Cutscene_6_PlayerChoice_b_begin break=Cutscene_6_PlayerChoice_b_end]
+[title=Cutscene_6_end]
+
+[title=Cutscene_6_PlayerChoice_a_begin]
+Player:I think I could win!
+Girl:Grins. Confident, huh? We’ll see tomorrow!
+[newtalk start=Cutscene_7_begin break=Cutscene_7_end]
+[title=Cutscene_6_PlayerChoice_a_end]
+
+[title=Cutscene_6_PlayerChoice_b_begin]
+Player:Better not try, I’d probably fail.
+Girl:Smirks. Don’t worry, I’ll cheer for you anyway.
+[newtalk start=Cutscene_7_begin break=Cutscene_7_end]
+[title=Cutscene_6_PlayerChoice_b_end]
+[title=Cutscene_7_begin]
+Girl:Glances around The festival prep is chaotic but kind of fun to watch.
+Girl:[question=FestivalChaosResponse]?
+[choice]I love seeing it all come together.[newtalk start=Cutscene_7_PlayerChoice_a_begin break=Cutscene_7_PlayerChoice_a_end]
+[choice]It’s a bit overwhelming, though.[newtalk start=Cutscene_7_PlayerChoice_b_begin break=Cutscene_7_PlayerChoice_b_end]
+[title=Cutscene_7_end]
+[title=Cutscene_7_PlayerChoice_a_begin]
+Player:I love seeing it all come together.
+Girl:Exactly! Even the little mess-ups make it more lively.
+Girl:We should take a picture of this hallway later—it’ll be part of the festival memories.
+[newtalk start=Cutscene_8_begin break=Cutscene_8_end]
+[title=Cutscene_7_PlayerChoice_a_end]
+
+[title=Cutscene_7_PlayerChoice_b_begin]
+Player:It’s a bit overwhelming, though.
+Girl:Nods. Yep, lots of moving pieces… but that’s part of the excitement![newtalk start=Cutscene_8_begin break=Cutscene_8_end]
+Girl:Maybe we can find a quiet spot to catch our breath before the festival madness.
+[newtalk start=Cutscene_8_begin break=Cutscene_8_end]
+[title=Cutscene_7_PlayerChoice_b_end]
+
+[title=Cutscene_8_begin]
+Girl:Pulls out her sketchbook I want to draw a festival mascot… want to see it?
+Girl:[question=MascotResponse]?
+[choice]Sure, show me![newtalk start=Cutscene_8_PlayerChoice_a_begin break=Cutscene_8_PlayerChoice_a_end]
+[choice]Maybe later, let’s keep walking.[newtalk start=Cutscene_8_PlayerChoice_b_begin break=Cutscene_8_PlayerChoice_b_end]
+[title=Cutscene_8_end]
+
+[title=Cutscene_8_PlayerChoice_a_begin]
+Player:Sure, show me!
+Girl:Shows a cute, slightly silly mascot.
+Girl:Don’t laugh too hard… or you’ll have to help name it.
+[newtalk start=Cutscene_9_begin break=Cutscene_9_end]
+[title=Cutscene_8_PlayerChoice_a_end]
+
+[title=Cutscene_8_PlayerChoice_b_begin]
+Player:Maybe later, let’s keep walking.
+Girl:Grins. Fine, but you’ll regret missing this masterpiece.
+Girl:Come on, the snack booths are just ahead!
+[newtalk start=Cutscene_9_begin break=Cutscene_9_end]
+[title=Cutscene_8_PlayerChoice_b_end]
+[title=Cutscene_9_begin]
+Scene:Walking past snack booths, Aya points at colorful treats.
+Girl:Look at all these snacks! I don’t even know where to start.
+Girl:[question=SnackResponse]?
+[choice]Everything looks delicious![newtalk start=Cutscene_9_PlayerChoice_a_begin break=Cutscene_9_PlayerChoice_a_end]
+[choice]Maybe we should try the less crowded ones first.[newtalk start=Cutscene_9_PlayerChoice_b_begin break=Cutscene_9_PlayerChoice_b_end]
+[title=Cutscene_9_end]
+
+[title=Cutscene_9_PlayerChoice_a_begin]
+Player:Everything looks delicious!
+Girl:Laughs. Then we better pace ourselves… or we’ll be too full for games.
+[newtalk start=Cutscene_10_begin break=Cutscene_10_end]
+[title=Cutscene_9_PlayerChoice_a_end]
+
+[title=Cutscene_9_PlayerChoice_b_begin]
+Player:Maybe we should try the less crowded ones first.
+Girl:Nods. Smart thinking! The long lines can wait.
+[newtalk start=Cutscene_10_begin break=Cutscene_10_end]
+[title=Cutscene_9_PlayerChoice_b_end]
+
+[title=Cutscene_10_begin]
+Girl:Points at a game booth. This balloon dart game looks tricky.
+Girl:[question=GameResponse]?
+[choice]I want to try it![newtalk start=Cutscene_10_PlayerChoice_a_begin break=Cutscene_10_PlayerChoice_a_end]
+[choice]Better watch you play first.[newtalk start=Cutscene_10_PlayerChoice_b_begin break=Cutscene_10_PlayerChoice_b_end]
+[title=Cutscene_10_end]
+
+[title=Cutscene_10_PlayerChoice_a_begin]
+Player:I want to try it!
+Girl:Smirks. Alright, let’s see if you have skills.
+[newtalk start=Cutscene_11_begin break=Cutscene_11_end]
+[title=Cutscene_10_PlayerChoice_a_end]
+
+[title=Cutscene_10_PlayerChoice_b_begin]
+Player:Better watch you play first.
+Girl:Grins. Fine, but don’t laugh if I win on my first try!
+[newtalk start=Cutscene_11_begin break=Cutscene_11_end]
+[title=Cutscene_10_PlayerChoice_b_end]
+
+[title=Cutscene_11_begin]
+Scene:Walking toward the main hallway, Aya gestures at students preparing decorations.
+Girl:The festival is really taking shape! I love seeing everyone excited.
+Girl:[question=ExcitementResponse]?
+[choice]It’s so lively! I can’t wait for tomorrow.[newtalk start=Cutscene_11_PlayerChoice_a_begin break=Cutscene_11_PlayerChoice_a_end]
+[choice]I hope it all goes smoothly.[newtalk start=Cutscene_11_PlayerChoice_b_begin break=Cutscene_11_PlayerChoice_b_end]
+[title=Cutscene_11_end]
+
+[title=Cutscene_11_PlayerChoice_a_begin]
+Player:It’s so lively! I can’t wait for tomorrow.
+Girl:Me too! I’m already imagining all the fun we’ll have.
+[newtalk start=Cutscene_12_begin break=Cutscene_12_end]
+[title=Cutscene_11_PlayerChoice_a_end]
+
+[title=Cutscene_11_PlayerChoice_b_begin]
+Player:I hope it all goes smoothly.
+Girl:Nods. But sometimes the small chaos makes it even more memorable!
+[newtalk start=Cutscene_12_begin break=Cutscene_12_end]
+[title=Cutscene_11_PlayerChoice_b_end]
+
+[title=Cutscene_12_begin]
+Girl:Glances at her sketchbook I’m thinking of drawing a quick festival map for fun.
+Girl:[question=MapResponse]?
+[choice]That’s a great idea![newtalk start=Cutscene_12_PlayerChoice_a_begin break=Cutscene_12_PlayerChoice_a_end]
+[choice]Maybe later, we should keep exploring.[newtalk start=Cutscene_12_PlayerChoice_b_begin break=Cutscene_12_PlayerChoice_b_end]
+[title=Cutscene_12_end]
+
+[title=Cutscene_12_PlayerChoice_a_begin]
+Player:That’s a great idea!
+Girl:Smiles. We could even mark the best food spots and game booths.
+[newtalk start=Cutscene_13_begin break=Cutscene_13_end]
+[title=Cutscene_12_PlayerChoice_a_end]
+
+[title=Cutscene_12_PlayerChoice_b_begin]
+Player:Maybe later, we should keep exploring.
+Girl:Grins. Fine, adventure first, map later!
+[newtalk start=Cutscene_13_begin break=Cutscene_13_end]
+[title=Cutscene_12_PlayerChoice_b_end]
+
+[title=Cutscene_13_begin]
+Scene:Near the gym, Aya points at lanterns hanging above.
+Girl:These lanterns are going to look magical at night.
+Girl:[question=LanternResponse]?
+[choice]They’ll be amazing![newtalk start=Cutscene_13_PlayerChoice_a_begin break=Cutscene_13_PlayerChoice_a_end]
+[choice]Maybe we should add a few more.[newtalk start=Cutscene_13_PlayerChoice_b_begin break=Cutscene_13_PlayerChoice_b_end]
+[title=Cutscene_13_end]
+
+[title=Cutscene_13_PlayerChoice_a_begin]
+Player:They’ll be amazing!
+Girl:Smiles. Nighttime photos are going to be so pretty.
+[newtalk start=Cutscene_14_begin break=Cutscene_14_end]
+[title=Cutscene_13_PlayerChoice_a_end]
+
+[title=Cutscene_13_PlayerChoice_b_begin]
+Player:Maybe we should add a few more.
+Girl:Nods. Great idea! More lanterns = more magical vibes.
+[newtalk start=Cutscene_14_begin break=Cutscene_14_end]
+[title=Cutscene_13_PlayerChoice_b_end]
+
+[title=Cutscene_14_begin]
+Girl:Looks at the crowd setting up booths. Everyone’s energy is contagious!
+Girl:[question=EnergyResponse]?
+[choice]I love the excitement.[newtalk start=Cutscene_14_PlayerChoice_a_begin break=Cutscene_14_PlayerChoice_a_end]
+[choice]It’s a bit overwhelming.[newtalk start=Cutscene_14_PlayerChoice_b_begin break=Cutscene_14_PlayerChoice_b_end]
+[title=Cutscene_14_end]
+
+[title=Cutscene_14_PlayerChoice_a_begin]
+Player:I love the excitement.
+Girl:Me too! Moments like this are why I enjoy festivals so much.
+[newtalk start=Cutscene_15_begin break=Cutscene_15_end]
+[title=Cutscene_14_PlayerChoice_a_end]
+
+[title=Cutscene_14_PlayerChoice_b_begin]
+Player:It’s a bit overwhelming.
+Girl:Yeah, but that just makes us appreciate the calmer spots even more.
+[newtalk start=Cutscene_15_begin break=Cutscene_15_end]
+[title=Cutscene_14_PlayerChoice_b_end]
+
+[title=Cutscene_15_begin]
+Scene:Aya stretches, glancing at the hallway.
+Girl:We’ve walked a lot today… think we should head toward the exit soon?
+Girl:[question=ExitResponse]?
+[choice]Yeah, it’s getting late.[newtalk start=Cutscene_15_PlayerChoice_a_begin break=Cutscene_15_PlayerChoice_a_end]
+[choice]Let’s explore a bit more.[newtalk start=Cutscene_15_PlayerChoice_b_begin break=Cutscene_15_PlayerChoice_b_end]
+[title=Cutscene_15_end]
+
+[title=Cutscene_15_PlayerChoice_a_begin]
+Player:Yeah, it’s getting late.
+Girl:Nods. I guess it’s time to head home, but tomorrow will be fun!
+[newtalk start=Cutscene_16_begin break=Cutscene_16_end]
+[title=Cutscene_15_PlayerChoice_a_end]
+
+[title=Cutscene_15_PlayerChoice_b_begin]
+Player:Let’s explore a bit more.
+Girl:Grins. Okay, but we need to pace ourselves… can’t get too tired before the festival.
+[newtalk start=Cutscene_16_begin break=Cutscene_16_end]
+[title=Cutscene_15_PlayerChoice_b_end]
+
+[title=Cutscene_16_begin]
+Scene:Walking toward the exit, Aya glances back at the festival hallway.
+Girl:Tomorrow all of this will be packed with people… can’t wait!
+Player:Yeah, it’s going to be exciting.
+Girl:Smiles. I’m glad you joined me today.
+[newtalk start=Cutscene_17_begin break=Cutscene_17_end]
+[title=Cutscene_16_end]
+
+[title=Cutscene_17_begin]
+Girl:Pauses at the door I should head home now.
+Girl:[question=GoodbyeResponse]?
+[choice]See you tomorrow![newtalk start=Cutscene_17_PlayerChoice_a_begin break=Cutscene_17_PlayerChoice_a_end]
+[choice]Have a safe trip home.[newtalk start=Cutscene_17_PlayerChoice_b_begin break=Cutscene_17_PlayerChoice_b_end]
+[title=Cutscene_17_end]
+
+[title=Cutscene_17_PlayerChoice_a_begin]
+Player:See you tomorrow!
+Girl:Waves cheerfully. Can’t wait to show you the festival in full swing!
+[newtalk start=Cutscene_18_begin break=Cutscene_18_end]
+[title=Cutscene_17_PlayerChoice_a_end]
+
+[title=Cutscene_17_PlayerChoice_b_begin]
+Player:Have a safe trip home.
+Girl:Thanks! You too. Tomorrow will be amazing.
+[newtalk start=Cutscene_18_begin break=Cutscene_18_end]
+[title=Cutscene_17_PlayerChoice_b_end]
+
+[title=Cutscene_18_begin]
+Scene:Aya walks down the street, backpack slung over her shoulder.
+Girl:Today was fun, but I need to get some rest before the festival.
+Girl:Small smile Maybe we can meet again tomorrow and explore even more.
+[newtalk start=Cutscene_19_begin break=Cutscene_19_end]
+[title=Cutscene_18_end]
+
+[title=Cutscene_19_begin]
+Girl:Waves at a passing friend.
+Girl:Looks back at you Oh! Don’t forget to stop by my booth tomorrow. I’ll save a little doodle for you!
+Player:Sounds great!
+[newtalk start=Cutscene_20_begin break=Cutscene_20_end]
+[title=Cutscene_19_end]
+
+[title=Cutscene_20_begin]
+Scene:Aya turns a corner and disappears from view.
+Girl:Waves one last time See you tomorrow, Ren!
+[title=Cutscene_20_end]
+
+[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=-1]

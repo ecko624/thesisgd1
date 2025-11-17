@@ -1,0 +1,75 @@
+[title=Cutscene_0_begin]
+Scene:The library is quiet. Mika sits at a table, sketchbook open, drawing.
+Girl:without looking up Oh. It’s you.
+Girl:[question=GreetingChoice]Hi
+[choice]Hey… you’re Mika, right?[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]Hi… you’re Mika, right?[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+[title=Cutscene_0_end]
+
+
+[title=Cutscene_0_PlayerChoice_0a_begin]
+Girl:glances up Yeah. And you’re standing in my light.
+Girl:closes sketchbook a bit I’m Mika. You?
+Player:Ren. Sorry about that.
+Girl:shrugs It’s fine. Sit if you want.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0a_end]
+
+
+[title=Cutscene_0_PlayerChoice_0b_begin]
+Girl:looks at you for a second Yep. That’s me.
+Girl:taps pencil I’m Mika. And you are?
+Player:Ren. Nice to meet you.
+Girl:Hm. Sure.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0b_end]
+
+
+[title=Cutscene_1_begin]
+Girl:goes back to drawing The library’s quiet today. I like it better this way.
+Girl:glances at you So… what are you doing here?
+Girl:[question=ReasonInLibrary]?
+[choice]Just looking for a quiet place.[newtalk start=Cutscene_1_PlayerChoice_a_begin break=Cutscene_1_PlayerChoice_a_end]
+[choice]I saw you here, so I came over.[newtalk start=Cutscene_1_PlayerChoice_b_begin break=Cutscene_1_PlayerChoice_b_end]
+[title=Cutscene_1_end]
+
+
+[title=Cutscene_1_PlayerChoice_a_begin]
+Girl:nods Makes sense. Quiet is rare here.
+Girl:keeps drawing You can stay. Just don’t talk too loud.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_1_PlayerChoice_a_end]
+
+
+[title=Cutscene_1_PlayerChoice_b_begin]
+Girl:pauses …Really?
+Girl:raises brow You’re bold. Or weird.
+Girl:shrugs Either way, sit.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_1_PlayerChoice_b_end]
+
+
+[title=Cutscene_2_begin]
+Girl:sketching You keep looking at my drawing. Why?
+Girl:[question=DrawingResponse]?
+[choice]It looks good. You’re talented.[newtalk start=Cutscene_2_PlayerChoice_a_begin break=Cutscene_2_PlayerChoice_a_end]
+[choice]I was just curious, that’s all.[newtalk start=Cutscene_2_PlayerChoice_b_begin break=Cutscene_2_PlayerChoice_b_end]
+[title=Cutscene_2_end]
+
+
+[title=Cutscene_2_PlayerChoice_a_begin]
+Girl:blinks lightly …Thanks.
+Girl:looks away for a second Didn’t expect that.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_PlayerChoice_a_end]
+
+
+[title=Cutscene_2_PlayerChoice_b_begin]
+Girl:Oh. Well, don’t stare too much.
+Girl:smirks lightly It’s distracting.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_PlayerChoice_b_end]
+
+
+[title=Cutscene_3_begin]
+Girl:closes sketchbook That’s enough drawing for now.
+Girl:stands I’m heading out. If you’re here again tomorrow… maybe I won’t ignore you.
+Girl:small shrug No promises though.
+[title=Cutscene_3_end]
+
+
+[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=-1]

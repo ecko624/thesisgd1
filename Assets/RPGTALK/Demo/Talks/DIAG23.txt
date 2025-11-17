@@ -1,0 +1,75 @@
+[title=Cutscene_0_begin]
+Scene:The classroom is bright and lively. Aya sits at a desk, sketchbook open, doodling with a smile.
+Girl:without looking up Hey! It’s you.
+Girl:[question=GreetingChoice]Hi
+[choice]Hey… you’re Aya, right?[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]Hi… you’re Aya, right?[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+[title=Cutscene_0_end]
+
+
+[title=Cutscene_0_PlayerChoice_0a_begin]
+Girl:glances up cheerfully Yeah! That’s me.
+Girl:closes sketchbook a bit I’m Aya. You are?
+Player:Ren. Hey!
+Girl:smiles It’s fine. You can sit here if you want.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0a_end]
+
+
+[title=Cutscene_0_PlayerChoice_0b_begin]
+Girl:looks at you with a grin Yep! That’s me.
+Girl:taps pencil I’m Aya. And you are?
+Player:Ren. Nice to meet you.
+Girl:smiles Sure! Have a seat.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0b_end]
+
+
+[title=Cutscene_1_begin]
+Girl:goes back to doodling The classroom is so lively today! I kinda like it.
+Girl:glances at you So… what brings you here?
+Girl:[question=ReasonInLibrary]?
+[choice]Just looking for a fun place to sit.[newtalk start=Cutscene_1_PlayerChoice_a_begin break=Cutscene_1_PlayerChoice_a_end]
+[choice]I saw you here, so I thought I’d join.[newtalk start=Cutscene_1_PlayerChoice_b_begin break=Cutscene_1_PlayerChoice_b_end]
+[title=Cutscene_1_end]
+
+
+[title=Cutscene_1_PlayerChoice_a_begin]
+Girl:nods happily Makes sense! It’s nice to find a spot like this.
+Girl:keeps doodling You can stay. Just don’t distract me too much with your chatter.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_1_PlayerChoice_a_end]
+
+
+[title=Cutscene_1_PlayerChoice_b_begin]
+Girl:pauses with a grin …Really?
+Girl:raises brow You’re bold! I like that.
+Girl:shrugs Alright, sit down![newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_1_PlayerChoice_b_end]
+
+
+[title=Cutscene_2_begin]
+Girl:sketching You keep glancing at my doodles. Why’s that?
+Girl:[question=DrawingResponse]?
+[choice]It looks really cool! You’re talented.[newtalk start=Cutscene_2_PlayerChoice_a_begin break=Cutscene_2_PlayerChoice_a_end]
+[choice]I was just curious, that’s all.[newtalk start=Cutscene_2_PlayerChoice_b_begin break=Cutscene_2_PlayerChoice_b_end]
+[title=Cutscene_2_end]
+
+
+[title=Cutscene_2_PlayerChoice_a_begin]
+Girl:blinks lightly …Aw, thanks!
+Girl:looks away and giggles Didn’t expect that compliment.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_PlayerChoice_a_end]
+
+
+[title=Cutscene_2_PlayerChoice_b_begin]
+Girl:Oh! Well, try not to peek too much.
+Girl:smirks lightly It’s kinda distracting.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_PlayerChoice_b_end]
+
+
+[title=Cutscene_3_begin]
+Girl:closes sketchbook cheerfully That’s enough doodling for now.
+Girl:stands I’m heading out for a bit, but if you’re around tomorrow… maybe I’ll save you a spot!
+Girl:small shrug No promises, though.
+[title=Cutscene_3_end]
+
+
+[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=-1]

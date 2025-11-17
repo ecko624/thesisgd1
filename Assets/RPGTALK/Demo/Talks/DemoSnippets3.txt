@@ -1,0 +1,161 @@
+[title=Cutscene_0_begin]
+Mika:Hey hey! You haven’t tried this demo before, right? It can actually save your choices — and remember what you said last time!
+Ren:No way! That’s awesome! So you’ll actually remember if I say something nice?
+Mika:Hehe, yep! So... let’s see how well you do~
+Mika:[question=FirstImpressionQuestion]So… what do you think about me so far?
+[choice]You’re super cute![newtalk start=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_0_begin break=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_0_end]
+[choice]You’re really fun![newtalk start=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_1_begin break=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_1_end]
+
+[title=FollowUp_Cutscene_0_SaveNode_0_end]
+
+[title=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_0_begin]
+Mika:Eh!? You think I’m cute!? Stop it, you’re making me grin like a dork!
+Ren:Haha, it’s true though!
+Mika:Well… I’ll remember that, and maybe smile even more next time~
+[title=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_0_end]
+
+[title=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_1_begin]
+Mika:Fun? Hehe, I like that! Being around you is fun too.
+Ren:Good! I’m glad we both agree!
+Mika:Let’s keep it fun next time too, okay?
+[title=FollowUp_FollowUp_Cutscene_0_SaveNode_0_Choice_1_end]
+
+[title=FollowUp_Cutscene_0_SaveNode_1_begin]
+Mika:Hey! Remember last time, you said I was cute? You’re making me blush all over again!
+Ren:Haha, I can’t help it!
+Mika:Hehe… okay, okay, I forgive you. Just don’t say it too much!
+[title=FollowUp_Cutscene_0_SaveNode_1_end]
+
+[title=FollowUp_Cutscene_0_SaveNode_2_begin]
+Mika:Back again! You said I was fun, right? I’m gonna make sure I keep up the fun!
+Ren:Challenge accepted!
+Mika:Hehe, I like your energy too!
+[title=FollowUp_Cutscene_0_SaveNode_2_end]
+
+
+[title=Cutscene_1_begin]
+Mika:So, Ren… since we’ve talked a bit, I’ve got a fun question!
+Ren:Shoot!
+Mika:[question=DateIdeaQuestion]If we were to hang out, where would you want to go?
+[choice]A cute café sounds perfect![newtalk start=FollowUp_Cutscene_1_Choice_0_begin break=FollowUp_Cutscene_1_Choice_0_end]
+[choice]The arcade! Let’s play games![newtalk start=FollowUp_Cutscene_1_Choice_1_begin break=FollowUp_Cutscene_1_Choice_1_end]
+
+[title=FollowUp_Cutscene_1_Choice_0_begin]
+Mika:A café date! Oooh, sipping drinks and chatting? I like it!
+Ren:Yeah, just relaxing and laughing together.
+Mika:Perfect! I’m already excited thinking about it!
+[title=FollowUp_Cutscene_1_Choice_0_end]
+
+[title=FollowUp_Cutscene_1_Choice_1_begin]
+Mika:Arcade time! We’re gonna have so much fun racing and playing games!
+Ren:Bring it on! I’m ready to beat you!
+Mika:Hehe, we’ll see about that! Loser buys snacks!
+[title=FollowUp_Cutscene_1_Choice_1_end]
+
+
+[title=Cutscene_2_begin]
+Mika:Hey Ren… can I ask something a little personal, but still cheerful?
+Ren:Sure! Shoot!
+Mika:[question=FeelingsQuestion]Do you enjoy hanging out with me?
+[choice]Absolutely! It’s great![newtalk start=FollowUp_Cutscene_2_Choice_0_begin break=FollowUp_Cutscene_2_Choice_0_end]
+[choice]Yeah! You’re really fun to be with![newtalk start=FollowUp_Cutscene_2_Choice_1_begin break=FollowUp_Cutscene_2_Choice_1_end]
+
+[title=FollowUp_Cutscene_2_Choice_0_begin]
+Mika:Really!? That makes me so happy!
+Ren:Of course! I love spending time with you.
+Mika:Hehe… you’re making me grin ear to ear!
+[title=FollowUp_Cutscene_2_Choice_0_end]
+
+[title=FollowUp_Cutscene_2_Choice_1_begin]
+Mika:Fun, huh? Hehe, I knew we’d get along well!
+Ren:Yeah! You always make things lively.
+Mika:Exactly! I’m glad you think that too!
+[title=FollowUp_Cutscene_2_Choice_1_end]
+
+
+[title=FollowUp_Cutscene_2_SaveNode_1_begin]
+Mika:Last time, you said you liked spending time with me… so I wore a cute outfit today!
+Ren:Wow, you look amazing!
+Mika:Hehe… thanks! I knew you’d notice!
+[title=FollowUp_Cutscene_2_SaveNode_1_end]
+
+[title=FollowUp_Cutscene_2_SaveNode_2_begin]
+Mika:You said being with me is fun, so I planned a fun surprise next time we hang out!
+Ren:Can’t wait! I’m already looking forward to it.
+Mika:Hehe, me too! It’s gonna be awesome!
+[title=FollowUp_Cutscene_2_SaveNode_2_end]
+
+[title=Cutscene_2_end]
+
+
+[title=Cutscene_3_begin]
+Mika:Ren, you know… every time we talk, I feel happier!
+Ren:Aww, really? That makes me happy too.
+Mika:Yeah! You’re always cheerful and kind!
+Ren:Thanks… I try my best!
+Mika:[question=ComplimentQuestion]So… what do you think is my best trait?
+[choice]Your smile! It lights up everything![newtalk start=FollowUp_Cutscene_3_Choice_0_begin break=FollowUp_Cutscene_3_Choice_0_end]
+[choice]Your laugh! It makes me happy![newtalk start=FollowUp_Cutscene_3_Choice_1_begin break=FollowUp_Cutscene_3_Choice_1_end]
+
+[title=FollowUp_Cutscene_3_Choice_0_begin]
+Mika:My smile!? Hehe, you noticed! That’s so nice of you!
+Ren:Of course! It’s impossible not to notice.
+Mika:Hehe… okay, I’ll keep smiling then!
+[title=FollowUp_Cutscene_3_Choice_0_end]
+
+[title=FollowUp_Cutscene_3_Choice_1_begin]
+Mika:My laugh!? Really? You think it’s great?
+Ren:Definitely! It makes everything feel brighter.
+Mika:Hehe… then I’ll laugh even more around you!
+[title=FollowUp_Cutscene_3_Choice_1_end]
+
+
+[title=FollowUp_Cutscene_3_SaveNode_1_begin]
+Mika:You said you liked my smile last time… so I smiled extra today!
+Ren:It’s perfect! You’re glowing!
+Mika:Hehe, stop teasing me!
+[title=FollowUp_Cutscene_3_SaveNode_1_end]
+
+[title=FollowUp_Cutscene_3_SaveNode_2_begin]
+Mika:You said my laugh is fun, so I made sure to laugh more for you today!
+Ren:Love it! You’re contagious.
+Mika:Hehe… that’s the plan!
+[title=FollowUp_Cutscene_3_SaveNode_2_end]
+
+[title=Cutscene_3_end]
+
+
+[title=Cutscene_4_begin]
+Mika:Ren… can I ask something? It’s kind of a big cheerful question!
+Ren:O-Oh? I’m ready!
+Mika:I was thinking… if this story had an ending… what would you want it to be?
+Ren:[question=ConfessionQuestion]Would you want us to stay together… or friends forever?
+[choice]Stay together, of course![newtalk start=FollowUp_Cutscene_4_Choice_0_begin break=FollowUp_Cutscene_4_Choice_0_end]
+[choice]Friends forever is great too![newtalk start=FollowUp_Cutscene_4_Choice_1_begin break=FollowUp_Cutscene_4_Choice_1_end]
+
+[title=FollowUp_Cutscene_4_Choice_0_begin]
+Mika:T-Together!? Hehe… I like that! That sounds amazing!
+Ren:Then it’s settled! We’ll have fun together always!
+Mika:Hehe… you’re the best, Ren!
+[title=FollowUp_Cutscene_4_Choice_0_end]
+
+[title=FollowUp_Cutscene_4_Choice_1_begin]
+Mika:Friends forever? Hehe, I like that too! It means endless fun!
+Ren:Exactly! We’ll always have adventures together!
+Mika:Hehe… I can’t wait!
+[title=FollowUp_Cutscene_4_Choice_1_end]
+
+
+[title=FollowUp_Cutscene_4_SaveNode_1_begin]
+Mika:You said you wanted us to stay together, so… I made a little charm for you!
+Ren:It’s perfect! I’ll treasure it.
+Mika:Hehe… we’ll both keep it and remember this!
+[title=FollowUp_Cutscene_4_SaveNode_1_end]
+
+[title=FollowUp_Cutscene_4_SaveNode_2_begin]
+Mika:You said friends forever, so… I made matching bracelets for us!
+Ren:Wow, that’s so cool!
+Mika:Hehe, now we’ll always have a fun reminder of our friendship!
+[title=FollowUp_Cutscene_4_SaveNode_2_end]
+
+[title=Cutscene_4_end]

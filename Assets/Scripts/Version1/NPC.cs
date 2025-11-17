@@ -12,6 +12,9 @@ public class NPC : MonoBehaviour, IInteractable
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
 
+    // New: delay before actually closing the dialogue UI so player can read final line
+    public float endDialogueDelay = 2f;
+
     private enum QuestState { NotStarted, InProgress, Completed}
     private QuestState questState = QuestState.NotStarted;
 
@@ -101,10 +104,6 @@ public class NPC : MonoBehaviour, IInteractable
 
         dialogueUI.SetNPCInfo(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueUI.ShowDialogueUI(true);
-
-        // Hide close button at start
-        SetCloseButtonVisible(false);
-
         PauseController.SetPause(true);
 
         DisplayCurrentLine();
@@ -117,28 +116,20 @@ public class NPC : MonoBehaviour, IInteractable
             StopAllCoroutines();
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
-            return;
         }
 
-        //Clear Choices
-        Debug.Log("Clearing choices");
-        dialogueUI.ClearChoices();
+    //Clear Choices
+    Debug.Log("Clearing choices");
 
-        // Advance to next line if possible
-        if (dialogueIndex < dialogueData.dialogueLines.Length - 1)
+        // Increment dialogueIndex and display the line
+        dialogueIndex++;
+        if (dialogueIndex < dialogueData.dialogueLines.Length)
         {
-            dialogueIndex++;
-            // Hide close button while progressing
-            SetCloseButtonVisible(false);
             DisplayCurrentLine();
         }
         else
         {
-            // At last line -- do NOT auto-close.
-            // Ensure the close button visibility reflects whether this line is an "end" line.
-            bool isEndLine = dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex];
-            SetCloseButtonVisible(isEndLine);
-            // If not an end line, do nothing (keeps the dialogue open so player can't skip closing)
+            EndDialogue();
         }
 
         // Choices and end checks will be handled after TypeLine finishes
@@ -146,8 +137,8 @@ public class NPC : MonoBehaviour, IInteractable
 
     IEnumerator TypeLine()
     {
-        Debug.Log($"TypeLine coroutine started for index {dialogueIndex}");
-        isTyping = true;
+    Debug.Log($"TypeLine coroutine started for index {dialogueIndex}");
+    isTyping = true;
         dialogueUI.SetDialogueText("");
         foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
         {
@@ -156,15 +147,13 @@ public class NPC : MonoBehaviour, IInteractable
         }
 
         isTyping = false;
-
         // After typing, check for endDialogueLines
         if (dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
         {
-            // Show close button when this line is an "end" line, but do NOT auto close.
-            SetCloseButtonVisible(true);
+            
+            EndDialogue();
             yield break;
         }
-
         // After typing, check for choices
         foreach (DialogueChoice dialogueChoice in dialogueData.choices)
         {
@@ -172,8 +161,6 @@ public class NPC : MonoBehaviour, IInteractable
             if (dialogueChoice.dialogueIndex == dialogueIndex)
             {
                 Debug.Log("entered forLoop if statement display choices");
-                // Ensure close button is hidden while choices are displayed
-                SetCloseButtonVisible(false);
                 DisplayChoices(dialogueChoice);
                 yield break;
             }
@@ -182,16 +169,10 @@ public class NPC : MonoBehaviour, IInteractable
         if (dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
         {
             Debug.Log($"Auto-progress triggered for index {dialogueIndex}");
-            // Keep close button hidden if the line auto-progresses
-            SetCloseButtonVisible(false);
             yield return new WaitForSeconds(dialogueData.autoProgressDelay);
             NextLine();
         }
-        else
-        {
-            // Non-end non-choice non-auto line: keep close hidden
-            SetCloseButtonVisible(false);
-        }
+        
     }
 
     void DisplayChoices(DialogueChoice choice)
@@ -268,29 +249,23 @@ public class NPC : MonoBehaviour, IInteractable
         StartCoroutine(TypeLine());
     }
     
+    // Replace the old EndDialogue implementation with delayed closing
     public void EndDialogue()
     {
+        // stop ongoing typing/choice coroutines so we don't have overlapping actions
         StopAllCoroutines();
-        isDialogueActive = false;
-        dialogueUI.SetDialogueText("");
-        // Hide close button when ending dialogue
-        SetCloseButtonVisible(false);
-        dialogueUI.ShowDialogueUI(false);
-        PauseController.SetPause(false);
+        // start a coroutine that waits then hides the UI
+        StartCoroutine(EndDialogueDelayed());
     }
 
-    // Utility to toggle the close button and wire its click to EndDialogue
-    private void SetCloseButtonVisible(bool visible)
+    private IEnumerator EndDialogueDelayed()
     {
-        if (dialogueUI == null || dialogueUI.closeButton == null) return;
+        // keep dialogue visible for a short delay so player can read
+        yield return new WaitForSeconds(endDialogueDelay);
 
-        var btn = dialogueUI.closeButton;
-        // Always remove prior wiring to avoid duplicates
-        btn.onClick.RemoveListener(EndDialogue);
-        btn.gameObject.SetActive(visible);
-        if (visible)
-        {
-            btn.onClick.AddListener(EndDialogue);
-        }
+        isDialogueActive = false;
+        dialogueUI.SetDialogueText("");
+        dialogueUI.ShowDialogueUI(false);
+        PauseController.SetPause(false);
     }
 }
