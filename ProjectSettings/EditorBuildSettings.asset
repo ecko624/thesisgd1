@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Quest1.1Cutscene.unity
     guid: 20c71f1ce5d723b418f02edcd3df0dbe
   - enabled: 1
-    path: Assets/Scenes/AyaEnding3.1Cutscene.unity
+    path: Assets/Scenes/7 - Choose + Ending/AyaEnding3.1Cutscene.unity
     guid: 1a2f52ff729e0c040907375bdac05802
   - enabled: 1
     path: Assets/Scenes/EndingCutscene.unity
@@ -33,13 +33,13 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroCutscene.unity
     guid: 0c06ec67e7376e14b8a18015b08881c7
   - enabled: 1
-    path: Assets/Scenes/MikaEnding3.2Cutscene.unity
+    path: Assets/Scenes/7 - Choose + Ending/MikaEnding3.2Cutscene.unity
     guid: 48c120532680340408b672f469fc748c
   - enabled: 1
     path: Assets/Scenes/QUEST21.unity
     guid: ce11e24abc12e4b43b9bd4f9433d7b60
   - enabled: 1
-    path: Assets/Scenes/SoraEnding3.3Cutscene.unity
+    path: Assets/Scenes/7 - Choose + Ending/SoraEnding3.3Cutscene.unity
     guid: 119687f16ea5f624bae9bfb9dc3344ff
   - enabled: 1
     path: Assets/Scenes/INTRO1.unity
@@ -57,7 +57,7 @@ EditorBuildSettings:
     path: Assets/Scenes/QUEST2.unity
     guid: 78deb4ef853452746b4bd517e1610109
   - enabled: 1
-    path: Assets/Scenes/CHOOSE.unity
+    path: Assets/Scenes/7 - Choose + Ending/CHOOSE.unity
     guid: 842d481cc714704468d00e6ecf4ffcfa
   - enabled: 1
     path: Assets/Scenes/INTRO2.unity
@@ -75,67 +75,67 @@ EditorBuildSettings:
     path: Assets/Scenes/QUEST3END.unity
     guid: cf25627fb188c724b8769955fa45d025
   - enabled: 1
-    path: Assets/Scenes/DIAG23.1A.unity
+    path: Assets/Scenes/2 - Aya/DIAG23.1A.unity
     guid: 8ffcf3a42a5d6d844abdfe1bfc6d59f6
   - enabled: 1
-    path: Assets/Scenes/DIAG23.4.unity
+    path: Assets/Scenes/5 - Aya/DIAG23.4.unity
     guid: 0bb63d26c9d94824b9df19a48416d782
   - enabled: 1
     path: Assets/Scenes/QUEST3GAMEPLAY.unity
     guid: f8cdf77fdb8871a4aae58572d24834b3
   - enabled: 1
-    path: Assets/Scenes/DIAG1.unity
+    path: Assets/Scenes/1 - Mika/DIAG1.unity
     guid: 979a36a9d5d08114a816f6b19b9e996c
   - enabled: 1
-    path: Assets/Scenes/DIAG2.unity
+    path: Assets/Scenes/1 - Mika/DIAG2.unity
     guid: 3c6b1db7bd8284a4ea92e704dff4e9a5
   - enabled: 1
-    path: Assets/Scenes/DIAG23.1.unity
+    path: Assets/Scenes/2 - Aya/DIAG23.1.unity
     guid: d4efadd8290ac1e43bacf5630690eae6
   - enabled: 1
     path: Assets/Scenes/DIAG3 1.unity
     guid: 9d035d9c24046964f889027cd3307485
   - enabled: 1
-    path: Assets/Scenes/DIAG5 1.unity
+    path: Assets/Scenes/4-Mika/DIAG5 1.unity
     guid: 3cbd86b8a8340ba47aa5444ee0f65b0e
   - enabled: 1
     path: Assets/Scenes/DIAG5.1.unity
     guid: 964d0928905d5a345b60dd3b93b8b5ce
   - enabled: 1
-    path: Assets/Scenes/DIAG6.unity
+    path: Assets/Scenes/4-Mika/DIAG6.unity
     guid: a7944ac6d731ac54c90bb082b68b6c51
   - enabled: 1
-    path: Assets/Scenes/DIAG7.unity
+    path: Assets/Scenes/4-Mika/DIAG7.unity
     guid: 99b20c9af1f7f0f4892467afda19df75
   - enabled: 1
-    path: Assets/Scenes/DIAG32.1.unity
+    path: Assets/Scenes/3 - Sora/DIAG32.1.unity
     guid: acf3ce754e2eb504f89c132b82fd1671
   - enabled: 1
-    path: Assets/Scenes/DIAG35.unity
+    path: Assets/Scenes/6 - Sora/DIAG35.unity
     guid: 9f031aec565f14f46a8da57a8751533a
   - enabled: 1
     path: Assets/Scenes/LOGGER2.unity
     guid: 363b10e544cf07d4bb35d648ee5f8b54
   - enabled: 1
-    path: Assets/Scenes/DIAG23.2.unity
+    path: Assets/Scenes/5 - Aya/DIAG23.2.unity
     guid: f8fc802738c113b46982354bfcdcd326
   - enabled: 1
-    path: Assets/Scenes/DIAG23.3.unity
+    path: Assets/Scenes/5 - Aya/DIAG23.3.unity
     guid: b47826fba8a8d584d9a143eb4dd3a575
   - enabled: 1
-    path: Assets/Scenes/DIAG3.unity
+    path: Assets/Scenes/1 - Mika/DIAG3.unity
     guid: 179403e9cea3635408b99bf83d3125cd
   - enabled: 1
-    path: Assets/Scenes/DIAG4.unity
+    path: Assets/Scenes/1 - Mika/DIAG4.unity
     guid: e3318ca33ac036f41ad63491230df632
   - enabled: 1
-    path: Assets/Scenes/DIAG5.unity
+    path: Assets/Scenes/4-Mika/DIAG5.unity
     guid: ab046f7f328c76148b9ff2e4307ff8af
   - enabled: 1
-    path: Assets/Scenes/DIAG21.unity
+    path: Assets/Scenes/2 - Aya/DIAG21.unity
     guid: 24bf18b85bc0dae4b9e28c83ba959e36
   - enabled: 1
-    path: Assets/Scenes/DIAG22.unity
+    path: Assets/Scenes/2 - Aya/DIAG22.unity
     guid: 07cfbc63b7c03954e96314526e6593a7
   - enabled: 1
     path: Assets/Scenes/DIAG23.unity
@@ -144,18 +144,18 @@ EditorBuildSettings:
     path: Assets/Scenes/DIAG24.unity
     guid: ef280adfa619fb041ad04c766b219061
   - enabled: 1
-    path: Assets/Scenes/DIAG31.unity
+    path: Assets/Scenes/3 - Sora/DIAG31.unity
     guid: 892da5e5e62b87c46a08dac812c7f0c8
   - enabled: 1
-    path: Assets/Scenes/DIAG32.unity
+    path: Assets/Scenes/3 - Sora/DIAG32.unity
     guid: 03da01b37fcf57e4db2814b23e8b6d7a
   - enabled: 1
-    path: Assets/Scenes/DIAG33.unity
+    path: Assets/Scenes/3 - Sora/DIAG33.unity
     guid: acde3e6aa559b2242860dfe421870aff
   - enabled: 1
-    path: Assets/Scenes/DIAG34.unity
+    path: Assets/Scenes/6 - Sora/DIAG34.unity
     guid: a50b4d238c78f4f44a96429936ea5d1c
   - enabled: 1
-    path: Assets/Scenes/DIAG4.1.unity
+    path: Assets/Scenes/1 - Mika/DIAG4.1.unity
     guid: ff4453fa05cf92249b464f1e112779bb
   m_configObjects: {}
