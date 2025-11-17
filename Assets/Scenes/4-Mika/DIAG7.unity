@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 60
-  nextSceneName: DIAG21
+  nextSceneName: DIAG23.2
 --- !u!4 &1079232546
 Transform:
   m_ObjectHideFlags: 0
@@ -1375,17 +1375,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e6fe677ec7107458ff0b781e7c5041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personalityKey: Aya
-  npcId: Aya
-  portrait: {fileID: 21300000, guid: c8b1d17a75d193447b60a54875eb95ee, type: 3}
+  serverPersonality: aya
   greeting: Hey!
-  tone: cheerful
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2
   useTrigger: 1
-  addTriggerChildForDetection: 1
-  triggerChildSize: {x: 1.5, y: 2}
   onOpenDialogue:
     m_PersistentCalls:
       m_Calls: []

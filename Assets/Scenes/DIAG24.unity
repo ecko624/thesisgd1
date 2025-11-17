@@ -59570,7 +59570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 5
-  nextSceneName: DIAG31
+  nextSceneName: DIAG34
 --- !u!4 &1578248746
 Transform:
   m_ObjectHideFlags: 0

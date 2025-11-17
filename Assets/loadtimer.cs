@@ -13,7 +13,7 @@ public class loadtimer : MonoBehaviour
 
     void Start()
     {
-        // Start the timer
+       
         StartCoroutine(LoadNextScene());
     }
 
@@ -24,5 +24,6 @@ public class loadtimer : MonoBehaviour
 
         // Load the next scene
         SceneManager.LoadScene(nextSceneName);
+        
     }
 }
