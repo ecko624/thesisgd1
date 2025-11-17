@@ -16,11 +16,11 @@ public class GameManager : MonoBehaviour
         set => _questActive = value; 
     }
 
-    [Header("NPC Conversation Memory")]
+    [Header("NPC Memory")]
     [SerializeField] private Dictionary<string, string> _npcMemories = new();
     public Dictionary<string, string> npcMemories => _npcMemories;
 
-    [Header("Current Active Character")]
+    [Header("Current Character")]
     [SerializeField] private string _currentCharacter = "aya";
     [SerializeField] private string _currentIntimacyLevel = "Stranger";
 
@@ -96,11 +96,7 @@ public class GameManager : MonoBehaviour
     public void IncrementPeopleMet()
     {
         _peopleMet++;
-        if (_peopleMet >= 3)
-        {
-            _questActive = false;
-            Debug.Log("Quest Complete: All 3 girls met!");
-        }
+        if (_peopleMet >= 3) _questActive = false;
     }
 
     public void TryStartMeetEveryoneQuest(string personality)
@@ -130,7 +126,7 @@ public class GameManager : MonoBehaviour
         _questActive = _peopleMet < 3;
     }
 
-    [ContextMenu("Reset All Progress")]
+    [ContextMenu("Reset Progress")]
     public void ResetProgress()
     {
         _ayaIntimacy = _mikaIntimacy = _soraIntimacy = _peopleMet = 0;

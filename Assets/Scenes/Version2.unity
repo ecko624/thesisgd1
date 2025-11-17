@@ -4039,16 +4039,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e6fe677ec7107458ff0b781e7c5041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personalityKey: Aya
   serverPersonality: aya
-  portrait: {fileID: 21300000, guid: fbeaa7c6ed581554184c13902ff3a5ef, type: 3}
   greeting: Hey!
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2
-  useTrigger: 1
-  addTriggerChildForDetection: 1
-  triggerChildSize: {x: 1.5, y: 2}
+  useTrigger: 0
   onOpenDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -4343,16 +4339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e6fe677ec7107458ff0b781e7c5041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personalityKey: 'aya '
   serverPersonality: aya
-  portrait: {fileID: 21300000, guid: 7eeb9eb5d06871244ac1c702185bcc4d, type: 3}
   greeting: Hey!
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2
-  useTrigger: 1
-  addTriggerChildForDetection: 1
-  triggerChildSize: {x: 1.5, y: 2}
+  useTrigger: 0
   onOpenDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -58966,7 +58958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueController: {fileID: 1311931302}
   playerInputField: {fileID: 236183721}
-  quest2: {fileID: 1891969619}
+  quest2: {fileID: 0}
   quest: 10
 --- !u!114 &1311931302
 MonoBehaviour:
@@ -59548,6 +59540,7 @@ GameObject:
   - component: {fileID: 1418304024}
   - component: {fileID: 1418304025}
   - component: {fileID: 1418304026}
+  - component: {fileID: 1418304027}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -59844,6 +59837,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionIcon: {fileID: 585677476}
+--- !u!114 &1418304027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418304018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7bce9e1b249504f9411b7eeb7f759f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueController: {fileID: 1311931302}
+  dialoguePanel: {fileID: 1132503805}
+  movementScripts:
+  - {fileID: 1418304023}
 --- !u!1 &1437462326
 GameObject:
   m_ObjectHideFlags: 0
@@ -60246,16 +60255,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e6fe677ec7107458ff0b781e7c5041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personalityKey: Sora
   serverPersonality: sora
-  portrait: {fileID: 21300000, guid: c2488789300deec42abd23c832133e1e, type: 3}
   greeting: Hey!
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2
-  useTrigger: 1
-  addTriggerChildForDetection: 1
-  triggerChildSize: {x: 1.5, y: 2}
+  useTrigger: 0
   onOpenDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -60644,16 +60649,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e6fe677ec7107458ff0b781e7c5041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personalityKey: Mika
   serverPersonality: mika
-  portrait: {fileID: 21300000, guid: c8b1d17a75d193447b60a54875eb95ee, type: 3}
   greeting: Hey!
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2
-  useTrigger: 1
-  addTriggerChildForDetection: 1
-  triggerChildSize: {x: 1.5, y: 2}
+  useTrigger: 0
   onOpenDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -61246,7 +61247,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1701560618}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 7b8928b5bb86bd54dbfa043051828813, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1701560618
 MonoBehaviour:
   m_ObjectHideFlags: 0

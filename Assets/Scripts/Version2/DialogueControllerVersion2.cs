@@ -6,13 +6,13 @@ using UnityEngine.Networking;
 
 public class DialogueControllerVersion2 : MonoBehaviour
 {
-    [Header("UI Components")]
+    [Header("UI")]
     [SerializeField] private TextMeshProUGUI npcText;
     [SerializeField] private TMP_InputField playerInputField;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI intimacyDisplay;
 
-    [Header("Server Settings")]
+    [Header("Server")]
     [SerializeField] private string serverURL = "http://localhost:5000/generate";
     [SerializeField] private string playerID = "player1";
 
@@ -21,43 +21,53 @@ public class DialogueControllerVersion2 : MonoBehaviour
     public delegate void ModelResponseHandler(string response);
     public event ModelResponseHandler OnModelResponse;
 
-    [Serializable]
-    private class ServerRequest { public string player_id; public string personality; public string player_input; }
-    [Serializable]
-    private class ServerResponse { public string response; public int intimacy_delta; public int intimacy_score; public string intimacy_level; }
+    [Serializable] private class Request { public string player_id; public string personality; public string player_input; }
+    [Serializable] private class Response { public string response; public int intimacy_delta; public int intimacy_score; public string intimacy_level; }
 
     public TextMeshProUGUI NpcText => npcText;
 
-    public void OpenDialoguePanel() => dialoguePanel.SetActive(true);
-    public void CloseDialoguePanel() => dialoguePanel.SetActive(false);
+    public void OpenDialoguePanel() => dialoguePanel?.SetActive(true);
+    public void CloseDialoguePanel() => dialoguePanel?.SetActive(false);
 
     public void StartInteraction(string personality)
-    {
-        currentPersonality = personality.ToLower();
-        dialoguePanel.SetActive(true);
-        npcText.text = "";
+{
+    currentPersonality = personality.ToLower();
 
-        if (!GameManager.Instance.npcMemories.ContainsKey(currentPersonality))
-            GetNPCResponse("Hey...");
+    // Only open panel and show greeting — DO NOT auto-send anything
+    dialoguePanel?.SetActive(true);
+    npcText.text = GetGreeting(personality);  // Just show greeting text, no server call
+
+    // Optional: auto-focus input field
+    if (playerInputField)
+    {
+        playerInputField.text = "";
+        playerInputField.ActivateInputField();
     }
+}
 
-    public void GetNPCResponse(string playerInput)
+// Helper so each girl has her own greeting
+private string GetGreeting(string personality)
+{
+    return personality switch
     {
-        if (string.IsNullOrWhiteSpace(playerInput)) return;
+        "aya" => "Hey! You came~ ♡",
+        "mika" => "...Oh. It's you.",
+        "sora" => "Yo! Took you long enough!",
+        _ => "Hello there."
+    };
+}
+
+    public void GetNPCResponse(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input)) return;
         playerInputField.interactable = false;
         playerInputField.text = "";
-        StartCoroutine(SendToServer(playerInput.Trim()));
+        StartCoroutine(Send(input.Trim()));
     }
 
-    private IEnumerator SendToServer(string input)
+    private IEnumerator Send(string input)
     {
-        var req = new ServerRequest
-        {
-            player_id = playerID,
-            personality = currentPersonality,
-            player_input = input
-        };
-
+        var req = new Request { player_id = playerID, personality = currentPersonality, player_input = input };
         using var www = new UnityWebRequest(serverURL, "POST");
         byte[] body = System.Text.Encoding.UTF8.GetBytes(JsonUtility.ToJson(req));
         www.uploadHandler = new UploadHandlerRaw(body);
@@ -68,14 +78,13 @@ public class DialogueControllerVersion2 : MonoBehaviour
 
         if (www.result != UnityWebRequest.Result.Success)
         {
-            npcText.text = "I... can't reach you right now...";
+            npcText.text = "I... can't hear you...";
             Debug.LogError(www.error);
         }
         else
         {
-            var resp = JsonUtility.FromJson<ServerResponse>(www.downloadHandler.text);
+            var resp = JsonUtility.FromJson<Response>(www.downloadHandler.text);
             npcText.text = resp.response;
-
             GameManager.Instance.UpdateIntimacy(currentPersonality, resp.intimacy_score);
             GameManager.Instance.currentIntimacyLevel = resp.intimacy_level;
             GameManager.Instance.IncrementPeopleMet();
