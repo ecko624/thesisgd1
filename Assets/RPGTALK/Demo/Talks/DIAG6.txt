@@ -1,140 +1,133 @@
 [title=Cutscene_0_begin]
 Scene: Library’s quiet corner. Mika is writing in her notebook. She notices Ren.
-Girl:Oh… Ren. You’re back.
-Girl:It’s nice to see you again. I wasn’t sure if you’d stop by.
-Girl:[question=GreetingChoice]Oh… Ren. You’re back.
+Mika:Oh… Ren. You’re back.
+Mika:--closes her notebook gently-- It’s nice to see you again.
+Mika:I wasn’t sure if you’d stop by.
+Mika:[question=GreetingChoice]?
 [choice]I like it here… it’s peaceful.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
 [choice]I wasn’t sure if you’d want company again.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_end]
 
 
 [title=Cutscene_0_PlayerChoice_0a_begin]
-Girl:I don’t mind your company. You’re quiet… in a comfortable way.
-Girl:Most people who come here talk too much.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Mika:Peaceful… yes. That’s why I like this corner too.
+Mika:I’m glad you feel the same way.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0a_end]
 
 
 [title=Cutscene_1_begin]
-Girl:I don’t mind your company. You’re quiet… in a comfortable way.
-Girl:Most people who come here talk too much.
-Girl:[question=ReasonInLibrary]?
+Mika:I don’t mind your company. You’re quiet… in a comfortable way.
+Mika:--brushes a strand of hair behind her ear-- Most people who come here talk too much.
+Mika:[question=SilenceChoice]?
 [choice]I feel the same. Silence isn’t awkward for me.[newtalk start=Cutscene_1_PlayerChoice_a_begin break=Cutscene_1_PlayerChoice_a_end]
 [choice]Do people really talk a lot in the library?[newtalk start=Cutscene_1_PlayerChoice_b_begin break=Cutscene_1_PlayerChoice_b_end]
 [title=Cutscene_1_end]
 
 
 [title=Cutscene_1_PlayerChoice_a_begin]
-Girl:Unfortunately, yes. Especially the first-years.
-Girl:I was actually thinking about something for my story. When I’m stuck, I come here to get inspired.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+Mika:It’s nice… isn’t it? When silence doesn’t feel heavy.
+Mika:I like that you understand that.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_1_PlayerChoice_a_end]
 
 
 [title=Cutscene_1_PlayerChoice_b_begin]
-Girl:Unfortunately, yes. Especially the first-years.
-Girl:I was actually thinking about something for my story. When I’m stuck, I come here to get inspired.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+Mika:Unfortunately, yes. Especially the first-years.
+Mika:They treat the library like a group study café sometimes.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_1_PlayerChoice_b_end]
 
 
 [title=Cutscene_2_begin]
-Girl:I was thinking… about my story.
-Girl:[question=DrawingResponse]?
+Mika:--taps her notebook-- I was actually thinking about something for my story.
+Mika:When I’m stuck, I come here to get inspired.
+Mika:[question=StoryChoice]?
 [choice]What kind of story are you writing?[newtalk start=Cutscene_2_PlayerChoice_a_begin break=Cutscene_2_PlayerChoice_a_end]
 [choice]Does the library help you think?[newtalk start=Cutscene_2_PlayerChoice_b_begin break=Cutscene_2_PlayerChoice_b_end]
 [title=Cutscene_2_end]
 
 
 [title=Cutscene_2_PlayerChoice_a_begin]
-Girl:It’s a fantasy story… about a traveler who finds a lost city hidden between worlds.
-Girl:I’m still figuring out the emotional parts. Characters are harder than magic systems.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+Mika:It’s a fantasy story… about a traveler who finds a lost city hidden between worlds.
+Mika:I’m still figuring out the emotional parts. Characters are harder than magic systems.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_PlayerChoice_a_end]
 
 
 [title=Cutscene_2_PlayerChoice_b_begin]
-Girl:Oh—don’t stare too much.
-Girl:smirks lightly It’s distracting.
-Girl:Anyway… I’m writing a fantasy story. A traveler finding a lost city hidden between worlds.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+Mika:Yes. The quiet helps me think.
+Mika:Anyway… I’m writing a fantasy story about a traveler who finds a lost city hidden between worlds.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_PlayerChoice_b_end]
 
 
 [title=Cutscene_3_begin]
-Girl:…You’re good at expressing emotions, you know.
-Girl:glances at his bag Are you still drawing?
-Girl:I thought about what you showed me yesterday. Your art feels… thoughtful.
-Girl:Like you’re observing things most people overlook.
-Girl:[question=ArtThoughts]?
-[choice]Drawing helps me express things I can’t say.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
-[choice]I don’t know if it’s that deep… but thanks.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+Mika:…Maybe you’re right about emotions being important.
+Mika:--glances at his bag-- Are you still drawing?
+Mika:I thought about what you showed me yesterday. Your art feels… thoughtful.
+Mika:Like you’re observing things most people overlook.
+Mika:[question=DrawingChoice]?
+[choice]Drawing helps me express things I can’t say.[newtalk start=Cutscene_3_PlayerChoice_a_begin break=Cutscene_3_PlayerChoice_a_end]
+[choice]I don’t know if it’s that deep… but thanks.[newtalk start=Cutscene_3_PlayerChoice_b_begin break=Cutscene_3_PlayerChoice_b_end]
 [title=Cutscene_3_end]
 
 
+[title=Cutscene_3_PlayerChoice_a_begin]
+Mika:…I thought so.
+Mika:Your drawings feel honest. Like they’re saying something quietly.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_3_PlayerChoice_a_end]
+
+
+[title=Cutscene_3_PlayerChoice_b_begin]
+Mika:Maybe you don’t notice it… but it *is* that deep.
+Mika:I can feel something in your art.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_3_PlayerChoice_b_end]
+
+
 [title=Cutscene_4_begin]
-Girl:I think it *is* that deep.
-Girl:You’re easy to be around… even without talking.
-Girl:I’m glad you don’t mind the quiet.
-Girl:Um… the school festival is coming soon.
-Girl:I was wondering… not asking, just wondering…
-Girl:Are you planning to go with someone? Or… not yet?
-Girl:[question=FestivalChoice]?
-[choice]I’m still thinking about it.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
-[choice]I haven’t decided yet.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+Mika:I like that about you.
+Mika:You’re easy to be around… even when you’re quiet.
+Mika:[question=QuietChoice]?
+[choice]You’re easy to talk to… even without talking.[newtalk start=Cutscene_4_PlayerChoice_a_begin break=Cutscene_4_PlayerChoice_a_end]
+[choice]I’m glad you don’t mind my quietness.[newtalk start=Cutscene_4_PlayerChoice_b_begin break=Cutscene_4_PlayerChoice_b_end]
 [title=Cutscene_4_end]
 
 
+[title=Cutscene_4_PlayerChoice_a_begin]
+Mika:…That makes me happy. Really.
+Mika:I didn’t think anyone would feel that way about me.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_4_PlayerChoice_a_end]
+
+
+[title=Cutscene_4_PlayerChoice_b_begin]
+Mika:Why would I mind? Your quietness feels… gentle.
+Mika:It’s comforting.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_4_PlayerChoice_b_end]
+
+
 [title=Cutscene_5_begin]
-Girl:You know… you draw quietly.
-Girl:I like watching you think. It’s calming.
-Girl:I can feel your thoughts even if you don’t speak.
-Girl:[question=CalmChoice]?
-[choice]I feel calm here too.[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
-[choice]It’s easier to think around you.[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
+Mika:Um… the school festival is coming soon.
+Mika:I was wondering… not asking, just wondering…
+Mika:--blushes lightly-- Are you planning to go with someone? Or… not yet?
+Mika:[question=FestivalChoice]?
+[choice]I’m still thinking about it.[newtalk start=Cutscene_5_PlayerChoice_a_begin break=Cutscene_5_PlayerChoice_a_end]
+[choice]I haven’t decided yet.[newtalk start=Cutscene_5_PlayerChoice_b_begin break=Cutscene_5_PlayerChoice_b_end]
 [title=Cutscene_5_end]
 
 
+[title=Cutscene_5_PlayerChoice_a_begin]
+Mika:Thinking about it…?
+Mika:That means… there might be someone you want to go with.[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
+[title=Cutscene_5_PlayerChoice_a_end]
+
+
+[title=Cutscene_5_PlayerChoice_b_begin]
+Mika:That’s okay. Festivals can be overwhelming to plan for.
+Mika:If you need company… you can tell me sometime.[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
+[title=Cutscene_5_PlayerChoice_b_end]
+
+
 [title=Cutscene_6_begin]
-Girl:Maybe that’s why I like seeing you here… again.
-Girl:You’re different from other classmates, Ren. Gentle, careful, observing.
-Girl:[question=ObserveChoice]?
-[choice]I try to notice things.[newtalk start=Cutscene_7_begin break=Cutscene_7_end]
-[choice]I don’t stand out usually.[newtalk start=Cutscene_7_begin break=Cutscene_7_end]
+Mika:Anyway… thank you for sitting with me again.
+Mika:I like seeing you here.
+Mika:More than I expected to.
 [title=Cutscene_6_end]
 
 
-[title=Cutscene_7_begin]
-Girl:You *do* stand out. And I like it.
-Girl:I like seeing you pause before you speak. It’s rare.
-Girl:[question=PauseChoice]?
-[choice]You notice everything.[newtalk start=Cutscene_8_begin break=Cutscene_8_end]
-[choice]It’s not intentional.[newtalk start=Cutscene_8_begin break=Cutscene_8_end]
-[title=Cutscene_7_end]
-
-
-[title=Cutscene_8_begin]
-Girl:Maybe not… but it matters to me.
-Girl:Even small things, like how your hands move over the pencil.
-Girl:It’s… endearing.
-Girl:[question=NervousChoice]?
-[choice]You’re making me nervous.[newtalk start=Cutscene_9_begin break=Cutscene_9_end]
-[choice]I didn’t expect that.[newtalk start=Cutscene_9_begin break=Cutscene_9_end]
-[title=Cutscene_8_end]
-
-
-[title=Cutscene_9_begin]
-Girl:I’m not trying to. I just…
-Girl:feel something when you’re here.
-Girl:A warmth that’s quiet, but present.
-Girl:[question=WarmthChoice]?
-[choice]I feel it too.[newtalk start=Cutscene_10_begin break=Cutscene_10_end]
-[choice]I’m not sure what to say.[newtalk start=Cutscene_10_begin break=Cutscene_10_end]
-[title=Cutscene_9_end]
-
-
-[title=Cutscene_10_begin]
-Girl:That’s fine. You don’t need to say anything.
-Girl:Being here is enough.
-Girl:closes notebook gently
-Girl:If you’re here again tomorrow… I’ll be happy.
-Girl:…Maybe more than happy.
-[title=Cutscene_10_end]
-
-
-[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=-1]
+[save start=FollowUp_Cutscene_Mika_SaveNode_0_begin break=FollowUp_Cutscene_Mika_SaveNode_0_end data=LibraryMeeting mod=-1]
