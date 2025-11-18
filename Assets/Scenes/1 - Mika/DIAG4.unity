@@ -249,8 +249,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1601660220}
   dialogWindow: {fileID: 1382059713}
-  forceScreenCenter: 1
-  centerOffset: {x: 0, y: 800}
   rotateToTarget: 0
   cameraBillboard: 0
   basedOnWhatCamera: {fileID: 1301762006}
@@ -1477,8 +1475,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.0000079274, y: 60.80005}
-  m_SizeDelta: {x: 160, y: 38.1}
+  m_AnchoredPosition: {x: 0, y: 19.049988}
+  m_SizeDelta: {x: 160, y: 38.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1382059714
 MonoBehaviour:
@@ -1608,7 +1606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180.0412}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -5.6, y: 3.1958017}
+  m_AnchoredPosition: {x: -5.600006, y: 3.1958017}
   m_SizeDelta: {x: 65, y: 93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400394589
