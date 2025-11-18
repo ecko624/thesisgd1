@@ -1,0 +1,119 @@
+[title=Cutscene_0_begin]
+Girl:stares for a moment before smiling faintly Of course I came. When someone asks like that... it’s hard to turn away.
+Girl:[question=GreetingChoice]How do you greet her?
+[choice]Hey... I wasn’t sure you’d come.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]You actually came. I didn’t think you would.[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+[title=Cutscene_0_end]
+
+[title=Cutscene_0_PlayerChoice_0a_begin]
+Girl:tilts her head slightly You really thought I’d stay away after everything we said?
+Girl:steps closer Just so you know... I keep my promises.
+Girl:pauses, voice lower I’m Elara. And you are...?
+Player:[PlayerName]. But you already knew that.
+Girl:smiles faintly Hearing it in person feels... different. Real.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0a_end]
+
+[title=Cutscene_0_PlayerChoice_0b_begin]
+Girl:smirks slightly Did I really seem that unpredictable?
+Girl:walks a step closer Maybe that’s fair. I tend to appear when people least expect it.
+Girl:lowers her tone I’m Elara. So... are you as nervous as you look?
+Player:Maybe. Or maybe I’m just trying to figure you out.
+Girl:quietly Then we’re even.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0b_end]
+
+[title=Cutscene_1_begin]
+Girl:glances around, tension in her voice It’s strange... the city feels louder tonight, but I can still hear every breath.
+Girl:[question=FirstMeetResponse]How do you respond?
+[choice]Maybe you’re just aware of what matters now.[newtalk start=Cutscene_0_PlayerChoice_1a_begin break=Cutscene_0_PlayerChoice_1a_end]
+[choice]Or maybe you were waiting for something that would finally break the silence.[newtalk start=Cutscene_0_PlayerChoice_1b_begin break=Cutscene_0_PlayerChoice_1b_end]
+[title=Cutscene_1_end]
+
+[title=Cutscene_0_PlayerChoice_1a_begin]
+Girl:looks at you intently Maybe I am. And maybe that’s why I’m here... to see if this is one of those moments.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1a_end]
+
+[title=Cutscene_0_PlayerChoice_1b_begin]
+Girl:lets out a quiet breath You talk like you’ve been waiting too.
+Girl:eyes narrow slightly Maybe that’s what drew me here.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1b_end]
+
+[title=Cutscene_2_begin]
+Girl:studies your face closely You’re different than I imagined. Calmer... but there’s something underneath it.
+Girl:steps closer, voice soft but firm I can’t decide if that’s curiosity or danger.
+Girl:[question=FirstImpression]What do you say?
+[choice]Maybe both. Sometimes they’re the same thing.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[choice]You’re one to talk... there’s fire in your eyes, even when you smile.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_end]
+
+[title=Cutscene_3_begin]
+Girl:[question=FirstThought]locks eyes with you Tell me... what did you really think when you saw me?
+[choice]I thought you looked like someone who hides storms behind a calm face.[newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
+[choice]I thought you were the kind of person who could burn someone without even trying.[newtalk start=Cutscene_0_PlayerChoice_3b_begin break=Cutscene_0_PlayerChoice_3b_end]
+[title=Cutscene_3_end]
+
+[title=Cutscene_0_PlayerChoice_3a_begin]
+Girl:smiles faintly, gaze sharp Maybe I do. But you still stayed.
+Girl:lowers her voice That says something about you too.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3a_end]
+
+[title=Cutscene_0_PlayerChoice_3b_begin]
+Girl:smirks You think I burn? Then why didn’t you run?
+Girl:leans closer Maybe you wanted to see how close you could get before it hurt.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3b_end]
+
+[title=Cutscene_4_begin]
+Girl:turns away, then back again This... is strange. I didn’t expect it to feel this heavy.
+Girl:[question=NextMeeting]quietly Do you think we’ll meet again after this?
+[choice]If we don’t, I’ll probably keep wondering what would’ve happened.[newtalk start=Cutscene_0_PlayerChoice_4a_begin break=Cutscene_0_PlayerChoice_4a_end]
+[choice]Only if you want to. I don’t chase what wants to disappear.[newtalk start=Cutscene_0_PlayerChoice_4b_begin break=Cutscene_0_PlayerChoice_4b_end]
+[title=Cutscene_4_end]
+
+[title=Cutscene_0_PlayerChoice_4a_begin]
+Girl:stares for a second Then I guess I shouldn’t vanish, should I?
+Girl:smiles faintly, almost to herself Maybe I don’t want to.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4a_end]
+
+[title=Cutscene_0_PlayerChoice_4b_begin]
+Girl:nods slowly That’s fair. Still... maybe I’ll stay, just to see what you’d do.
+Girl:smirks slightly You make it hard to walk away.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4b_end]
+
+[title=Cutscene_5_begin]
+Girl:steps closer, the distance almost gone You have this look in your eyes... like you’ve already decided something.
+Player:Maybe I have.
+Girl:smiles, eyes glinting Then maybe I’ll have to find out what it is... next time.
+[title=Cutscene_5_end]
+
+[title=Cutscene_6_begin]
+Scene:A dimly lit rooftop, the city lights flickering below. Elara waits, leaning on the railing.
+Girl:without turning You came again. I was wondering if you’d still want to see me after that night.
+Player:I couldn’t stop thinking about it.
+Girl:looks over her shoulder You shouldn’t say things like that unless you mean them.
+Player:I mean every word.
+Girl:smiles darkly Then I guess this just got interesting.
+Girl:[question=ReturnResponse]What do you say?
+[choice]I don’t run from intensity. I face it.[newtalk start=Cutscene_6_PlayerChoice_a_begin break=Cutscene_6_PlayerChoice_a_end]
+[choice]If this is dangerous... then maybe that’s what makes it real.[newtalk start=Cutscene_6_PlayerChoice_b_begin break=Cutscene_6_PlayerChoice_b_end]
+[title=Cutscene_6_end]
+
+[title=Cutscene_6_PlayerChoice_a_begin]
+Girl:turns to face you completely Then face me now. No masks. No games.
+Girl:steps closer until the air feels heavy around you I want to see if you can handle the truth.[newtalk start=Cutscene_7_begin break=Cutscene_7_end]
+[title=Cutscene_6_PlayerChoice_a_end]
+
+[title=Cutscene_6_PlayerChoice_b_begin]
+Girl:smiles slowly Maybe that’s why I can’t stay away.
+Girl:voice drops slightly Real things always carry risk.[newtalk start=Cutscene_7_begin break=Cutscene_7_end]
+[title=Cutscene_6_PlayerChoice_b_end]
+
+[title=Cutscene_7_begin]
+Girl:leans against the railing, her tone softer now You know... most people don’t look at me the way you do.
+Player:Maybe that’s because they’re not really looking.
+Girl:meets your gaze You see too much, [PlayerName].
+Player:Maybe that’s exactly why I’m here.
+Girl:smiles faintly Then don’t look away.
+[title=Cutscene_7_end]
+
+
+[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=+2]
+[title=Cutscene_0_end]

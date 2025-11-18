@@ -1,61 +1,45 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class InputHandler : MonoBehaviour
 {
-    [SerializeField] private DialogueControllerVersion2 dialogueController; // Assign in Inspector to DialogueManager GameObject
-    public TMP_InputField playerInputField; // Assign in Inspector to the InputField in DialoguePanel
+    [SerializeField] private DialogueControllerVersion2 dialogueController;
+    [SerializeField] private TMP_InputField playerInputField;
+    [SerializeField] private Text quest2;
+    public int quest = 10;
 
     void Start()
     {
-        if (playerInputField != null)
-        {
-            playerInputField.onEndEdit.RemoveAllListeners();
-            playerInputField.onEndEdit.AddListener(OnInputSubmit);
-        }
-        else
-        {
-            Debug.LogWarning("playerInputField not assigned in InputHandler!");
-        }
+        if (playerInputField)
+            playerInputField.onEndEdit.AddListener(OnSubmit);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && dialogueController != null)
-        {
-            string input = dialogueController.GetPlayerInputText(); // Use new method
-            if (!string.IsNullOrEmpty(input))
-            {
-                dialogueController.GetNPCResponse(input); // Uses default personality
-            }
-        }
+        if (quest2) quest2.text = quest + "/10";
+        if (Input.GetKeyDown(KeyCode.Return) && playerInputField.isFocused)
+            OnSubmit(playerInputField.text);
     }
 
-    private void OnInputSubmit(string input)
+    void OnSubmit(string input)
     {
-        if (string.IsNullOrWhiteSpace(input) || input.Trim().Length < 1) return;
+        if (string.IsNullOrWhiteSpace(input)) return;
 
-        string trimmedInput = input.Trim();
-        string personality = GameManager.Instance.currentCharacter; // e.g., "outgoing_class_rep"
-        string tone = GameManager.Instance.currentTone;             // e.g., "cheerful"
-        string intimacyLevel = GameManager.Instance.GetIntimacyLevel(
-            personality == "outgoing_class_rep" ? GameManager.Instance.ayaIntimacy :
-            personality == "library_ghost" ? GameManager.Instance.mikaIntimacy :
-            GameManager.Instance.soraIntimacy
-        );
-
-        if (dialogueController != null)
+        quest = Mathf.Max(0, quest - 1);
+        if (quest <= 0)
         {
-            dialogueController.GetNPCResponse(trimmedInput, personality, tone, intimacyLevel); // Updated call
+            string scene = SceneManager.GetActiveScene().name;
+            if (scene.Contains("QUEST1")) SceneManager.LoadScene("QUEST1END");
+            if (scene.Contains("QUEST2")) SceneManager.LoadScene("QUEST2END");
+            if (scene.Contains("QUEST3")) SceneManager.LoadScene("QUEST3END");
         }
 
+        dialogueController.GetNPCResponse(input.Trim());
         playerInputField.text = "";
         playerInputField.ActivateInputField();
     }
 
-    // Optional: Handle submit button if added to UI
-    public void OnSubmitButtonClick()
-    {
-        OnInputSubmit(playerInputField.text);
-    }
+    public void OnSubmitButtonClick() => OnSubmit(playerInputField.text);
 }

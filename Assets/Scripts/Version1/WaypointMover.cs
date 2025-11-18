@@ -12,6 +12,7 @@ public class WaypointMover : MonoBehaviour
     private Transform[] waypoints;
     private int currentWaypointIndex = 0;
     private bool isWaiting;
+    public static bool onoff=true;
     void Start()
     {
         waypoints = new Transform[waypointParent.childCount];
@@ -27,8 +28,10 @@ public class WaypointMover : MonoBehaviour
         {
             return;
         }
-        
-        MoveToWaypoint();
+        if (onoff == true)
+        {
+            MoveToWaypoint();
+        }
     }
 
     void MoveToWaypoint()

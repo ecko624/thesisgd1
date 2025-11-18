@@ -1,0 +1,90 @@
+[title=Cutscene_0_begin]
+Girl:*sitting cross-legged on the seawall, sketchbook balanced on her knees* She looks up when you stop nearby, her pencil pausing mid-line. 
+Girl:*smiles faintly* Oh—someone else who draws here. 
+Girl:[question=GreetingChoice]I thought I was the only one stealing colors from the sea.
+[choice]Uh... sorry. I didn’t mean to interrupt.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]I didn’t think anyone else came out here this late.[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+[title=Cutscene_0_end]
+
+[title=Cutscene_0_PlayerChoice_0a_begin]
+Girl:*shakes her head lightly* You didn’t. The sea’s too loud to interrupt anyway.
+Girl:*leans slightly to peek at your notebook* You sketch too, huh? I can tell by how you’re watching the light move.
+Girl:*grins* I’m Sora. Art student, ocean addict, occasional runaway.
+Player:Ren. I just... come here when it’s quiet.
+Girl:*smiles softly* Quiet’s good. That’s when the world shows its real colors.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0a_end]
+
+[title=Cutscene_0_PlayerChoice_0b_begin]
+Girl:*laughs under her breath* Guess the waves keep secrets better than people do.
+Girl:glances toward the water The late light’s the best part—it makes everything feel like it’s breathing.
+Girl:offers a small smile I’m Sora. You?
+Player:Ren. I usually just draw alone... didn’t think I’d run into anyone.
+Girl:*tilts her head* Maybe the sea got bored of your silence and sent me.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0b_end]
+
+[title=Cutscene_1_begin]
+Girl:*looks back at the horizon* The light keeps changing, doesn’t it? You can’t hold on to it, no matter how fast you draw.
+Girl:[question=FirstMeetResponse]What do you say?
+[choice]Yeah... it’s hard to keep something that’s meant to move.[newtalk start=Cutscene_0_PlayerChoice_1a_begin break=Cutscene_0_PlayerChoice_1a_end]
+[choice]I guess that’s what makes it worth chasing, even if you never catch it.[newtalk start=Cutscene_0_PlayerChoice_1b_begin break=Cutscene_0_PlayerChoice_1b_end]
+[title=Cutscene_1_end]
+
+[title=Cutscene_0_PlayerChoice_1a_begin]
+Girl:*smiles gently* You get it. Most people try to freeze it instead of letting it breathe.
+Girl:*leans her chin on her hand* Maybe that’s why I like drawing near strangers who understand.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1a_end]
+
+[title=Cutscene_0_PlayerChoice_1b_begin]
+Girl:*grins softly* That’s a nice way to put it. You sound like someone who watches more than you speak.
+Girl:*eyes linger on him* I like that.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1b_end]
+
+[title=Cutscene_2_begin]
+Girl:*flips a page in her sketchbook* So... what do you draw for? Practice? Or peace?
+Girl:[question=FirstImpression]What do you say?
+[choice]Mostly to quiet my thoughts. The sea helps with that.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[choice]I don’t really know. I just... feel better when I draw.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_end]
+
+[title=Cutscene_3_begin]
+Girl:[question=FirstThought]*She smiles faintly, eyes bright* Then tell me something honest—what did you think when you saw me sitting here?
+[choice]You looked... like you belonged here more than anyone else.[newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
+[choice]Honestly? I just thought you looked... calm. Like the waves stopped for you.[newtalk start=Cutscene_0_PlayerChoice_3b_begin break=Cutscene_0_PlayerChoice_3b_end]
+[title=Cutscene_3_end]
+
+[title=Cutscene_0_PlayerChoice_3a_begin]
+Girl:*smiles softly* That’s the nicest thing anyone’s said to me today.
+Girl:*pauses* Maybe that’s because I keep trying to belong somewhere new.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3a_end]
+
+[title=Cutscene_0_PlayerChoice_3b_begin]
+Girl:*laughs quietly* That’s... poetic. You didn’t strike me as the poetic type.
+Girl:*tilts her head* I guess you hide more colors than I thought.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3b_end]
+
+[title=Cutscene_4_begin]
+Girl:*closes her sketchbook gently The sun’s almost gone. I never know whether to say goodbye or just let the tide do it for me.
+Girl:[question=NextMeeting]Do you think we’ll see each other again?
+[choice]Maybe... if we both end up chasing the same light again.[newtalk start=Cutscene_0_PlayerChoice_4a_begin break=Cutscene_0_PlayerChoice_4a_end]
+[choice]I’d like that. But only if you don’t mind quiet company.[newtalk start=Cutscene_0_PlayerChoice_4b_begin break=Cutscene_0_PlayerChoice_4b_end]
+[title=Cutscene_4_end]
+
+[title=Cutscene_0_PlayerChoice_4a_begin]
+Girl:*smiles, tucking a strand of hair behind her ear* Then I’ll keep my eyes open next sunset.
+Girl:*stands, brushing sand off her skirt* Maybe the sea’s better with two sets of colors watching.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4a_end]
+
+[title=Cutscene_0_PlayerChoice_4b_begin]
+Girl:*grins softly* Quiet’s fine. The sea doesn’t talk much either.
+Girl:*steps back toward the path* Maybe next time, you’ll show me one of your sketches.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4b_end]
+
+[title=Cutscene_5_begin]
+Girl:*pauses at the edge of the seawall* You’ve got a calm sort of energy, Ren. Like you draw the world just to understand it.
+Player:Maybe I do.
+Girl:*smiles faintly* Then keep drawing. Maybe I’ll see what you find next time.
+[title=Cutscene_5_end]
+
+
+[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=+2]
+[title=Cutscene_0_end]

@@ -1,0 +1,133 @@
+[title=Cutscene_0_begin]
+Scene: School hallway after class. Aya waves Ren over.
+Aya:Oh! Ren! Perfect timing. I was actually looking for you.
+Aya:I still feel like I didn’t get to talk to you enough yesterday.
+Aya:You kind of escaped right after class, you know?
+Aya:Anyway—how are you settling in? Be honest!
+Aya:[question=SettlingChoice]?
+[choice]I’m still adjusting… everything feels new.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]Sorry if I left quickly. Crowds overwhelm me.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_end]
+
+
+[title=Cutscene_0_PlayerChoice_0a_begin]
+Aya:Ohh, I get that. New places can feel like walking through fog.
+Aya:But you’re handling it better than you think.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0a_end]
+
+
+[title=Cutscene_1_begin]
+Aya:Ahh, that makes sense. You’re like a little stray cat in a noisy marketplace.
+Aya:But don’t worry—I’m good at helping people settle in.
+Aya:[question=EnergyChoice]?
+[choice]I appreciate it… even if I’m not great with new people.[newtalk start=Cutscene_1_PlayerChoice_a_begin break=Cutscene_1_PlayerChoice_a_end]
+[choice]Are you always this energetic?[newtalk start=Cutscene_1_PlayerChoice_b_begin break=Cutscene_1_PlayerChoice_b_end]
+[title=Cutscene_1_end]
+
+
+[title=Cutscene_1_PlayerChoice_a_begin]
+Aya:That’s fine! I can handle being the social one for both of us.
+Aya:You just follow my lead.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_1_PlayerChoice_a_end]
+
+
+[title=Cutscene_1_PlayerChoice_b_begin]
+Aya:Always? Worse during festival season.
+Aya:You should see me when I’m running on caffeine and excitement.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_1_PlayerChoice_b_end]
+
+
+[title=Cutscene_2_begin]
+Aya:Speaking of festivals—clubs are recruiting like crazy right now.
+Aya:And since you’re new, everyone’s curious.
+Aya:Pretty sure the Art Club and Literature Circle already asked about you.
+Aya:[question=ClubChoice]?
+[choice]They asked about me? Why…?[newtalk start=Cutscene_2_PlayerChoice_a_begin break=Cutscene_2_PlayerChoice_a_end]
+[choice]That’s intimidating… I don’t think I’m ready.[newtalk start=Cutscene_2_PlayerChoice_b_begin break=Cutscene_2_PlayerChoice_b_end]
+[title=Cutscene_2_end]
+
+
+[title=Cutscene_2_PlayerChoice_a_begin]
+Aya:Well, you’re mysterious. People love mysterious.
+Aya:And also—you’re talented. I saw your notebook yesterday.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_PlayerChoice_a_end]
+
+
+[title=Cutscene_2_PlayerChoice_b_begin]
+Aya:Hey, it’s okay to not feel ready.
+Aya:But clubs aren’t scary. They just noticed you, that’s all.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_PlayerChoice_b_end]
+
+
+[title=Cutscene_3_begin]
+Aya:Well… you draw really well. I only saw one page, but it was good.
+Aya:And now I’m curious about the rest.
+Aya:[question=DrawingChoice]?
+[choice]It’s just a hobby… I don’t know if I’m good enough.[newtalk start=Cutscene_3_PlayerChoice_a_begin break=Cutscene_3_PlayerChoice_a_end]
+[choice]Did you really look at my drawings…?[newtalk start=Cutscene_3_PlayerChoice_b_begin break=Cutscene_3_PlayerChoice_b_end]
+[title=Cutscene_3_end]
+
+
+[title=Cutscene_3_PlayerChoice_a_begin]
+Aya:“Just a hobby” doesn’t stop talent from being talent.
+Aya:You’re good, Ren. Don’t pretend you aren’t.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_3_PlayerChoice_a_end]
+
+
+[title=Cutscene_3_PlayerChoice_b_begin]
+Aya:Not on purpose! You left your sketchbook open.
+Aya:But what I saw was honestly really impressive.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_3_PlayerChoice_b_end]
+
+
+[title=Cutscene_4_begin]
+Aya:You don’t have to stay in the background, you know.
+Aya:I kinda want to pull you into the middle of everything.
+Aya:[question=WhyChoice]?
+[choice]That sounds… overwhelming.[newtalk start=Cutscene_4_PlayerChoice_a_begin break=Cutscene_4_PlayerChoice_a_end]
+[choice]Why me, though?[newtalk start=Cutscene_4_PlayerChoice_b_begin break=Cutscene_4_PlayerChoice_b_end]
+[title=Cutscene_4_end]
+
+
+[title=Cutscene_4_PlayerChoice_a_begin]
+Aya:Overwhelming isn’t always bad. Sometimes it’s the start of something exciting.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_4_PlayerChoice_a_end]
+
+
+[title=Cutscene_4_PlayerChoice_b_begin]
+Aya:Because you look like someone who has stories to tell.
+Aya:You just don’t know where to start yet.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_4_PlayerChoice_b_end]
+
+
+[title=Cutscene_5_begin]
+Aya:Correct on both counts.
+Aya:Oh! About the school festival—
+Aya:People usually go with a partner or a group.
+Aya:So… who are you planning to go with?
+Aya:[question=FestivalChoice]?
+[choice]I’m still thinking about it.[newtalk start=Cutscene_5_PlayerChoice_a_begin break=Cutscene_5_PlayerChoice_a_end]
+[choice]I honestly don’t know yet.[newtalk start=Cutscene_5_PlayerChoice_b_begin break=Cutscene_5_PlayerChoice_b_end]
+[title=Cutscene_5_end]
+
+
+[title=Cutscene_5_PlayerChoice_a_begin]
+Aya:Thinking about it, huh…?
+Aya:That means someone’s on your mind.[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
+[title=Cutscene_5_PlayerChoice_a_end]
+
+
+[title=Cutscene_5_PlayerChoice_b_begin]
+Aya:That’s fine. If you need someone to go with… you can tell me.
+Aya:Anytime.[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
+[title=Cutscene_5_PlayerChoice_b_end]
+
+
+[title=Cutscene_6_begin]
+Aya:Well… anyway. I’ve got planning to do.
+Aya:But if you see me around, wave me over. I don’t mind.
+Aya:Actually… I’d like it.
+[title=Cutscene_6_end]
+
+
+[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstHallwayMeeting mod=-1]

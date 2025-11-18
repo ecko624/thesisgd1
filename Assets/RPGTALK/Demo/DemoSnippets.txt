@@ -1,0 +1,77 @@
+[title=Cutscene_0_begin]
+Girl:grins brightly Of course I would! You asked so sincerely... how could I say no?
+Girl:[question=GreetingChoice]How do you greet her?
+[choice]Hey... I wasn’t sure you’d come![newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]You actually came! I didn’t think you would![newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+[title=Cutscene_0_end]
+
+[title=Cutscene_0_PlayerChoice_0a_begin]
+Girl:smiles wide Of course I did! You sounded way too excited for me to miss it.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0a_end]
+
+[title=Cutscene_0_PlayerChoice_0b_begin]
+Girl:giggles teasingly What, did you really think I’d bail on you that easily?[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0b_end]
+
+[title=Cutscene_1_begin]
+Girl:laughs lightly Maybe my schedule is busy... but this sounded like way more fun than anything else!
+Girl:[question=FirstMeetResponse]How do you respond?
+[choice]I’m glad you decided to have fun with me today.[newtalk start=Cutscene_0_PlayerChoice_1a_begin break=Cutscene_0_PlayerChoice_1a_end]
+[choice]So I made it into your super exclusive schedule, huh?[newtalk start=Cutscene_0_PlayerChoice_1b_begin break=Cutscene_0_PlayerChoice_1b_end]
+[title=Cutscene_1_end]
+
+[title=Cutscene_0_PlayerChoice_1a_begin]
+Girl:smiles playfully Aww, you make it sound like this is a big deal... but maybe it kind of is.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1a_end]
+
+[title=Cutscene_0_PlayerChoice_1b_begin]
+Girl:laughs softly Heh, maybe you did! Don’t make me regret giving you a spot, okay?[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1b_end]
+
+[title=Cutscene_2_begin]
+Girl:looks around with bright eyes It’s kind of surreal, huh? Seeing you here instead of just chatting on a screen!
+Girl:[question=FirstImpression]What do you say?
+[choice]You look even more amazing in person![newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[choice]Yeah, it’s different—but I like it![newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_end]
+
+[title=Cutscene_3_begin]
+Girl:[question=FirstThought]grins curiously Sooo... what was your first thought when you saw me? Be honest!
+[choice]I thought you were even cuter than I imagined![newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
+[choice]I thought you looked a little nervous—but totally adorable![newtalk start=Cutscene_0_PlayerChoice_3b_begin break=Cutscene_0_PlayerChoice_3b_end]
+[title=Cutscene_3_end]
+
+[title=Cutscene_0_PlayerChoice_3a_begin]
+Girl:covers her face, laughing Oh my gosh, stop! You can’t just drop compliments like that out of nowhere![newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3a_end]
+
+[title=Cutscene_0_PlayerChoice_3b_begin]
+Girl:laughs brightly Nervous? Maybe a bit! I didn’t want to trip over my words or something.
+Girl:smiles warmly But hearing that from you... that helps a lot, actually.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3b_end]
+
+[title=Cutscene_4_begin]
+Girl:beaming This is really nice, you know? Just hanging out and talking like this.
+Girl:[question=NextMeeting]leans in playfully Sooo... should we do this again sometime?
+[choice]I’d love that! Maybe sooner than you think.[newtalk start=Cutscene_0_PlayerChoice_4a_begin break=Cutscene_0_PlayerChoice_4a_end]
+[choice]Only if you promise not to keep me waiting next time![newtalk start=Cutscene_0_PlayerChoice_4b_begin break=Cutscene_0_PlayerChoice_4b_end]
+[title=Cutscene_4_end]
+
+[title=Cutscene_0_PlayerChoice_4a_begin]
+Girl:smiles wide, eyes sparkling Then it’s a date! Well... maybe not a date—unless you want it to be?
+Girl:laughs softly You sure know how to keep things interesting![newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4a_end]
+
+[title=Cutscene_0_PlayerChoice_4b_begin]
+Girl:pretends to think Hmm... no promises! But I do like surprises.
+Girl:grins playfully Guess you’ll just have to find out next time![newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4b_end]
+
+[title=Cutscene_5_begin]
+Girl:smiles warmly, eyes bright I should probably go... but this was really fun!
+Girl:waves lightly Next time, maybe it won’t feel like the first time anymore—just... something to look forward to.
+[title=Cutscene_5_end]
+
+
+[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=-1]
+[title=Cutscene_0_end]

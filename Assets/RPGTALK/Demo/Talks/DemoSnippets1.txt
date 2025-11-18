@@ -1,0 +1,112 @@
+[title=Cutscene_0_begin]
+Girl:Hello gooday!
+Girl:[question=GreetingChoice]How do you greet her?
+[choice]Hey... I wasn’t sure you’d come.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]You actually came! I didn’t think you would.[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+[title=Cutscene_0_end]
+
+[title=Cutscene_0_PlayerChoice_0a_begin]
+Girl:laughs softly I did! It’s not every day I get invited out like this.
+Girl:grins Oh, wait—let’s do this properly. I’m Elara!
+Player:And I’m [PlayerName]. Finally meeting in person feels kind of exciting, huh?
+Girl:nods happily It really does! I was starting to think it would never happen.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0a_end]
+
+[title=Cutscene_0_PlayerChoice_0b_begin]
+Girl:smiles teasingly What, did you think I’d cancel at the last second?
+Girl:tilts her head I’m Elara, by the way! It’s nice to finally meet you for real.
+Player:You too. I’ve been looking forward to this.
+Girl:Me too! I even picked this place because it felt... peaceful. But now it’s better with you here.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+[title=Cutscene_0_PlayerChoice_0b_end]
+
+[title=Cutscene_1_begin]
+Girl:looks around with a small smile It’s such a nice day. The sky’s clear, and the air smells like new beginnings.
+Girl:[question=FirstMeetResponse]How do you respond?
+[choice]I’m glad you chose to spend it here... with me.[newtalk start=Cutscene_0_PlayerChoice_1a_begin break=Cutscene_0_PlayerChoice_1a_end]
+[choice]Yeah... it feels like a good day to make memories.[newtalk start=Cutscene_0_PlayerChoice_1b_begin break=Cutscene_0_PlayerChoice_1b_end]
+[title=Cutscene_1_end]
+
+[title=Cutscene_0_PlayerChoice_1a_begin]
+Girl:grins That’s sweet of you to say. I’m glad I came. This already feels special.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1a_end]
+
+[title=Cutscene_0_PlayerChoice_1b_begin]
+Girl:nods You’re right! Every moment like this is one we don’t get back. So we should enjoy it while it lasts![newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1b_end]
+
+[title=Cutscene_2_begin]
+Girl:leans forward slightly You know, it’s kind of surreal seeing you in person. I got so used to chatting through a screen.
+Girl:smiles warmly But now I can actually hear your voice... it’s nice.
+Girl:[question=FirstImpression]What do you say?
+[choice]You look even more cheerful in person. The sunlight really suits you.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[choice]It feels like meeting someone I already know... but in the best way.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[title=Cutscene_2_end]
+
+[title=Cutscene_3_begin]
+Girl:[question=FirstThought]smiles playfully So... be honest. What was your first thought when you saw me?
+[choice]I thought you looked... radiant. Like the day got brighter because of you.[newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
+[choice]I thought you were exactly how I imagined—just with a happier smile.[newtalk start=Cutscene_0_PlayerChoice_3b_begin break=Cutscene_0_PlayerChoice_3b_end]
+[title=Cutscene_3_end]
+
+[title=Cutscene_0_PlayerChoice_3a_begin]
+Girl:blushes lightly You really know how to make someone smile, don’t you?
+Girl:laughs softly I’ll take that as a compliment.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3a_end]
+
+[title=Cutscene_0_PlayerChoice_3b_begin]
+Girl:giggles I’ll take that! I was worried I’d look tired after rushing to get here.
+Girl:smiles wide Guess it was worth it after all.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3b_end]
+
+[title=Cutscene_4_begin]
+Girl:leans back happily This is nice. The breeze, the quiet... and the company, of course.
+Girl:[question=NextMeeting]Do you think we’ll do this again sometime?
+[choice]I hope so. Days like this deserve a sequel.[newtalk start=Cutscene_0_PlayerChoice_4a_begin break=Cutscene_0_PlayerChoice_4a_end]
+[choice]Definitely. Next time, I’m bringing snacks.[newtalk start=Cutscene_0_PlayerChoice_4b_begin break=Cutscene_0_PlayerChoice_4b_end]
+[title=Cutscene_4_end]
+
+[title=Cutscene_0_PlayerChoice_4a_begin]
+Girl:laughs softly A sequel, huh? Then I guess I’ll have to make sure I’m in it.
+Girl:smiles gently Thanks for today, [PlayerName]. It’s been... really nice.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4a_end]
+
+[title=Cutscene_0_PlayerChoice_4b_begin]
+Girl:grins Deal! I’ll bring drinks, then we’ll make it a real picnic.
+Girl:looks at you, her eyes bright I can’t wait.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4b_end]
+
+[title=Cutscene_5_begin]
+Girl:stands and stretches slightly The day went by fast, didn’t it?
+Girl:smiles warmly Next time, let’s make it even longer. I don’t want this feeling to end just yet.
+[title=Cutscene_5_end]
+
+[title=Cutscene_6_begin]
+Scene:The next weekend, the sun shines brighter than before. The two meet again in the park, laughter and music filling the air.
+Girl:waves excitedly Hey! You made it again! I was starting to think you’d oversleep.
+Player:You underestimate my dedication to good company.
+Girl:laughs That’s the right answer! Come on, there’s a fair nearby—they’re giving out free cotton candy!
+Girl:[question=ReturnResponse]What do you say?
+[choice]You had me at cotton candy.[newtalk start=Cutscene_6_PlayerChoice_a_begin break=Cutscene_6_PlayerChoice_a_end]
+[choice]Only if you promise not to eat mine too.[newtalk start=Cutscene_6_PlayerChoice_b_begin break=Cutscene_6_PlayerChoice_b_end]
+[title=Cutscene_6_end]
+
+[title=Cutscene_6_PlayerChoice_a_begin]
+Girl:grins brightly Perfect! Let’s make this day even sweeter.
+Girl:runs ahead slightly, turning back with a laugh Try to keep up, [PlayerName]![newtalk start=Cutscene_7_begin break=Cutscene_7_end]
+[title=Cutscene_6_PlayerChoice_a_end]
+
+[title=Cutscene_6_PlayerChoice_b_begin]
+Girl:pretends to pout Me? Never! ...Okay, maybe just a bite.
+Girl:giggles Come on, before they run out![newtalk start=Cutscene_7_begin break=Cutscene_7_end]
+[title=Cutscene_6_PlayerChoice_b_end]
+
+[title=Cutscene_7_begin]
+Girl:after a few moments of laughter You know... I’m really glad we met like this.
+Player:Yeah... me too. It feels like the start of something good.
+Girl:smiles, eyes bright Then let’s make sure it keeps going.
+Girl:extends her hand Shall we?
+[title=Cutscene_7_end]
+
+
+[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=+1]
+[title=Cutscene_0_end]
