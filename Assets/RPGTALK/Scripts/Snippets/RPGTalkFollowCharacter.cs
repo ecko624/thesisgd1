@@ -9,6 +9,12 @@ namespace RPGTALK.Snippets
         [Header("Set ups")]
         public Canvas canvas;
         public RectTransform dialogWindow;
+        
+            [Header("Screen Centering (optional)")]
+            [Tooltip("If true, the dialog will be forced to the screen center (useful for cutscenes).")]
+            public bool forceScreenCenter = false;
+            [Tooltip("Pixel offset applied to the screen center when forceScreenCenter is true. Y positive moves up.")]
+            public Vector2 centerOffset = new Vector2(0, 100);
 
         [Header("Camera Specs")]
         public bool rotateToTarget;
@@ -95,8 +101,40 @@ namespace RPGTALK.Snippets
                 newRotation = basedOnWhatCamera.transform.rotation;
             }
 
-            dialogWindow.transform.position = newPos;
-            dialogWindow.transform.rotation = newRotation;
+            // For ScreenSpaceOverlay canvases we should convert screen point to the
+            // dialog's parent local point and set anchoredPosition. This is more
+            // reliable in Play mode than assigning world positions directly.
+            if (canvas != null && canvas.renderMode == RenderMode.ScreenSpaceOverlay)
+            {
+                RectTransform parentRect = dialogWindow.parent as RectTransform;
+                Vector2 localPoint;
+                if (parentRect != null)
+                {
+                    if (forceScreenCenter)
+                    {
+                        // Compute a screen-space point at the center + offset and convert to local point
+                        Vector2 screenCenter = new Vector2(Screen.width * 0.5f + centerOffset.x, Screen.height * 0.5f + centerOffset.y);
+                        RectTransformUtility.ScreenPointToLocalPointInRectangle(parentRect, screenCenter, null, out localPoint);
+                        dialogWindow.anchoredPosition = localPoint;
+                    }
+                    else
+                    {
+                        Vector3 screenPoint = newPos;
+                        RectTransformUtility.ScreenPointToLocalPointInRectangle(parentRect, screenPoint, null, out localPoint);
+                        dialogWindow.anchoredPosition = localPoint;
+                    }
+                }
+                else
+                {
+                    dialogWindow.transform.position = newPos;
+                }
+                dialogWindow.transform.rotation = newRotation;
+            }
+            else
+            {
+                dialogWindow.transform.position = newPos;
+                dialogWindow.transform.rotation = newRotation;
+            }
 
             //If the pointer was a smart pointer, we want to set the end of it to our following obj.
             if (smartPointer != null)

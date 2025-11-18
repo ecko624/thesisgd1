@@ -249,6 +249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1601660220}
   dialogWindow: {fileID: 1382059713}
+  forceScreenCenter: 1
+  centerOffset: {x: 0, y: 800}
   rotateToTarget: 0
   cameraBillboard: 0
   basedOnWhatCamera: {fileID: 1301762006}
@@ -1912,7 +1914,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.97, y: -3.52, z: 0}
-  m_LocalScale: {x: 5.34, y: 5.35, z: 1}
+  m_LocalScale: {x: 1.94, y: 2, z: 6.5154}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

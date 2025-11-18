@@ -249,6 +249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1601660220}
   dialogWindow: {fileID: 1382059713}
+  forceScreenCenter: 1
+  centerOffset: {x: 0, y: 800}
   rotateToTarget: 0
   cameraBillboard: 0
   basedOnWhatCamera: {fileID: 1301762006}
