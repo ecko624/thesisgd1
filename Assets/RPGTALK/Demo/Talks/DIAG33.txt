@@ -1,6 +1,6 @@
 [title=Cutscene_0_begin]
 Girl:*sitting cross-legged on the seawall, sketchbook balanced on her knees* She looks up when you stop nearby, her pencil pausing mid-line. 
-Girl:smiles faintly Oh—someone else who draws here. 
+Girl:*smiles faintly* Oh—someone else who draws here. 
 Girl:[question=GreetingChoice]I thought I was the only one stealing colors from the sea.
 [choice]Uh... sorry. I didn’t mean to interrupt.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
 [choice]I didn’t think anyone else came out here this late.[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]

@@ -14,13 +14,13 @@ Girl:Bother? Not at all! You’re part of the class now, so don’t hesitate to 
 
 [title=Cutscene_0_PlayerChoice_0b_begin]
 Girl:Oh, so you’re the quiet type! That’s fine — I’ll make sure you feel at home here.
-Girl:grins You can count on me if you need anything. I like helping people settle in.
+Girl:*grins* You can count on me if you need anything. I like helping people settle in.
 Player:Thanks... that means a lot. Everything’s kind of new to me.
 Girl:Then it’s a good thing you’ve got me as your class rep! You’ll fit right in soon enough.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0b_end]
 
 [title=Cutscene_1_begin]
-Girl:smiles It’s such a nice day, isn’t it? Feels like the perfect time to start something new.
+Girl:*smiles* It’s such a nice day, isn’t it? Feels like the perfect time to start something new.
 Girl:[question=FirstMeetResponse]Am I right?
 [choice]Yeah... it feels like a fresh start.[newtalk start=Cutscene_0_PlayerChoice_1a_begin break=Cutscene_0_PlayerChoice_1a_end]
 [choice]Maybe. Though I think I’m still warming up to everything.[newtalk start=Cutscene_0_PlayerChoice_1b_begin break=Cutscene_0_PlayerChoice_1b_end]
@@ -29,63 +29,63 @@ Girl:[question=FirstMeetResponse]Am I right?
 [title=Cutscene_0_PlayerChoice_1a_begin]
 Girl:That’s the right mindset! I like it. You’ll do great here, Ren.
 Player:I hope so... I’m not exactly good at standing out.
-Girl:smiles warmly That’s okay. I’ll make sure you don’t fade into the background.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+Girl:*smiles warmly* That’s okay. I’ll make sure you don’t fade into the background.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_0_PlayerChoice_1a_end]
 
 [title=Cutscene_0_PlayerChoice_1b_begin]
-Girl:laughs That’s totally fine! You’ve got time to get comfortable.
+Girl:*laughs* That’s totally fine! You’ve got time to get comfortable.
 Girl:Besides, I’m not letting you stay a mystery for too long.
 Player:heh... that sounds like a challenge.
-Girl:grins It is one. And I’m definitely winning it.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+Girl:*grins*It is one. And I’m definitely winning it.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_0_PlayerChoice_1b_end]
 
 [title=Cutscene_2_begin]
-Girl:leans forward slightly So, what do you think of the class so far? Too loud? Too quiet?
+Girl:*leans forward slightly* So, what do you think of the class so far? Too loud? Too quiet?
 Player:It’s... lively. Definitely not what I’m used to.
 Girl:Yeah, it’s a little chaotic sometimes. But that’s what makes it fun.
-Girl:smiles You’ll get used to it — maybe even start enjoying it.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+Girl:*smiles* You’ll get used to it — maybe even start enjoying it.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_end]
 
 [title=Cutscene_3_begin]
-Girl:[question=FirstThought]smiles playfully So... be honest. What was your first thought when you met me?
+Girl:[question=FirstThought]*smiles playfully* So... be honest. What was your first thought when you met me?
 [choice]You seemed... really confident. Like you know how to handle anything.[newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
 [choice]You’re... more outgoing than I expected. It’s kind of refreshing.[newtalk start=Cutscene_0_PlayerChoice_3b_begin break=Cutscene_0_PlayerChoice_3b_end]
 [title=Cutscene_3_end]
 
 [title=Cutscene_0_PlayerChoice_3a_begin]
-Girl:grins Confident, huh? I’ll take that as a compliment.
+Girl:*grins* Confident, huh? I’ll take that as a compliment.
 Girl:But trust me, I’m just good at pretending sometimes.
 Player:Still... you make it look easy.
-Girl:smiles Maybe one day you’ll say the same about yourself.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+Girl:*smiles* Maybe one day you’ll say the same about yourself.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
 [title=Cutscene_0_PlayerChoice_3a_end]
 
 [title=Cutscene_0_PlayerChoice_3b_begin]
-Girl:laughs Outgoing, huh? I get that a lot.
+Girl:*laughs* Outgoing, huh? I get that a lot.
 Girl:But that just means I have to work harder to balance out quiet people like you.
 Player:I guess that makes sense... it’s a good balance.
-Girl:smiles See? We’re already a good team.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+Girl:*smiles* See? We’re already a good team.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
 [title=Cutscene_0_PlayerChoice_3b_end]
 
 [title=Cutscene_4_begin]
-Girl:leans back happily Well, Ren, I’m glad we got to talk. You seem really nice.
+Girl:*leans back happily* Well, Ren, I’m glad we got to talk. You seem really nice.
 Girl:[question=NextMeeting]Do you think you’ll join any of the class activities later?
 [choice]Maybe... if someone drags me into it.[newtalk start=Cutscene_0_PlayerChoice_4a_begin break=Cutscene_0_PlayerChoice_4a_end]
 [choice]I’ll think about it. Depends on what it is, I guess.[newtalk start=Cutscene_0_PlayerChoice_4b_begin break=Cutscene_0_PlayerChoice_4b_end]
 [title=Cutscene_4_end]
 
 [title=Cutscene_0_PlayerChoice_4a_begin]
-Girl:grins Then I guess I’ll be the one doing the dragging.
-Girl:smiles gently Thanks for talking with me, Ren. You’re easier to talk to than you think.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+Girl:*grins* Then I guess I’ll be the one doing the dragging.
+Girl:*smiles gently* Thanks for talking with me, Ren. You’re easier to talk to than you think.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
 [title=Cutscene_0_PlayerChoice_4a_end]
 
 [title=Cutscene_0_PlayerChoice_4b_begin]
 Girl:That’s fair! I’ll make sure it’s something fun, so you’ll have no excuse to skip.
-Girl:smiles I’m really glad you’re in our class, Ren. It already feels different with you here.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+Girl:*smiles* I’m really glad you’re in our class, Ren. It already feels different with you here.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
 [title=Cutscene_0_PlayerChoice_4b_end]
 
 [title=Cutscene_5_begin]
-Girl:stands and waves slightly Alright, class rep duties call! But don’t disappear on me, okay?
-Girl:smiles warmly See you tomorrow, Ren.
+Girl:*stands and waves slightly* Alright, class rep duties call! But don’t disappear on me, okay?
+Girl:*smiles warmly* See you tomorrow, Ren.
 Player:Yeah... see you, Aya.
 [title=Cutscene_5_end]
 

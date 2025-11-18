@@ -7,7 +7,7 @@ Girl:[question=GreetingChoice]I didn’t think anyone else came here this early.
 
 [title=Cutscene_0_PlayerChoice_0a_begin]
 Girl:Oh, you’re not bothering me. The library’s usually empty this time of day.
-Girl:*pauses* for a moment Maybe that’s why I like it here.
+Girl:*pauses for a moment* Maybe that’s why I like it here.
 Girl:*softly* I’m Mika, by the way. We’re... in the same class, right?
 Player:Yeah. I’m Ren. I’ve seen you around, but... you always seemed busy reading.
 Girl:*smiles faintly* That’s one way to say “hiding,” I guess.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
