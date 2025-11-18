@@ -6,103 +6,40 @@ using UnityEngine.SceneManagement;
 public class InputHandler : MonoBehaviour
 {
     [SerializeField] private DialogueControllerVersion2 dialogueController;
-    public TMP_InputField playerInputField;
+    [SerializeField] private TMP_InputField playerInputField;
+    [SerializeField] private Text quest2;
     public int quest = 10;
-    public Text quest2;
 
     void Start()
     {
-        if (playerInputField != null)
-        {
-            playerInputField.onEndEdit.RemoveAllListeners();
-            playerInputField.onEndEdit.AddListener(OnInputSubmit);
-        }
-        else
-        {
-            Debug.LogWarning("playerInputField not assigned in InputHandler!");
-        }
+        if (playerInputField)
+            playerInputField.onEndEdit.AddListener(OnSubmit);
     }
 
     void Update()
     {
-        quest2.text = quest.ToString() + "/10";
-
-        // ENTER key submit
-        if (Input.GetKeyDown(KeyCode.Return) && dialogueController != null)
-        {
-            string input = playerInputField.text;  // ✅ FIXED: read directly from input field
-
-            if (!string.IsNullOrEmpty(input))
-            {
-                dialogueController.GetNPCResponse(input);
-            }
-        }
+        if (quest2) quest2.text = quest + "/10";
+        if (Input.GetKeyDown(KeyCode.Return) && playerInputField.isFocused)
+            OnSubmit(playerInputField.text);
     }
 
-    private void OnInputSubmit(string input)
+    void OnSubmit(string input)
     {
-        string currentScene = SceneManager.GetActiveScene().name;
+        if (string.IsNullOrWhiteSpace(input)) return;
 
-        // === QUEST LOGIC ===
-        if (currentScene == "QUEST1GAMEPLAY")
+        quest = Mathf.Max(0, quest - 1);
+        if (quest <= 0)
         {
-            if (quest <= 0)
-            {
-                Application.LoadLevel("QUEST1END");
-                quest = 0;
-            }
-            PlayerPrefs.SetInt("quest2", 1);
-            PlayerPrefs.Save();
-        }
-        if (currentScene == "QUEST21")
-        {
-            if (quest <= 0)
-            {
-                Application.LoadLevel("QUEST2END");
-                quest = 0;
-            }
-            PlayerPrefs.SetInt("quest3", 1);
-            PlayerPrefs.Save();
-        }
-        if (currentScene == "QUEST3GAMEPLAY")
-        {
-            if (quest <= 0)
-            {
-                Application.LoadLevel("QUEST3END");
-                quest = 0;
-            }
-            PlayerPrefs.SetInt("quest4", 1);
-            PlayerPrefs.Save();
+            string scene = SceneManager.GetActiveScene().name;
+            if (scene.Contains("QUEST1")) SceneManager.LoadScene("QUEST1END");
+            if (scene.Contains("QUEST2")) SceneManager.LoadScene("QUEST2END");
+            if (scene.Contains("QUEST3")) SceneManager.LoadScene("QUEST3END");
         }
 
-        quest -= 1;
-
-        if (string.IsNullOrWhiteSpace(input) || input.Trim().Length < 1) return;
-
-        string trimmedInput = input.Trim();
-
-        string personality = GameManager.Instance.currentCharacter;
-        string tone = GameManager.Instance.currentTone;
-
-        string intimacyLevel = GameManager.Instance.GetIntimacyLevel(
-            personality == "outgoing_class_rep" ? GameManager.Instance.ayaIntimacy :
-            personality == "library_ghost" ? GameManager.Instance.mikaIntimacy :
-            GameManager.Instance.soraIntimacy
-        );
-
-        // Send to dialogue controller
-        if (dialogueController != null)
-        {
-            dialogueController.GetNPCResponse(trimmedInput, personality, tone, intimacyLevel);
-        }
-
-        // Reset input
+        dialogueController.GetNPCResponse(input.Trim());
         playerInputField.text = "";
         playerInputField.ActivateInputField();
     }
 
-    public void OnSubmitButtonClick()
-    {
-        OnInputSubmit(playerInputField.text);
-    }
+    public void OnSubmitButtonClick() => OnSubmit(playerInputField.text);
 }

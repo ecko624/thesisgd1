@@ -326,7 +326,7 @@ MonoBehaviour:
   billboard: 1
   mainCamera: 1
   otherCamera: {fileID: 0}
-  txtToParse: {fileID: 4900000, guid: 4080b96c204af9c468550fdf83d8772e, type: 3}
+  txtToParse: {fileID: 4900000, guid: d6b7f0333fab02a4287e2b4e9d17d27c, type: 3}
   enableQuickSkip: 0
   callback:
     m_PersistentCalls:
@@ -1204,7 +1204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a694a23509dfbd49bdda485421fc5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nexr: DIAG23.2
+  nexr: DIAG34
 --- !u!114 &1220619204
 MonoBehaviour:
   m_ObjectHideFlags: 0

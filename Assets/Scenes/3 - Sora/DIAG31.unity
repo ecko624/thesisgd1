@@ -556,6 +556,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef029dd2f0bc3e4d836fb3608edc04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _peopleMet: 0
+  _questActive: 0
+  _currentCharacter: aya
+  _currentIntimacyLevel: Stranger
+  _ayaIntimacy: 0
+  _mikaIntimacy: 0
+  _soraIntimacy: 0
 --- !u!4 &44517085
 Transform:
   m_ObjectHideFlags: 0
@@ -920,7 +927,7 @@ Transform:
   m_GameObject: {fileID: 173384950}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.12, y: 56.32, z: -10}
+  m_LocalPosition: {x: 123.33, y: 57.64, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -52370,14 +52377,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884503474}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -98.927, y: -13.676, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7247989, w: 0.6889605}
+  m_LocalPosition: {x: -63.561, y: -4.823, z: 0}
+  m_LocalScale: {x: 2.48, y: 2.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 541190150}
   m_Father: {fileID: 249699904}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -92.904}
 --- !u!61 &884503477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52439,8 +52446,8 @@ MonoBehaviour:
   direction: 4
   teleportTargetPosition: {fileID: 138924679}
   requiredQuestId: 
-  cutsceneSceneName: DIAG22
-  cutsceneKey: DIAG22
+  cutsceneSceneName: DIAG32
+  cutsceneKey: DIAG32
 --- !u!1 &900133741
 GameObject:
   m_ObjectHideFlags: 0
@@ -52852,7 +52859,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1845144980}
-  - {fileID: 2031915594}
+  - {fileID: 2000603558}
   m_Father: {fileID: 280008347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -53903,17 +53910,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e6fe677ec7107458ff0b781e7c5041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personalityKey: outgoing_class_rep
-  npcId: Aya
-  portrait: {fileID: 21300000, guid: fbeaa7c6ed581554184c13902ff3a5ef, type: 3}
+  serverPersonality: aya
   greeting: Hey!
-  tone: cheerful
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2
   useTrigger: 1
-  addTriggerChildForDetection: 1
-  triggerChildSize: {x: 1.5, y: 2}
   onOpenDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -69851,7 +69853,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.003921569, g: 0.015686275, b: 0.039215688, a: 0}
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -69901,7 +69903,7 @@ Transform:
   m_GameObject: {fileID: 1649243579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.079353, y: 56.3142, z: -10}
+  m_LocalPosition: {x: 52.3407, y: 56.313732, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71839,17 +71841,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e6fe677ec7107458ff0b781e7c5041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personalityKey: grandfather
-  npcId: Hiroshi
-  portrait: {fileID: 21300000, guid: 7eeb9eb5d06871244ac1c702185bcc4d, type: 3}
+  serverPersonality: aya
   greeting: Hey!
-  tone: shy
   interactPrompt: {fileID: 0}
   interactionKey: 101
   maxInteractDistance: 2
   useTrigger: 1
-  addTriggerChildForDetection: 1
-  triggerChildSize: {x: 1.5, y: 2}
   onOpenDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -72022,8 +72019,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.1679077, y: 133.96317}
-  m_SizeDelta: {x: 505.3214, y: 117.5169}
+  m_AnchoredPosition: {x: 4.1679077, y: 138.1}
+  m_SizeDelta: {x: 505.3214, y: 110.8737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845144981
 MonoBehaviour:
@@ -72058,7 +72055,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: " \u201CGo to the School\""
+  m_Text: " \u201CGo to the Beach\""
 --- !u!222 &1845144982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -72196,7 +72193,7 @@ Transform:
   m_GameObject: {fileID: 1892856173}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.12, y: 56.32, z: 0}
+  m_LocalPosition: {x: 123.33, y: 57.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -72687,6 +72684,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958339217}
   m_CullTransparentMesh: 1
+--- !u!1 &2000603557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000603558}
+  - component: {fileID: 2000603560}
+  - component: {fileID: 2000603559}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2000603558
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000603557}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1061279244}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4.3164062, y: -50.494995}
+  m_SizeDelta: {x: 454.63, y: 244.99}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2000603559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000603557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e301f29adebd3dc4ea11b14ebf64a072, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2000603560
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000603557}
+  m_CullTransparentMesh: 1
 --- !u!1 &2009847094
 GameObject:
   m_ObjectHideFlags: 0
@@ -72912,81 +72984,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2031915593
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2031915594}
-  - component: {fileID: 2031915596}
-  - component: {fileID: 2031915595}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2031915594
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031915593}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1061279244}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -59.100006}
-  m_SizeDelta: {x: 454.9297, y: 244.38}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2031915595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031915593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d48c43824c06d5489c240710fb705b4, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2031915596
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031915593}
-  m_CullTransparentMesh: 1
 --- !u!1 &2035425852
 GameObject:
   m_ObjectHideFlags: 0
@@ -73190,10 +73187,10 @@ MonoBehaviour:
   npcText: {fileID: 1367928883}
   playerInputField: {fileID: 535209763}
   dialoguePanel: {fileID: 1464487073}
-  personality: grandfather
-  tone: shy
-  intimacy: stranger
-  maxContextLength: 200
+  intimacyDisplay: {fileID: 0}
+  serverURL: http://localhost:5000/generate
+  playerID: player1
+  currentPersonality: aya
 --- !u!114 &2071825039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73208,8 +73205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueController: {fileID: 2071825038}
   playerInputField: {fileID: 535209763}
-  quest: 10
   quest2: {fileID: 607983454}
+  quest: 10
 --- !u!4 &2071825040
 Transform:
   m_ObjectHideFlags: 0
