@@ -249,8 +249,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1601660220}
   dialogWindow: {fileID: 1382059713}
-  forceScreenCenter: 1
-  centerOffset: {x: 0, y: 800}
   rotateToTarget: 0
   cameraBillboard: 0
   basedOnWhatCamera: {fileID: 1301762006}
@@ -1206,7 +1204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a694a23509dfbd49bdda485421fc5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nexr: DIAG7
+  nexr: DIAG23.1b
 --- !u!114 &1220619204
 MonoBehaviour:
   m_ObjectHideFlags: 0

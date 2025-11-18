@@ -2990,7 +2990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 208938812}
+  m_BoundingShape2D: {fileID: 1278941903}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &173384952
@@ -76465,7 +76465,7 @@ Transform:
   m_GameObject: {fileID: 1649243579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.3407, y: 56.313732, z: -10}
+  m_LocalPosition: {x: 89.12, y: 56.32, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77885,6 +77885,8 @@ GameObject:
   - component: {fileID: 1892856177}
   - component: {fileID: 1892856176}
   - component: {fileID: 1892856175}
+  - component: {fileID: 1892856183}
+  - component: {fileID: 1892856182}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -78181,6 +78183,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1892856182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892856173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 0
+  m_SpriteHash: 0
+--- !u!114 &1892856183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892856173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: ea4012fb79708314ea2d495b44a0a8cb, type: 3}
 --- !u!1 &1926781469
 GameObject:
   m_ObjectHideFlags: 0
