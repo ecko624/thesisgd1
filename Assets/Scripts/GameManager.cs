@@ -1,5 +1,8 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 
 public class GameManager : MonoBehaviour
 {
@@ -70,8 +73,39 @@ public class GameManager : MonoBehaviour
         if (currentCharacter == personality)
             currentIntimacyLevel = ScoreToLevel(newScore);
 
-        SaveIntimacyToPlayerPrefs();
+        Debug.Log($"[Intimacy Updated] {personality} -> Score: {newScore}, Level: {ScoreToLevel(newScore)}");
+
+        if (newScore >= 100)
+        {
+            string sceneName = personality switch
+            {
+                "aya" => "AyaEnding3.1Cutscene",
+                "mika" => "MikaEnding3.2Cutscene",
+                "sora" => "SoraEnding3.3Cutscene",
+                _ => ""
+            };
+
+            SceneManager.LoadScene(sceneName);
+        }
     }
+
+    private void OnCutsceneSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Unsubscribe so it only runs once
+        SceneManager.sceneLoaded -= OnCutsceneSceneLoaded;
+
+        PlayableDirector director = FindObjectOfType<PlayableDirector>();
+        if (director != null)
+        {
+            Debug.Log("[GameManager] Found PlayableDirector, playing cutscene.");
+            director.Play();
+        }
+        else
+        {
+            Debug.LogError("[GameManager] No PlayableDirector found in scene!");
+        }
+    }
+
 
     public int GetIntimacyScore(string personality)
     {
