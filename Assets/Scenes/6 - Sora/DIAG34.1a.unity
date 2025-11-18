@@ -7334,8 +7334,8 @@ MonoBehaviour:
   direction: 4
   teleportTargetPosition: {fileID: 138924679}
   requiredQuestId: 
-  cutsceneSceneName: DIAG32
-  cutsceneKey: DIAG32
+  cutsceneSceneName: DIAG34.1a
+  cutsceneKey: DIAG34.1a
 --- !u!1 &900133741
 GameObject:
   m_ObjectHideFlags: 0
