@@ -1,203 +1,125 @@
 using UnityEngine;
 using UnityEngine.Events;
-using Version2;
 
 public class NPCInteractable : MonoBehaviour, IInteractable
 {
+    [Header("References")]
+    [SerializeField] private GameObject dialoguePanel; // Drag your DialoguePanel here
+
     [Header("Identity")]
-    public string personalityKey = "outgoing_class_rep";
-    public string npcId = "aya";
-    public Sprite portrait;
+    public string serverPersonality = "aya";  // MUST BE lowercase: aya, mika, sora
     [TextArea] public string greeting = "Hey!";
-    public string tone = "cheerful";
 
     [Header("Interaction")]
-    public GameObject interactPrompt;      // popup object (world-space or UI)
+    public GameObject interactPrompt;
     public KeyCode interactionKey = KeyCode.E;
-    public float maxInteractDistance = 2f; // used when not using triggers
-    public bool useTrigger = false;        // prefer distance-based by default
-    [Tooltip("If true, a child trigger collider + InteractionForwarder will be added so Version1's InteractionDetector works without making the main collider a trigger.")]
-    public bool addTriggerChildForDetection = true;
-    public Vector2 triggerChildSize = new Vector2(1.5f, 2f);
+    public float maxInteractDistance = 3f;
+    public bool useTrigger = false;
 
     [Header("Events")]
     public UnityEvent onOpenDialogue;
     public UnityEvent onCloseDialogue;
 
-    private DialogueControllerVersion2 dm; // Changed from DialogueManager
-    private bool playerInRange = false;
+    private DialogueControllerVersion2 dm;
     private Transform playerTransform;
+    private bool playerInRange = false;
     private bool isDialogueActive = false;
 
     void Awake()
     {
-        dm = FindObjectOfType<DialogueControllerVersion2>(); // Changed from DialogueManager
-        if (dm == null) Debug.LogWarning("NPCInteractable: DialogueControllerVersion2 not found in scene.");
-        if (interactPrompt != null) interactPrompt.SetActive(false);
-
-        if (addTriggerChildForDetection)
-            EnsureTriggerChildExists();
+        dm = FindObjectOfType<DialogueControllerVersion2>();
+        if (interactPrompt) interactPrompt.SetActive(false);
     }
 
     void Start()
     {
-        var player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null) playerTransform = player.transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
+        if (!playerTransform) Debug.LogError("Player with tag 'Player' not found!");
     }
 
     void Update()
+{
+    // Always check distance
+    if (!useTrigger)
+        UpdateDistanceCheck();
+
+    // If dialogue is active, block interaction but DO NOT check panel state
+    if (isDialogueActive)
     {
-        if (!useTrigger)
-        {
-            UpdateDistanceCheck();
-            if (!isDialogueActive && playerInRange && Input.GetKeyDown(interactionKey))
-                TryInteract();
-        }
-        else
-        {
-            if (!isDialogueActive && playerInRange && Input.GetKeyDown(interactionKey))
-                TryInteract();
-        }
+        SetPromptActive(false);
+        return;
     }
+
+    // Allow interaction normally
+    if (playerInRange && Input.GetKeyDown(interactionKey))
+        TryInteract();
+}
+
 
     void UpdateDistanceCheck()
     {
-        if (playerTransform == null)
+        if (!playerTransform) return;
+        float dist = Vector2.Distance(transform.position, playerTransform.position);
+        bool inRange = dist <= maxInteractDistance;
+
+        if (inRange != playerInRange)
         {
-            playerInRange = false;
-            SetPromptActive(false);
-            return;
+            playerInRange = inRange;
+            SetPromptActive(inRange && !isDialogueActive); // Only show prompt when NOT talking
         }
-
-        float d = Vector2.Distance(transform.position, playerTransform.position);
-        bool nowInRange = d <= maxInteractDistance;
-        if (nowInRange != playerInRange)
-        {
-            playerInRange = nowInRange;
-            SetPromptActive(playerInRange);
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!useTrigger) return;
-        if (!other.CompareTag("Player")) return;
-        playerInRange = true;
-        SetPromptActive(true);
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (!useTrigger) return;
-        if (!other.CompareTag("Player")) return;
-        playerInRange = false;
-        SetPromptActive(false);
     }
 
     void SetPromptActive(bool active)
     {
-        if (interactPrompt != null) interactPrompt.SetActive(active);
+        if (interactPrompt != null)
+            interactPrompt.SetActive(active);
     }
 
-    // IInteractable API for InteractionDetector
-    public void Interact()
-    {
-        if (!CanInteract()) return;
-        TryInteract();
-    }
-
-    public bool CanInteract()
-    {
-        return !isDialogueActive && playerInRange;
-    }
+    public void Interact() { if (CanInteract()) TryInteract(); }
+    public bool CanInteract() => playerInRange && !isDialogueActive && (dialoguePanel == null || !dialoguePanel.activeInHierarchy);
 
     void TryInteract()
     {
-        if (dm == null) dm = FindObjectOfType<DialogueControllerVersion2>(); // Changed from DialogueManager
-        if (dm == null) return;
-
         isDialogueActive = true;
+        SetPromptActive(false);
 
-        // Set identity for DialogueControllerVersion2 and GameManager
-        dm.StartInteraction(personalityKey, isSingleLine: false); // For grandfather 
-        dm.tone = tone; // Sync tone (though currently not used in GetNPCResponse directly)
-
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.currentCharacter = personalityKey;
-            GameManager.Instance.currentTone = tone; // Sync tone
-            // Sync intimacy (assuming GameManager handles this)
-            GameManager.Instance.currentIntimacy = GameManager.Instance.GetIntimacyLevel(
-                personalityKey == "outgoing_class_rep" ? GameManager.Instance.ayaIntimacy :
-                personalityKey == "library_ghost" ? GameManager.Instance.mikaIntimacy : GameManager.Instance.soraIntimacy
-            );
-        }
-
-        if (dm.npcText != null) dm.npcText.text = greeting;
-
-        // Explicitly open the UI panel
+        GameManager.Instance.currentCharacter = serverPersonality;
+        dm.StartInteraction(serverPersonality);
+        dm.NpcText.text = greeting;
         dm.OpenDialoguePanel();
 
-        // Invoke events and subscribe
+        dm.OnModelResponse += OnResponse;
         onOpenDialogue?.Invoke();
-        dm.OnModelResponse += HandleModelResponse;
-        SetPromptActive(false);
+        GameManager.Instance.TryStartMeetEveryoneQuest(serverPersonality);
     }
 
-    private void HandleModelResponse(string response)
+    void OnResponse(string text)
     {
-        if (string.IsNullOrEmpty(response)) return;
-        var lower = response.ToLowerInvariant();
-        if (lower.Contains("goodbye") || lower.Contains("see you") || lower.Contains("bye"))
-        {
+        // Optional: auto-close on certain keywords (you can remove if you want)
+        if (text.ToLower().Contains("bye") || text.ToLower().Contains("see you"))
             EndConversation();
-            return;
-        }
-
-        // Additional reaction logic here
     }
 
-    void EndConversation()
+    public void EndConversation()
+{
+    if (!isDialogueActive) return;
+
+    isDialogueActive = false;
+
+    dm.OnModelResponse -= OnResponse;
+
+    dm.CloseDialoguePanel();
+    dm.ResetConversation();
+
+    onCloseDialogue?.Invoke();
+
+    if (playerInRange)
+        SetPromptActive(true);
+}
+
+
+    void OnDisable()
     {
-        Unsubscribe();
-        isDialogueActive = false;
-        onCloseDialogue?.Invoke();
-        if (playerInRange) SetPromptActive(true);
-    }
-
-    public void Unsubscribe()
-    {
-        if (dm != null) dm.OnModelResponse -= HandleModelResponse;
-    }
-
-    void OnDisable() => Unsubscribe();
-    void OnDestroy() => Unsubscribe();
-
-    void OnMouseDown() => TryInteract(); // For editor convenience
-
-    public void SetPortrait(Sprite s) => portrait = s;
-
-    public void SetPlayerInRangeFromForwarder(bool inRange)
-    {
-        playerInRange = inRange;
-        SetPromptActive(inRange);
-    }
-
-    void EnsureTriggerChildExists()
-    {
-        foreach (Transform child in transform)
-        {
-            var bf = child.GetComponent<InteractionForwarder>();
-            if (bf != null) return;
-        }
-
-        var go = new GameObject("InteractionTrigger");
-        go.transform.SetParent(transform, false);
-        go.transform.localPosition = Vector3.zero;
-        var bc = go.AddComponent<BoxCollider2D>();
-        bc.isTrigger = true;
-        bc.size = triggerChildSize;
-
-        go.AddComponent<InteractionForwarder>();
+        dm.OnModelResponse -= OnResponse;
     }
 }

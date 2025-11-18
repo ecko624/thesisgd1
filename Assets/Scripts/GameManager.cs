@@ -4,71 +4,136 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public int peopleMet { get; private set; }
-    public bool questActive { get; set; } // Public setter for external access
-    public Dictionary<string, string> npcMemories { get; private set; }
 
-    // Additional fields for character state
-    public string currentCharacter { get; set; } // e.g., "outgoing_class_rep"
-    public string currentTone { get; set; } // e.g., "cheerful"
-    public string currentIntimacy { get; set; } // e.g., "strangers"
+    [Header("Quest System")]
+    [SerializeField] private int _peopleMet = 0;
+    [SerializeField] private bool _questActive = false;
 
-    // Intimacy levels for each NPC
-    public int ayaIntimacy { get; private set; } = 0; // For "outgoing_class_rep"
-    public int mikaIntimacy { get; private set; } = 0; // For "library_ghost"
-    public int soraIntimacy { get; private set; } = 0; // For "free_spirit"
+    public int peopleMet => _peopleMet;
+    public bool questActive 
+    { 
+        get => _questActive; 
+        set => _questActive = value; 
+    }
 
-    void Awake()
+    [Header("NPC Memory")]
+    [SerializeField] private Dictionary<string, string> _npcMemories = new();
+    public Dictionary<string, string> npcMemories => _npcMemories;
+
+    [Header("Current Character")]
+    [SerializeField] private string _currentCharacter = "aya";
+    [SerializeField] private string _currentIntimacyLevel = "Stranger";
+
+    public string currentCharacter 
+    { 
+        get => _currentCharacter; 
+        set => _currentCharacter = value; 
+    }
+    public string currentIntimacyLevel 
+    { 
+        get => _currentIntimacyLevel; 
+        set => _currentIntimacyLevel = value; 
+    }
+
+    [Header("Intimacy Scores (0-100)")]
+    [SerializeField] private int _ayaIntimacy = 0;
+    [SerializeField] private int _mikaIntimacy = 0;
+    [SerializeField] private int _soraIntimacy = 0;
+
+    public int ayaIntimacy => _ayaIntimacy;
+    public int mikaIntimacy => _mikaIntimacy;
+    public int soraIntimacy => _soraIntimacy;
+
+    private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            npcMemories = new Dictionary<string, string>();
-            questActive = false; // Initialize quest state
+            LoadIntimacyFromSave();
         }
         else Destroy(gameObject);
     }
 
-    void Start()
-    {
-        // Initialize Act 1: Trigger grandfather interaction
-        var dm = FindObjectOfType<DialogueControllerVersion2>();
-        if (dm != null) dm.StartInteraction("grandfather");
-    }
+    
 
-    public void UpdateIntimacy(string personality, int delta)
+    public void UpdateIntimacy(string personality, int newScore)
     {
-        // Update intimacy based on personality
+        personality = personality.ToLower();
         switch (personality)
         {
-            case "outgoing_class_rep":
-                ayaIntimacy = Mathf.Clamp(ayaIntimacy + delta, -10, 10);
-                currentIntimacy = GetIntimacyLevel(ayaIntimacy);
-                break;
-            case "library_ghost":
-                mikaIntimacy = Mathf.Clamp(mikaIntimacy + delta, -10, 10);
-                currentIntimacy = GetIntimacyLevel(mikaIntimacy);
-                break;
-            case "free_spirit":
-                soraIntimacy = Mathf.Clamp(soraIntimacy + delta, -10, 10);
-                currentIntimacy = GetIntimacyLevel(soraIntimacy);
-                break;
+            case "aya": _ayaIntimacy = Mathf.Clamp(newScore, 0, 100); break;
+            case "mika": _mikaIntimacy = Mathf.Clamp(newScore, 0, 100); break;
+            case "sora": _soraIntimacy = Mathf.Clamp(newScore, 0, 100); break;
         }
+
+        if (currentCharacter == personality)
+            currentIntimacyLevel = ScoreToLevel(newScore);
+
+        SaveIntimacyToPlayerPrefs();
+    }
+
+    public int GetIntimacyScore(string personality)
+    {
+        return personality.ToLower() switch
+        {
+            "aya" => _ayaIntimacy,
+            "mika" => _mikaIntimacy,
+            "sora" => _soraIntimacy,
+            _ => 0
+        };
+    }
+
+    public string GetIntimacyLevel(string personality) => ScoreToLevel(GetIntimacyScore(personality));
+
+    private string ScoreToLevel(int score)
+    {
+        if (score >= 80) return "Romantic Interest";
+        if (score >= 60) return "Close Friend";
+        if (score >= 40) return "Friend";
+        if (score >= 20) return "Acquaintance";
+        return "Stranger";
     }
 
     public void IncrementPeopleMet()
     {
-        peopleMet++;
-        questActive = peopleMet < 3; // Deactivate quest when complete
+        _peopleMet++;
+        if (_peopleMet >= 3) _questActive = false;
     }
 
-    public string GetIntimacyLevel(int intimacy)
+    public void TryStartMeetEveryoneQuest(string personality)
     {
-        if (intimacy <= -3) return "strangers";
-        if (intimacy <= 2) return "acquaintance";
-        if (intimacy <= 5) return "friend";
-        if (intimacy <= 8) return "close_friend";
-        return "romantic_interest";
+        if (_peopleMet == 0)
+        {
+            _questActive = true;
+            Debug.Log("[Quest Started] Meet Aya, Mika, and Sora!");
+        }
+    }
+
+    private void SaveIntimacyToPlayerPrefs()
+    {
+        PlayerPrefs.SetInt("Intimacy_Aya", _ayaIntimacy);
+        PlayerPrefs.SetInt("Intimacy_Mika", _mikaIntimacy);
+        PlayerPrefs.SetInt("Intimacy_Sora", _soraIntimacy);
+        PlayerPrefs.SetInt("PeopleMet", _peopleMet);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadIntimacyFromSave()
+    {
+        _ayaIntimacy = PlayerPrefs.GetInt("Intimacy_Aya", 0);
+        _mikaIntimacy = PlayerPrefs.GetInt("Intimacy_Mika", 0);
+        _soraIntimacy = PlayerPrefs.GetInt("Intimacy_Sora", 0);
+        _peopleMet = PlayerPrefs.GetInt("PeopleMet", 0);
+        _questActive = _peopleMet < 3;
+    }
+
+    [ContextMenu("Reset Progress")]
+    public void ResetProgress()
+    {
+        _ayaIntimacy = _mikaIntimacy = _soraIntimacy = _peopleMet = 0;
+        _questActive = true;
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 }
