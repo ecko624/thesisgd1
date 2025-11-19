@@ -40,6 +40,7 @@ public class MapTransition : MonoBehaviour
             PersistentCamera.Instance.SetConfinerBoundsByName(mapBoundary.gameObject.name);
         }
 
+
         // Check if we have a quest-specific cutscene and if that quest is active
         if (!string.IsNullOrEmpty(cutsceneSceneName) && !string.IsNullOrEmpty(requiredQuestId) && QuestController.Instance.IsQuestActive(requiredQuestId))
         {
