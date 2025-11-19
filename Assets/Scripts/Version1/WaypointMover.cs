@@ -12,11 +12,25 @@ public class WaypointMover : MonoBehaviour
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
     private Animator animator;
+    private bool hasAnimator = false;
     public static bool onoff = true;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        hasAnimator = animator != null;
+        if (!hasAnimator)
+        {
+            Debug.LogWarning($"WaypointMover: no Animator found on '{gameObject.name}'. NPC movement will work but animation calls will be skipped.");
+        }
+
+        // Validate waypoints parent
+        if (waypointParent == null)
+        {
+            Debug.LogError($"WaypointMover: 'waypointParent' is not set on '{gameObject.name}'. Movement disabled.");
+            enabled = false;
+            return;
+        }
 
         // Store children as waypoints
         int count = waypointParent.childCount;
@@ -29,7 +43,7 @@ public class WaypointMover : MonoBehaviour
     {
         if (PauseController.IsGamePaused || isWaiting || !onoff)
         {
-            animator.SetBool("isWalking", false);
+            if (hasAnimator) animator.SetBool("isWalking", false);
             return;
         }
 
@@ -48,9 +62,12 @@ public class WaypointMover : MonoBehaviour
 
         // Animation direction
         Vector3 direction = (targetPos - transform.position).normalized;
-        animator.SetFloat("InputX", direction.x);
-        animator.SetFloat("InputY", direction.y);
-        animator.SetBool("isWalking", direction.magnitude > 0.05f);
+        if (hasAnimator)
+        {
+            animator.SetFloat("InputX", direction.x);
+            animator.SetFloat("InputY", direction.y);
+            animator.SetBool("isWalking", direction.magnitude > 0.05f);
+        }
 
         // Check arrival
         if (Vector3.Distance(transform.position, targetPos) < 0.1f)
@@ -63,7 +80,7 @@ public class WaypointMover : MonoBehaviour
     IEnumerator WaitAtWaypoint()
     {
         isWaiting = true;
-        animator.SetBool("isWalking", false);
+        if (hasAnimator) animator.SetBool("isWalking", false);
 
         yield return new WaitForSeconds(waitTime);
 

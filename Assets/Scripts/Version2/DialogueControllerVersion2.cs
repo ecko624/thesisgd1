@@ -89,6 +89,10 @@ private string GetGreeting(string personality)
         if (string.IsNullOrWhiteSpace(input)) return;
     if (input == "Type Message") return; // placeholder block
     if (input.Length < 2) return;        // block accidental single keys
+        
+        // Log player choice to DataLogger
+        DataLogger.UpdateLastPlayerChoice(input.Trim());
+        
         playerInputField.interactable = false;
         playerInputField.text = "";
         StartCoroutine(Send(input.Trim()));
