@@ -1,55 +1,52 @@
 [title=Cutscene_0_begin]
-Scene:The library is quiet. Mika sits at a table, sketchbook open, drawing.
-Girl:without looking up Oh. It’s you.
-Girl:[question=GreetingChoice]Hi
-[choice]Hey… you’re Mika, right?[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
-[choice]Hi… you’re Mika, right?[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+Mika: Oh... hi.
+Mika:[question=GreetingChoice]I didn’t think anyone else came here this early.
+[choice]Hey... I didn’t mean to bother you. I just needed a quiet place.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]I didn’t expect to see someone here either... guess I’m not the only one who likes the quiet.[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
 [title=Cutscene_0_end]
 
 
 [title=Cutscene_0_PlayerChoice_0a_begin]
-Girl:glances up Yeah. And you’re standing in my light.
-Girl:closes sketchbook a bit I’m Mika. You?
-Player:Ren. Sorry about that.
-Girl:shrugs It’s fine. Sit if you want.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Mika: Oh—don’t worry, you’re really not bothering me.
+Mika: The library's usually empty at this hour.
+Mika: Maybe that’s why I like being here so much.
+Mika: I’m Mika, by the way. We’re… in the same class, right?
+Mika: You seem like someone who appreciates quiet places too.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0a_end]
 
 
 [title=Cutscene_0_PlayerChoice_0b_begin]
-Girl:looks at you for a second Yep. That’s me.
-Girl:taps pencil I’m Mika. And you are?
-Player:Ren. Nice to meet you.
-Girl:Hm. Sure.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Mika: *smiles lightly* Yeah… it feels like the quiet people end up in the same places.
+Mika: I’m Mika. I think we’re in the same class?
+Mika: It’s nice knowing someone else uses the library as a hiding spot too.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0b_end]
 
 
 [title=Cutscene_1_begin]
-Girl:goes back to drawing The library’s quiet today. I like it better this way.
-Girl:glances at you So… what are you doing here?
-Girl:[question=ReasonInLibrary]?
-[choice]Just looking for a quiet place.[newtalk start=Cutscene_1_PlayerChoice_a_begin break=Cutscene_1_PlayerChoice_a_end]
-[choice]I saw you here, so I came over.[newtalk start=Cutscene_1_PlayerChoice_b_begin break=Cutscene_1_PlayerChoice_b_end]
+Mika: *glances at her books* I’m here a lot, reading… or writing when it’s calm enough.
+Mika:[question=FirstMeetResponse]I’m glad you’re curious. There’s a lot I could talk about.
+[choice]You write? That’s... really cool. What kind of things?[newtalk start=Cutscene_0_PlayerChoice_1a_begin break=Cutscene_0_PlayerChoice_1a_end]
+[choice]That sounds peaceful. I could use a place like that too.[newtalk start=Cutscene_0_PlayerChoice_1b_begin break=Cutscene_0_PlayerChoice_1b_end]
 [title=Cutscene_1_end]
 
 
-[title=Cutscene_1_PlayerChoice_a_begin]
-Girl:nods Makes sense. Quiet is rare here.
-Girl:keeps drawing You can stay. Just don’t talk too loud.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
-[title=Cutscene_1_PlayerChoice_a_end]
+[title=Cutscene_0_PlayerChoice_1a_begin]
+Mika: *a bit shy* Mostly fantasy stories… about quiet places that turn out to be magical.
+Mika: It sounds silly, but writing them makes me feel a little less alone.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1a_end]
 
 
-[title=Cutscene_1_PlayerChoice_b_begin]
-Girl:pauses …Really?
-Girl:raises brow You’re bold. Or weird.
-Girl:shrugs Either way, sit.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
-[title=Cutscene_1_PlayerChoice_b_end]
+[title=Cutscene_0_PlayerChoice_1b_begin]
+Mika: *nods softly* It really is peaceful here.
+Mika: When it's quiet, everything else just… fades out.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1b_end]
 
 
 [title=Cutscene_2_begin]
-Girl:sketching You keep looking at my drawing. Why?
-Girl:[question=DrawingResponse]?
-[choice]It looks good. You’re talented.[newtalk start=Cutscene_2_PlayerChoice_a_begin break=Cutscene_2_PlayerChoice_a_end]
-[choice]I was just curious, that’s all.[newtalk start=Cutscene_2_PlayerChoice_b_begin break=Cutscene_2_PlayerChoice_b_end]
+Mika: *looks at you curiously* I don’t think I’ve seen you here before. Do you come often?
+Mika:[question=FirstImpression]I was wondering what made you come here today.
+[choice]First time, actually. I didn’t think I’d run into someone who understands the quiet.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[choice]Not really... I usually keep to myself. Guess the library finally caught me.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_end]
 
 
@@ -66,10 +63,49 @@ Girl:smirks lightly It’s distracting.[newtalk start=Cutscene_3_begin break=Cut
 
 
 [title=Cutscene_3_begin]
-Girl:closes sketchbook That’s enough drawing for now.
-Girl:stands I’m heading out. If you’re here again tomorrow… maybe I won’t ignore you.
-Girl:small shrug No promises though.
+Mika:[question=FirstThought]*smiles softly* And… what crossed your mind when you noticed me here?
+[choice]Honestly? You looked... like you belonged here. Peaceful.[newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
+[choice]You looked like you were somewhere else... lost in your own story.[newtalk start=Cutscene_0_PlayerChoice_3b_begin break=Cutscene_0_PlayerChoice_3b_end]
 [title=Cutscene_3_end]
+
+
+[title=Cutscene_0_PlayerChoice_3a_begin]
+Mika: *blinks softly* Peaceful…? That’s a really kind thing to say.
+Mika: Maybe this place does suit me more than I realized.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3a_end]
+
+
+[title=Cutscene_0_PlayerChoice_3b_begin]
+Mika: *laughs quietly* Lost in my own story—yeah, that sounds like me.
+Mika: But talking like this… feels like its own little story too.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3b_end]
+
+
+[title=Cutscene_4_begin]
+Mika: *sets her notebook aside* This is nice. Talking, I mean.
+Mika: It’s been a long time since I’ve had a conversation that felt this easy.
+Mika:[question=NextMeeting]I wonder if the quiet will bring you back here again.
+[choice]If you’re here, I’d like to.[newtalk start=Cutscene_0_PlayerChoice_4a_begin break=Cutscene_0_PlayerChoice_4a_end]
+[choice]Maybe... if I don’t get lost in the shelves first.[newtalk start=Cutscene_0_PlayerChoice_4b_begin break=Cutscene_0_PlayerChoice_4b_end]
+[title=Cutscene_4_end]
+
+
+[title=Cutscene_0_PlayerChoice_4a_begin]
+Mika: *warm smile* Then I’ll make sure to be here… and leave a book open so you know it’s me.
+Mika: Thanks for being part of the quiet instead of breaking it.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4a_end]
+
+
+[title=Cutscene_0_PlayerChoice_4b_begin]
+Mika: *laughs softly* I’ll leave a breadcrumb trail of paperbacks just in case.
+Mika: But I hope you find me even without them.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4b_end]
+
+
+[title=Cutscene_5_begin]
+Mika: *glances at the dimming window* It’s getting late… I should pack up.
+Mika: You should come by again sometime. The quiet feels nicer when someone shares it.
+[title=Cutscene_5_end]
 
 
 [save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=-1]

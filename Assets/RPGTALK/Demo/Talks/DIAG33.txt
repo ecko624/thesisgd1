@@ -1,52 +1,49 @@
 [title=Cutscene_0_begin]
-Scene:The beach is sunny, waves gently hitting the shore. Sora sits on a blanket, sketchbook in hand, smiling.
-Girl:looks up and waves Hey! Didn’t expect to see you here.
-Girl:[question=GreetingChoice]Hi
-[choice]Hey… you’re Sora, right?[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
-[choice]Hi… you’re Sora, right?[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+Sora:*sitting cross-legged on the seawall, sketchbook balanced on her knees* She looks up when you stop nearby, her pencil pausing mid-line. 
+Sora:*smiles faintly* Oh—someone else who draws here. 
+Sora:[question=GreetingChoice]I thought I was the only one stealing colors from the sea.
+[choice]Uh... sorry. I didn’t mean to interrupt.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]I didn’t think anyone else came out here this late.[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
 [title=Cutscene_0_end]
 
 [title=Cutscene_0_PlayerChoice_0a_begin]
-Girl:smiles brightly Yeah! That’s me.
-Girl:closes sketchbook a little I’m Sora. You are?
-Player:Ren. Hey!
-Girl:grins Come sit! It’s such a nice day for the beach anyway.
-[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Sora:*shakes her head lightly* You didn’t. The sea’s too loud to interrupt anyway.
+Sora:*leans slightly to peek at your notebook* You sketch too, huh? I can tell by how you’re watching the light move.
+Sora:*grins* I’m Sora. Art student, ocean addict, occasional runaway.
+Player:Ren. I just... come here when it’s quiet.
+Sora:*smiles softly* Quiet’s good. That’s when the world shows its real colors.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0a_end]
 
 [title=Cutscene_0_PlayerChoice_0b_begin]
-Girl:tilts head with a cheerful grin Yep! That’s me.
-Girl:taps pencil playfully I’m Sora. And you are?
-Player:Ren. Nice to meet you.
-Girl:smiles warmly Perfect! Come join me, the sand’s great for sitting.
-[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Sora:*laughs under her breath* Guess the waves keep secrets better than people do.
+Sora:glances toward the water The late light’s the best part—it makes everything feel like it’s breathing.
+Sora:offers a small smile I’m Sora. You?
+Player:Ren. I usually just draw alone... didn’t think I’d run into anyone.
+Sora:*tilts her head* Maybe the sea got bored of your silence and sent me.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0b_end]
 
 [title=Cutscene_1_begin]
-Girl:sketching happily The beach is so peaceful… and bright! I love it.
-Girl:glances at you So… what brings you here?
-Girl:[question=ReasonOnBeach]?
-[choice]Just enjoying the beach.[newtalk start=Cutscene_1_PlayerChoice_a_begin break=Cutscene_1_PlayerChoice_a_end]
-[choice]I saw you here, so I came over.[newtalk start=Cutscene_1_PlayerChoice_b_begin break=Cutscene_1_PlayerChoice_b_end]
+Sora:*looks back at the horizon* The light keeps changing, doesn’t it? You can’t hold on to it, no matter how fast you draw.
+Sora:[question=FirstMeetResponse]What do you say?
+[choice]Yeah... it’s hard to keep something that’s meant to move.[newtalk start=Cutscene_0_PlayerChoice_1a_begin break=Cutscene_0_PlayerChoice_1a_end]
+[choice]I guess that’s what makes it worth chasing, even if you never catch it.[newtalk start=Cutscene_0_PlayerChoice_1b_begin break=Cutscene_0_PlayerChoice_1b_end]
 [title=Cutscene_1_end]
 
-[title=Cutscene_1_PlayerChoice_a_begin]
-Girl:nods cheerfully Makes sense! The sun and waves are perfect for relaxing.
-Girl:keeps drawing You can sit with me. We can even doodle some seashells together!
-[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
-[title=Cutscene_1_PlayerChoice_a_end]
+[title=Cutscene_0_PlayerChoice_1a_begin]
+Sora:*smiles gently* You get it. Most people try to freeze it instead of letting it breathe.
+Sora:*leans her chin on her hand* Maybe that’s why I like drawing near strangers who understand.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1a_end]
 
-[title=Cutscene_1_PlayerChoice_b_begin]
-Girl:pauses and smiles …Really? That’s sweet of you!
-Girl:shrugs playfully Either way, come sit! The sand’s nice and warm.
-[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
-[title=Cutscene_1_PlayerChoice_b_end]
+[title=Cutscene_0_PlayerChoice_1b_begin]
+Sora:*grins softly* That’s a nice way to put it. You sound like someone who watches more than you speak.
+Sora:*eyes linger on him* I like that.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1b_end]
 
 [title=Cutscene_2_begin]
-Girl:sketching with excitement You keep glancing at my drawing. Why?
-Girl:[question=DrawingResponse]?
-[choice]It looks good. You’re talented.[newtalk start=Cutscene_2_PlayerChoice_a_begin break=Cutscene_2_PlayerChoice_a_end]
-[choice]I was just curious, that’s all.[newtalk start=Cutscene_2_PlayerChoice_b_begin break=Cutscene_2_PlayerChoice_b_end]
+Sora:*flips a page in her sketchbook* So... what do you draw for? Practice? Or peace?
+Sora:[question=FirstImpression]What do you say?
+[choice]Mostly to quiet my thoughts. The sea helps with that.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[choice]I don’t really know. I just... feel better when I draw.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_end]
 
 [title=Cutscene_2_PlayerChoice_a_begin]
@@ -62,35 +59,42 @@ Girl:smirks It’s distracting, but I like your curiosity!
 [title=Cutscene_2_PlayerChoice_b_end]
 
 [title=Cutscene_3_begin]
-Girl:closes sketchbook cheerfully That’s enough doodling for now.
-Girl:stands up stretching I should head home soon, but if you’re around tomorrow… maybe we can meet here again!
-Girl:small shrug No promises though, hehe.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+Sora:[question=FirstThought]*She smiles faintly, eyes bright* Then tell me something honest—what did you think when you saw me sitting here?
+[choice]You looked... like you belonged here more than anyone else.[newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
+[choice]Honestly? I just thought you looked... calm. Like the waves stopped for you.[newtalk start=Cutscene_0_PlayerChoice_3b_begin break=Cutscene_0_PlayerChoice_3b_end]
 [title=Cutscene_3_end]
+
+[title=Cutscene_0_PlayerChoice_3a_begin]
+Sora:*smiles softly* That’s the nicest thing anyone’s said to me today.
+Sora:*pauses* Maybe that’s because I keep trying to belong somewhere new.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3a_end]
+
+[title=Cutscene_0_PlayerChoice_3b_begin]
+Sora:*laughs quietly* That’s... poetic. You didn’t strike me as the poetic type.
+Sora:*tilts her head* I guess you hide more colors than I thought.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3b_end]
+
 [title=Cutscene_4_begin]
-Scene:Sora picks up a seashell and twirls it in her hand.
-Girl:Look at this shell! Isn’t it pretty?
-Girl:[question=ShellResponse]?
-[choice]It’s beautiful! You should add it to your sketch.[newtalk start=Cutscene_4_PlayerChoice_a_begin break=Cutscene_4_PlayerChoice_a_end]
-[choice]It’s nice, but I like the waves more.[newtalk start=Cutscene_4_PlayerChoice_b_begin break=Cutscene_4_PlayerChoice_b_end]
+Sora:*closes her sketchbook gently The sun’s almost gone. I never know whether to say goodbye or just let the tide do it for me.
+Sora:[question=NextMeeting]Do you think we’ll see each other again?
+[choice]Maybe... if we both end up chasing the same light again.[newtalk start=Cutscene_0_PlayerChoice_4a_begin break=Cutscene_0_PlayerChoice_4a_end]
+[choice]I’d like that. But only if you don’t mind quiet company.[newtalk start=Cutscene_0_PlayerChoice_4b_begin break=Cutscene_0_PlayerChoice_4b_end]
 [title=Cutscene_4_end]
 
-[title=Cutscene_4_PlayerChoice_a_begin]
-Player:It’s beautiful! You should add it to your sketch.
-Girl:grins Excitedly Yes! I can imagine all the colors. Thanks for the idea!
-[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
-[title=Cutscene_4_PlayerChoice_a_end]
+[title=Cutscene_0_PlayerChoice_4a_begin]
+Sora:*smiles, tucking a strand of hair behind her ear* Then I’ll keep my eyes open next sunset.
+Sora:*stands, brushing sand off her skirt* Maybe the sea’s better with two sets of colors watching.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4a_end]
 
-[title=Cutscene_4_PlayerChoice_b_begin]
-Player:It’s nice, but I like the waves more.
-Girl:nods happily True! The waves have so many shapes and shades… I’ll try adding them too!
-[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
-[title=Cutscene_4_PlayerChoice_b_end]
+[title=Cutscene_0_PlayerChoice_4b_begin]
+Sora:*grins softly* Quiet’s fine. The sea doesn’t talk much either.
+Sora:*steps back toward the path* Maybe next time, you’ll show me one of your sketches.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4b_end]
 
 [title=Cutscene_5_begin]
-Girl:sketching while smiling The sunlight makes the water sparkle. Isn’t it amazing?
-Girl:[question=SparkleResponse]?
-[choice]It’s gorgeous! I love the reflections.[newtalk start=Cutscene_5_PlayerChoice_a_begin break=Cutscene_5_PlayerChoice_a_end]
-[choice]Yeah, it’s nice, but I’m more interested in the sand.[newtalk start=Cutscene_5_PlayerChoice_b_begin break=Cutscene_5_PlayerChoice_b_end]
+Sora:*pauses at the edge of the seawall* You’ve got a calm sort of energy, Ren. Like you draw the world just to understand it.
+Player:Maybe I do.
+Sora:*smiles faintly* Then keep drawing. Maybe I’ll see what you find next time.
 [title=Cutscene_5_end]
 
 [title=Cutscene_5_PlayerChoice_a_begin]

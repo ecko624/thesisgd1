@@ -1,55 +1,52 @@
 [title=Cutscene_0_begin]
-Scene:The classroom is bright and lively. Aya sits at a desk, sketchbook open, doodling with a smile.
-Girl:without looking up Hey! It’s you.
-Girl:[question=GreetingChoice]Hi
-[choice]Hey… you’re Aya, right?[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
-[choice]Hi… you’re Aya, right?[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+Aya:Hey! I’m Aya, your class rep — nice to meet you!
+Aya:[question=GreetingChoice]You must be the new transfer student, right?
+[choice]Uh… hi. I’m Ren. I just transferred here. It’s nice to meet you.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]Hi. Yeah, I’m Ren. Still trying to get used to everything here.[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
 [title=Cutscene_0_end]
 
 
 [title=Cutscene_0_PlayerChoice_0a_begin]
-Girl:glances up cheerfully Yeah! That’s me.
-Girl:closes sketchbook a bit I’m Aya. You are?
-Player:Ren. Hey!
-Girl:smiles It’s fine. You can sit here if you want.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Aya:Nice to meet you too, Ren! Don’t worry — everyone’s friendly once you get to know them.
+Aya:If you ever get lost or need help, I’m your Aya, okay?
+Player:Ah— thanks. I really appreciate it. I’ll try not to be a bother.
+Aya:Bother? Not at all! You’re part of the class now, so don’t hesitate to ask me anything, okay? We’re all here to help.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0a_end]
 
 
 [title=Cutscene_0_PlayerChoice_0b_begin]
-Girl:looks at you with a grin Yep! That’s me.
-Girl:taps pencil I’m Aya. And you are?
-Player:Ren. Nice to meet you.
-Girl:smiles Sure! Have a seat.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Aya:Oh, so you’re the quiet type! That’s fine — I’ll make sure you feel at home here.
+Aya:*grins* You can count on me if you need anything. I like helping people settle in.
+Player:Thanks... that means a lot. Everything’s kind of new to me.
+Aya:Then it’s a good thing you’ve got me as your class rep! You’ll fit right in soon enough.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0b_end]
 
 
 [title=Cutscene_1_begin]
-Girl:goes back to doodling The classroom is so lively today! I kinda like it.
-Girl:glances at you So… what brings you here?
-Girl:[question=ReasonInLibrary]?
-[choice]Just looking for a fun place to sit.[newtalk start=Cutscene_1_PlayerChoice_a_begin break=Cutscene_1_PlayerChoice_a_end]
-[choice]I saw you here, so I thought I’d join.[newtalk start=Cutscene_1_PlayerChoice_b_begin break=Cutscene_1_PlayerChoice_b_end]
+Aya:*smiles* It’s such a nice day, isn’t it? Feels like the perfect time to start something new.
+Aya:[question=FirstMeetResponse]Am I right?
+[choice]Yeah... it feels like a fresh start.[newtalk start=Cutscene_0_PlayerChoice_1a_begin break=Cutscene_0_PlayerChoice_1a_end]
+[choice]Maybe. Though I think I’m still warming up to everything.[newtalk start=Cutscene_0_PlayerChoice_1b_begin break=Cutscene_0_PlayerChoice_1b_end]
 [title=Cutscene_1_end]
 
+[title=Cutscene_0_PlayerChoice_1a_begin]
+Aya:That’s the right mindset! I like it. You’ll do great here, Ren.
+Player:I hope so... I’m not exactly good at standing out.
+Aya:*smiles warmly* That’s okay. I’ll make sure you don’t fade into the background.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1a_end]
 
-[title=Cutscene_1_PlayerChoice_a_begin]
-Girl:nods happily Makes sense! It’s nice to find a spot like this.
-Girl:keeps doodling You can stay. Just don’t distract me too much with your chatter.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
-[title=Cutscene_1_PlayerChoice_a_end]
-
-
-[title=Cutscene_1_PlayerChoice_b_begin]
-Girl:pauses with a grin …Really?
-Girl:raises brow You’re bold! I like that.
-Girl:shrugs Alright, sit down![newtalk start=Cutscene_2_begin break=Cutscene_2_end]
-[title=Cutscene_1_PlayerChoice_b_end]
-
+[title=Cutscene_0_PlayerChoice_1b_begin]
+Aya:*laughs* That’s totally fine! You’ve got time to get comfortable.
+Aya:Besides, I’m not letting you stay a mystery for too long.
+Player:heh... that sounds like a challenge.
+Aya:*grins*It is one. And I’m definitely winning it.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1b_end]
 
 [title=Cutscene_2_begin]
-Girl:sketching You keep glancing at my doodles. Why’s that?
-Girl:[question=DrawingResponse]?
-[choice]It looks really cool! You’re talented.[newtalk start=Cutscene_2_PlayerChoice_a_begin break=Cutscene_2_PlayerChoice_a_end]
-[choice]I was just curious, that’s all.[newtalk start=Cutscene_2_PlayerChoice_b_begin break=Cutscene_2_PlayerChoice_b_end]
+Aya:*leans forward slightly* So, what do you think of the class so far? Too loud? Too quiet?
+Player:It’s... lively. Definitely not what I’m used to.
+Aya:Yeah, it’s a little chaotic sometimes. But that’s what makes it fun.
+Aya:*smiles* You’ll get used to it — maybe even start enjoying it.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_end]
 
 
@@ -66,10 +63,47 @@ Girl:smirks lightly It’s kinda distracting.[newtalk start=Cutscene_3_begin bre
 
 
 [title=Cutscene_3_begin]
-Girl:closes sketchbook cheerfully That’s enough doodling for now.
-Girl:stands I’m heading out for a bit, but if you’re around tomorrow… maybe I’ll save you a spot!
-Girl:small shrug No promises, though.
+Aya:[question=FirstThought]*smiles playfully* So... be honest. What was your first thought when you met me?
+[choice]You seemed... really confident. Like you know how to handle anything.[newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
+[choice]You’re... more outgoing than I expected. It’s kind of refreshing.[newtalk start=Cutscene_0_PlayerChoice_3b_begin break=Cutscene_0_PlayerChoice_3b_end]
 [title=Cutscene_3_end]
 
+[title=Cutscene_0_PlayerChoice_3a_begin]
+Aya:*grins* Confident, huh? I’ll take that as a compliment.
+Aya:But trust me, I’m just good at pretending sometimes.
+Player:Still... you make it look easy.
+Aya:*smiles* Maybe one day you’ll say the same about yourself.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3a_end]
 
-[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=-1]
+[title=Cutscene_0_PlayerChoice_3b_begin]
+Aya:*laughs* Outgoing, huh? I get that a lot.
+Aya:But that just means I have to work harder to balance out quiet people like you.
+Player:I guess that makes sense... it’s a good balance.
+Aya:*smiles* See? We’re already a good team.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3b_end]
+
+[title=Cutscene_4_begin]
+Aya:*leans back happily* Well, Ren, I’m glad we got to talk. You seem really nice.
+Aya:[question=NextMeeting]Do you think you’ll join any of the class activities later?
+[choice]Maybe... if someone drags me into it.[newtalk start=Cutscene_0_PlayerChoice_4a_begin break=Cutscene_0_PlayerChoice_4a_end]
+[choice]I’ll think about it. Depends on what it is, I guess.[newtalk start=Cutscene_0_PlayerChoice_4b_begin break=Cutscene_0_PlayerChoice_4b_end]
+[title=Cutscene_4_end]
+
+[title=Cutscene_0_PlayerChoice_4a_begin]
+Aya:*grins* Then I guess I’ll be the one doing the dragging.
+Aya:*smiles gently* Thanks for talking with me, Ren. You’re easier to talk to than you think.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4a_end]
+
+[title=Cutscene_0_PlayerChoice_4b_begin]
+Aya:That’s fair! I’ll make sure it’s something fun, so you’ll have no excuse to skip.
+Aya:*smiles* I’m really glad you’re in our class, Ren. It already feels different with you here.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4b_end]
+
+[title=Cutscene_5_begin]
+Aya:*stands and waves slightly* Alright, class rep duties call! But don’t disappear on me, okay?
+Aya:*smiles warmly* See you tomorrow, Ren.
+Player:Yeah... see you, Aya.
+[title=Cutscene_5_end]
+
+[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=+1]
+[title=Cutscene_0_end]

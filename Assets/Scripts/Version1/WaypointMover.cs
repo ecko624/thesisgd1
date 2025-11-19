@@ -11,13 +11,32 @@ public class WaypointMover : MonoBehaviour
 
     private Transform[] waypoints;
     private int currentWaypointIndex = 0;
-    private bool isWaiting;
-    public static bool onoff=true;
+    private bool isWaiting = false;
+    private Animator animator;
+    private bool hasAnimator = false;
+    public static bool onoff = true;
+
     void Start()
     {
-        waypoints = new Transform[waypointParent.childCount];
-        for (int i = 0; i < waypointParent.childCount; i++)
+        animator = GetComponent<Animator>();
+        hasAnimator = animator != null;
+        if (!hasAnimator)
         {
+            Debug.LogWarning($"WaypointMover: no Animator found on '{gameObject.name}'. NPC movement will work but animation calls will be skipped.");
+        }
+
+        // Validate waypoints parent
+        if (waypointParent == null)
+        {
+            Debug.LogError($"WaypointMover: 'waypointParent' is not set on '{gameObject.name}'. Movement disabled.");
+            enabled = false;
+            return;
+        }
+
+        // Store children as waypoints
+        int count = waypointParent.childCount;
+        waypoints = new Transform[count];
+        for (int i = 0; i < count; i++)
             waypoints[i] = waypointParent.GetChild(i);
         }
     }
@@ -26,6 +45,7 @@ public class WaypointMover : MonoBehaviour
     {
         if (PauseController.IsGamePaused || isWaiting)
         {
+            if (hasAnimator) animator.SetBool("isWalking", false);
             return;
         }
         if (onoff == true)
@@ -37,8 +57,24 @@ public class WaypointMover : MonoBehaviour
     void MoveToWaypoint()
     {
         Transform target = waypoints[currentWaypointIndex];
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, target.position) < 0.1f)
+
+        // Keep Z constant so distance works in 2D
+        Vector3 targetPos = new Vector3(target.position.x, target.position.y, transform.position.z);
+
+        // Move NPC
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+
+        // Animation direction
+        Vector3 direction = (targetPos - transform.position).normalized;
+        if (hasAnimator)
+        {
+            animator.SetFloat("InputX", direction.x);
+            animator.SetFloat("InputY", direction.y);
+            animator.SetBool("isWalking", direction.magnitude > 0.05f);
+        }
+
+        // Check arrival
+        if (Vector3.Distance(transform.position, targetPos) < 0.1f)
         {
             StartCoroutine(WaitAtWaypoint());
         }
@@ -47,6 +83,8 @@ public class WaypointMover : MonoBehaviour
     IEnumerator WaitAtWaypoint()
     {
         isWaiting = true;
+        if (hasAnimator) animator.SetBool("isWalking", false);
+
         yield return new WaitForSeconds(waitTime);
 
         currentWaypointIndex = loopWaypoints ? (currentWaypointIndex + 1) % waypoints.Length : Mathf.Min(currentWaypointIndex + 1, waypoints.Length - 1);
