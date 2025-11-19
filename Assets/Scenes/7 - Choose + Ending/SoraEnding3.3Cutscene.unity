@@ -19324,7 +19324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 20
-  nextSceneName: MainMenu
+  nextSceneName: EndingCutscene
 --- !u!4 &1201178507
 Transform:
   m_ObjectHideFlags: 0
