@@ -628,6 +628,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &86010730
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +695,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2116806028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 --- !u!1 &109713936
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundary: {fileID: 203379546}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 1307110511}
   requiredQuestId: 
@@ -56496,7 +56502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundary: {fileID: 208938812}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 1066808594}
   requiredQuestId: 
@@ -57601,7 +57607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundary: {fileID: 1328458234}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 1205154242}
   requiredQuestId: 
@@ -57863,7 +57869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundary: {fileID: 208938812}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 541190150}
   requiredQuestId: 
@@ -58119,6 +58125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questUI: {fileID: 1723347197}
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &738916784
 GameObject:
   m_ObjectHideFlags: 0
@@ -58212,6 +58220,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2116806028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 --- !u!1 &778749034
 GameObject:
   m_ObjectHideFlags: 0
@@ -59479,7 +59491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a87374cdfd058ad4187cc84ac45b119e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundary: {fileID: 249699903}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 138924679}
   requiredQuestId: 
@@ -59562,7 +59574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundary: {fileID: 1278941903}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 452748048}
   requiredQuestId: 
@@ -60161,6 +60173,8 @@ CanvasRenderer:
   m_GameObject: {fileID: 1055748602}
   m_CullTransparentMesh: 1
 --- !u!1 &1066808593
+<<<<<<< HEAD
+<<<<<<< HEAD
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60419,6 +60433,10 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1079903494
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60603,7 +60621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundary: {fileID: 208938812}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 1019562865}
   requiredQuestId: 
@@ -61554,6 +61572,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1270165184
 GameObject:
   m_ObjectHideFlags: 0
@@ -61696,6 +61716,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 --- !u!1 &1278941901
 GameObject:
   m_ObjectHideFlags: 0
@@ -77603,6 +77627,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464487073}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1506475826
 GameObject:
   m_ObjectHideFlags: 0
@@ -77634,6 +77660,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 86010731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 --- !u!1 &1523272951
 GameObject:
   m_ObjectHideFlags: 0
@@ -79479,7 +79509,7 @@ Transform:
   m_GameObject: {fileID: 1649243579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 87.57906, y: 56.25612, z: -10}
+  m_LocalPosition: {x: 89.12, y: 56.32, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79697,6 +79727,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677857995}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1680384120
 GameObject:
   m_ObjectHideFlags: 0
@@ -79986,6 +80018,10 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 --- !u!1 &1723347197
 GameObject:
   m_ObjectHideFlags: 0
@@ -80017,7 +80053,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 707461443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1777777832
+=======
+--- !u!1 &1814254125
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+--- !u!1 &1814254125
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80025,6 +80069,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 1777777833}
   m_Layer: 0
   m_Name: Waypoint (3)
@@ -80059,17 +80105,40 @@ GameObject:
   - component: {fileID: 1787900121}
   m_Layer: 0
   m_Name: WaypointParent (8)
+=======
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+  - component: {fileID: 1814254126}
+  - component: {fileID: 1814254129}
+  - component: {fileID: 1814254128}
+  - component: {fileID: 1814254127}
+  m_Layer: 0
+  m_Name: NPC_Grandpa
+<<<<<<< HEAD
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &1787900121
+=======
+--- !u!4 &1814254126
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+--- !u!4 &1814254126
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_GameObject: {fileID: 1787900120}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -80210,6 +80279,21 @@ Animator:
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1848255238
+=======
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+  m_GameObject: {fileID: 1814254125}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 84.64, y: 52.36, z: 0.031829976}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1128251997}
+  m_Father: {fileID: 2035425853}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1814254127
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80454,7 +80538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14b185d32794bd409e08dc335da56e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBoundary: {fileID: 208938812}
+  mapBoundary: {fileID: 0}
   direction: 4
   teleportTargetPosition: {fileID: 415652537}
   requiredQuestId: 
@@ -81137,6 +81221,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958339217}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1979037330
 GameObject:
   m_ObjectHideFlags: 0
@@ -81395,6 +81481,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 930238355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 --- !u!1 &2009847094
 GameObject:
   m_ObjectHideFlags: 0
@@ -82439,6 +82529,12 @@ SceneRoots:
   - {fileID: 1649243583}
   - {fileID: 182081520}
   - {fileID: 173384953}
+<<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 1270165187}
   - {fileID: 1569549866}
   - {fileID: 1625690896}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
