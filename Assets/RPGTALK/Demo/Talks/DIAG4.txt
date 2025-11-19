@@ -50,18 +50,6 @@ Mika:[question=FirstImpression]I was wondering what made you come here today.
 [title=Cutscene_2_end]
 
 
-[title=Cutscene_2_PlayerChoice_a_begin]
-Girl:blinks lightly …Thanks.
-Girl:looks away for a second Didn’t expect that.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
-[title=Cutscene_2_PlayerChoice_a_end]
-
-
-[title=Cutscene_2_PlayerChoice_b_begin]
-Girl:Oh. Well, don’t stare too much.
-Girl:smirks lightly It’s distracting.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
-[title=Cutscene_2_PlayerChoice_b_end]
-
-
 [title=Cutscene_3_begin]
 Mika:[question=FirstThought]*smiles softly* And… what crossed your mind when you noticed me here?
 [choice]Honestly? You looked... like you belonged here. Peaceful.[newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
@@ -109,3 +97,4 @@ Mika: You should come by again sometime. The quiet feels nicer when someone shar
 
 
 [save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=-1]
+[title=Cutscene_0_end]

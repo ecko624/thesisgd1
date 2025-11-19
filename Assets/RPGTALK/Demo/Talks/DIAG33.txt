@@ -46,18 +46,6 @@ Sora:[question=FirstImpression]What do you say?
 [choice]I don’t really know. I just... feel better when I draw.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_end]
 
-[title=Cutscene_2_PlayerChoice_a_begin]
-Girl:blinks, then laughs softly …Thanks! You’re too kind.
-Girl:looks away briefly I didn’t expect that compliment, hehe.
-[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
-[title=Cutscene_2_PlayerChoice_a_end]
-
-[title=Cutscene_2_PlayerChoice_b_begin]
-Girl:grins playfully Oh! Well, don’t peek too much.
-Girl:smirks It’s distracting, but I like your curiosity!
-[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
-[title=Cutscene_2_PlayerChoice_b_end]
-
 [title=Cutscene_3_begin]
 Sora:[question=FirstThought]*She smiles faintly, eyes bright* Then tell me something honest—what did you think when you saw me sitting here?
 [choice]You looked... like you belonged here more than anyone else.[newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
@@ -97,74 +85,6 @@ Player:Maybe I do.
 Sora:*smiles faintly* Then keep drawing. Maybe I’ll see what you find next time.
 [title=Cutscene_5_end]
 
-[title=Cutscene_5_PlayerChoice_a_begin]
-Player:It’s gorgeous! I love the reflections.
-Girl:beams Me too! The sunlight makes everything feel so cheerful!
-[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
-[title=Cutscene_5_PlayerChoice_a_end]
 
-[title=Cutscene_5_PlayerChoice_b_begin]
-Player:Yeah, it’s nice, but I’m more interested in the sand.
-Girl:smiles That’s fair! We could make a sandcastle later. Want to try?
-[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
-[title=Cutscene_5_PlayerChoice_b_end]
-
-[title=Cutscene_6_begin]
-Scene:Sora looks around at the shoreline.
-Girl:There are so many kids playing and flying kites today. Makes me want to join them!
-Girl:[question=JoinActivity]?
-[choice]Let’s join them![newtalk start=Cutscene_6_PlayerChoice_a_begin break=Cutscene_6_PlayerChoice_a_end]
-[choice]We could just relax here for now.[newtalk start=Cutscene_6_PlayerChoice_b_begin break=Cutscene_6_PlayerChoice_b_end]
-[title=Cutscene_6_end]
-
-[title=Cutscene_6_PlayerChoice_a_begin]
-Player:Let’s join them!
-Girl:claps her hands cheerfully Yes! Let’s see who can fly the kite the highest!
-[newtalk start=Cutscene_7_begin break=Cutscene_7_end]
-[title=Cutscene_6_PlayerChoice_a_end]
-
-[title=Cutscene_6_PlayerChoice_b_begin]
-Player:We could just relax here for now.
-Girl:smiles warmly Okay! I like just enjoying the waves and the breeze too.
-[newtalk start=Cutscene_7_begin break=Cutscene_7_end]
-[title=Cutscene_6_PlayerChoice_b_end]
-
-[title=Cutscene_7_begin]
-Scene:Sora sets her sketchbook aside and stretches.
-Girl:Phew! Walking along the shore is so refreshing.
-Girl:[question=RefreshResponse]?
-[choice]Yeah, I love the ocean breeze.[newtalk start=Cutscene_7_PlayerChoice_a_begin break=Cutscene_7_PlayerChoice_a_end]
-[choice]It’s okay, but I prefer the sunny sand.[newtalk start=Cutscene_7_PlayerChoice_b_begin break=Cutscene_7_PlayerChoice_b_end]
-[title=Cutscene_7_end]
-
-[title=Cutscene_7_PlayerChoice_a_begin]
-Player:Yeah, I love the ocean breeze.
-Girl:grins happily Me too! It makes everything feel alive and cheerful.
-[newtalk start=Cutscene_8_begin break=Cutscene_8_end]
-[title=Cutscene_7_PlayerChoice_a_end]
-
-[title=Cutscene_7_PlayerChoice_b_begin]
-Player:It’s okay, but I prefer the sunny sand.
-Girl:laughs lightly I get that! The sand is perfect for lying down and sketching.
-[newtalk start=Cutscene_8_begin break=Cutscene_8_end]
-[title=Cutscene_7_PlayerChoice_b_end]
-
-[title=Cutscene_8_begin]
-Scene:Sora looks at the horizon as the sun starts to lower.
-Girl:The sunset will be beautiful soon… I want to capture it in my sketch.
-Girl:[question=SunsetResponse]?
-[choice]I can help you pick colors.[newtalk start=Cutscene_8_PlayerChoice_a_begin break=Cutscene_8_PlayerChoice_a_end]
-[choice]Let’s just watch it together.[newtalk start=Cutscene_8_PlayerChoice_b_begin break=Cutscene_8_PlayerChoice_b_end]
-[title=Cutscene_8_end]
-
-[title=Cutscene_8_PlayerChoice_a_begin]
-Player:I can help you pick colors.
-Girl:smiles excitedly Perfect! Let’s make it the brightest sunset ever!
-
-[title=Cutscene_8_PlayerChoice_a_end]
-
-[title=Cutscene_8_PlayerChoice_b_begin]
-Player:Let’s just watch it together.
-Girl:nods happily Yes! Sometimes it’s best to just enjoy the view.
-[title=Cutscene_8_PlayerChoice_b_end]
-[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=-1]
+[save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=+2]
+[title=Cutscene_0_end]
