@@ -1712,10 +1712,11 @@ public class RPGTalk : MonoBehaviour {
 
         StartCoroutine(ReenableSkip(enableQuickSkip));
 
-        PlayNext ();
+        // Notify listeners about the made choice BEFORE advancing the dialog
         if (OnMadeChoice != null) {
             OnMadeChoice (questionID, choiceNumber);
         }
+        PlayNext ();
         //delete all the buttons (and other childs) in the buttons parent
         foreach (Transform child in choicesParent) {
             Destroy (child.gameObject);
