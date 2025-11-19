@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
 
     public void PlayVersion2()
     {
-        SceneManager.LoadSceneAsync("IntroCutscene1"); 
+        SceneManager.LoadSceneAsync("IntroCutscene2"); 
     }
 
     public void QuitGame()

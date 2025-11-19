@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class dont : MonoBehaviour
+public class dont2 : MonoBehaviour
 {
     public AudioSource audioSource; // assign your AudioSource here
-    private static dont instance = null; // Static reference for Singleton pattern
+    private static dont2 instance = null; // Static reference for Singleton pattern
 
     void Awake()
     {
@@ -47,7 +47,7 @@ public class dont : MonoBehaviour
     private void CheckCurrentSceneForDestruction(Scene scene, LoadSceneMode mode)
     {
         // Check if the newly loaded scene is one of the forbidden scenes
-        if (scene.name == "DIAG1" || scene.name == "Version2")
+        if (scene.name == "EndingCutscene")
         {
             Debug.Log($"Scene loaded: {scene.name}. Destroying persistent object: {gameObject.name}");
             // Destroy the object if the current scene is a forbidden scene
