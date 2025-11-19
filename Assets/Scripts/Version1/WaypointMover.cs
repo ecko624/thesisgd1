@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WaypointMover : MonoBehaviour
@@ -38,20 +37,17 @@ public class WaypointMover : MonoBehaviour
         waypoints = new Transform[count];
         for (int i = 0; i < count; i++)
             waypoints[i] = waypointParent.GetChild(i);
-        }
     }
 
     void Update()
     {
-        if (PauseController.IsGamePaused || isWaiting)
+        if (PauseController.IsGamePaused || isWaiting || !onoff)
         {
             if (hasAnimator) animator.SetBool("isWalking", false);
             return;
         }
-        if (onoff == true)
-        {
-            MoveToWaypoint();
-        }
+
+        MoveToWaypoint();
     }
 
     void MoveToWaypoint()
@@ -76,7 +72,8 @@ public class WaypointMover : MonoBehaviour
         // Check arrival
         if (Vector3.Distance(transform.position, targetPos) < 0.1f)
         {
-            StartCoroutine(WaitAtWaypoint());
+            if (!isWaiting)  // prevent double coroutine calls
+                StartCoroutine(WaitAtWaypoint());
         }
     }
 
@@ -87,7 +84,13 @@ public class WaypointMover : MonoBehaviour
 
         yield return new WaitForSeconds(waitTime);
 
-        currentWaypointIndex = loopWaypoints ? (currentWaypointIndex + 1) % waypoints.Length : Mathf.Min(currentWaypointIndex + 1, waypoints.Length - 1);
+        // Go to next waypoint
+        currentWaypointIndex++;
+
+        if (loopWaypoints)
+            currentWaypointIndex %= waypoints.Length;
+        else
+            currentWaypointIndex = Mathf.Min(currentWaypointIndex, waypoints.Length - 1);
 
         isWaiting = false;
     }
