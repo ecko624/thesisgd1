@@ -82,14 +82,6 @@ public class InteractionDetector : MonoBehaviour
                 Application.LoadLevel("DIAG35");
 
             }
-
-
-            if (Application.loadedLevelName == "DIAG34.1c")
-            {
-                Application.LoadLevel("DIAG35");
-
-            }
-            
         }
     
         

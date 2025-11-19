@@ -1,23 +1,23 @@
 [title=Cutscene_0_begin]
-Scene: Seaside pathway. *Sora is sketching waves. She notices Ren approaching.*
-Girl:*grins as she closes her sketchbook* Well, look who the tide carried back.
+Scene: Seaside pathway. Sora is sketching waves. She notices Ren approaching.
+Girl:grins as she closes her sketchbook Well, look who the tide carried back.
 Girl:smiles Ren, right? I was hoping you’d wander here again. The sea likes you.
 Girl:[question=RenResponse_0]?
-[choice]I like the quietness here… it’s calming.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]I like the quiet here… it’s calming.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
 [choice]I didn’t know the sea had preferences.[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
 [title=Cutscene_0_end]
 
 [title=Cutscene_0_PlayerChoice_0a_begin]
-Player:I like the quietness here… it’s calming.
+Player:I like the quiet here… it’s calming.
 Girl:Oh, it does. Everything has a personality if you pay attention.
-Girl:*points her pencil at him* And you—your colors feel softer today.
+Girl:points her pencil at him And you—your colors feel softer today.
 [newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0a_end]
 
 [title=Cutscene_0_PlayerChoice_0b_begin]
 Player:I didn’t know the sea had preferences.
-Girl:Really? The sea might surprise you sometimes.
-Girl:*points her pencil at him* Today, your colors have a hint of mystery to them.
+Girl:Oh, it does. Everything has a personality if you pay attention.
+Girl:points her pencil at him And you—your colors feel softer today.
 [newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0b_end]
 
@@ -30,14 +30,14 @@ Girl:[question=RenResponse_1]?
 [title=Cutscene_1_PlayerChoice_1a_begin]
 Player:Colors?
 Girl:Mhm. Everyone does. Yesterday you felt like dusk. Today you feel more like morning fog.
-Girl:*laughs lightly* It’s a compliment, by the way.
+Girl:laughs lightly It’s a compliment, by the way.
 [newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_1_PlayerChoice_1a_end]
 
 [title=Cutscene_1_PlayerChoice_1b_begin]
 Player:Do I… change colors often?
-Girl:Yes! Like the tide, you shift in ways that are noticeable if you look closely.
-Girl:*smiles* Today, you have a calm, misty vibe—quite soothing.
+Girl:Mhm. Everyone does. Yesterday you felt like dusk. Today you feel more like morning fog.
+Girl:laughs lightly It’s a compliment, by the way.
 [newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_1_PlayerChoice_1b_end]
 
@@ -50,14 +50,14 @@ Girl:[question=RenResponse_2]?
 [title=Cutscene_2_PlayerChoice_2a_begin]
 Player:I’m… not sure how to feel about that.
 Girl:It means you’re calming but mysterious. People notice more than you think.
-Girl:*taps her sketchbook* Speaking of noticing—I peeked at your drawing again yesterday. You have a gentle line style. It’s rare.
+Girl:taps her sketchbook Speaking of noticing—I peeked at your drawing again yesterday. You have a gentle line style. It’s rare.
 [newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_PlayerChoice_2a_end]
 
 [title=Cutscene_2_PlayerChoice_2b_begin]
 Player:So… fog is good?
-Girl:Absolutely. Fog isn’t dull—it’s thoughtful, like you today.
-Girl:*taps her sketchbook* Yesterday I noticed your shading was delicate… very intentional.
+Girl:It means you’re calming but mysterious. People notice more than you think.
+Girl:taps her sketchbook Speaking of noticing—I peeked at your drawing again yesterday. You have a gentle line style. It’s rare.
 [newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_PlayerChoice_2b_end]
 
@@ -76,8 +76,8 @@ Girl:walks closer, looking curiously You’re holding back, though. Like you’r
 
 [title=Cutscene_3_PlayerChoice_3b_begin]
 Player:I didn’t think anyone cared about my style.
-Girl:Actually, I’ve been keeping an eye on it. Your style has character and thoughtfulness.
-Girl:*walks closer, smiling subtly* It’s quietly impressive.
+Girl:I do. And the sea does. And probably more people than you realize.
+Girl:walks closer, looking curiously You’re holding back, though. Like you’re afraid your ideas are too loud.
 [newtalk start=Cutscene_4_begin break=Cutscene_4_end]
 [title=Cutscene_3_PlayerChoice_3b_end]
 
@@ -90,14 +90,14 @@ Girl:[question=RenResponse_4]?
 [title=Cutscene_4_PlayerChoice_4a_begin]
 Player:I… prefer staying in the background.
 Girl:That’s okay. Opening up is like breathing underwater—scary until you realize you won’t drown.
-Girl:*stretches, looking at the horizon* The school festival is coming soon. People usually go with someone whose colors vibe with theirs.
+Girl:stretches, looking at the horizon The school festival is coming soon. People usually go with someone whose colors vibe with theirs.
 [newtalk start=Cutscene_5_begin break=Cutscene_5_end]
 [title=Cutscene_4_PlayerChoice_4a_end]
 
 [title=Cutscene_4_PlayerChoice_4b_begin]
 Player:I’m still learning to open up.
-Girl:It’s fine. Even small steps can make a big difference.
-Girl:*stretches, looking at the horizon* At the festival, you’ll see how your colors mix with others—gradually.
+Girl:That’s okay. Opening up is like breathing underwater—scary until you realize you won’t drown.
+Girl:stretches, looking at the horizon The school festival is coming soon. People usually go with someone whose colors vibe with theirs.
 [newtalk start=Cutscene_5_begin break=Cutscene_5_end]
 [title=Cutscene_4_PlayerChoice_4b_end]
 
@@ -109,30 +109,233 @@ Girl:[question=RenFinalChoice]?
 
 [title=Cutscene_5_PlayerChoice_5a_begin]
 Player:I’m still thinking about it.
-Girl:*grins* Then think carefully… the sea might nudge you toward the right choice.
-[newtalk start=Cutscene_16_begin break=Cutscene_16_end]
+Girl:grins Then think carefully… the sea might nudge you toward the right choice.
+[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
 [title=Cutscene_5_PlayerChoice_5a_end]
 
 [title=Cutscene_5_PlayerChoice_5b_begin]
 Player:I don’t know yet.
-Girl:*smiles* That’s fine! Sometimes letting the tide guide you is the best way.
+Girl:smiles That’s fine! Sometimes letting the tide guide you is the best way.
+[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
 [title=Cutscene_5_PlayerChoice_5b_end]
 
+
+[title=Cutscene_6_begin]
+Scene: The waves lap at the shore. Sora gestures toward the sand.
+Girl:grins How about we make a sandcastle? It’s the perfect spot!
+Girl:[question=SandcastleResponse]?
+[choice]Sure! Let’s build the biggest one.[newtalk start=Cutscene_6_PlayerChoice_6a_begin break=Cutscene_6_PlayerChoice_6a_end]
+[choice]I’m not very good at this…[newtalk start=Cutscene_6_PlayerChoice_6b_begin break=Cutscene_6_PlayerChoice_6b_end]
+[title=Cutscene_6_end]
+
+[title=Cutscene_6_PlayerChoice_6a_begin]
+Player:Sure! Let’s build the biggest one.
+Girl:Excitedly Yes! We’ll make it legendary—maybe even sea-monster themed!
+[newtalk start=Cutscene_7_begin break=Cutscene_7_end]
+[title=Cutscene_6_PlayerChoice_6a_end]
+
+[title=Cutscene_6_PlayerChoice_6b_begin]
+Player:I’m not very good at this…
+Girl:Laughs gently That’s okay! I’ll show you some tricks. You’ll be a sand sculptor in no time.
+[newtalk start=Cutscene_7_begin break=Cutscene_7_end]
+[title=Cutscene_6_PlayerChoice_6b_end]
+
+[title=Cutscene_7_begin]
+Girl:looks at the waves Collecting seashells is fun too. Each one has a story, you know?
+Girl:[question=SeashellResponse]?
+[choice]Let’s find the prettiest ones.[newtalk start=Cutscene_7_PlayerChoice_7a_begin break=Cutscene_7_PlayerChoice_7a_end]
+[choice]I’ll just watch the waves.[newtalk start=Cutscene_7_PlayerChoice_7b_begin break=Cutscene_7_PlayerChoice_7b_end]
+[title=Cutscene_7_end]
+
+[title=Cutscene_7_PlayerChoice_7a_begin]
+Player:Let’s find the prettiest ones.
+Girl:grins Perfect! The colors are like tiny treasures from the ocean.
+[newtalk start=Cutscene_8_begin break=Cutscene_8_end]
+[title=Cutscene_7_PlayerChoice_7a_end]
+
+[title=Cutscene_7_PlayerChoice_7b_begin]
+Player:I’ll just watch the waves.
+Girl:smiles That’s fine too. The sea is mesmerizing on its own…
+Girl:glances at him The festival’s energy is fun, but this moment is calm and ours.
+[newtalk start=Cutscene_8_begin break=Cutscene_8_end]
+[title=Cutscene_7_PlayerChoice_7b_end]
+
+[title=Cutscene_8_begin]
+Scene: Sun starting to set, painting the sky in soft orange.
+Girl:points to horizon The sunset’s colors are like your earlier ‘morning fog’ vibe.
+Girl:[question=SunsetResponse]?
+[choice]It’s beautiful… almost magical.[newtalk start=Cutscene_8_PlayerChoice_8a_begin break=Cutscene_8_PlayerChoice_8a_end]
+[choice]I could stare at this forever.[newtalk start=Cutscene_8_PlayerChoice_8b_begin break=Cutscene_8_PlayerChoice_8b_end]
+[title=Cutscene_8_end]
+
+[title=Cutscene_8_PlayerChoice_8a_begin]
+Player:It’s beautiful… almost magical.
+Girl:smiles softly Exactly! This is why I love coming here… and why I hoped you’d return.
+[newtalk start=Cutscene_9_begin break=Cutscene_9_end]
+[title=Cutscene_8_PlayerChoice_8a_end]
+
+[title=Cutscene_8_PlayerChoice_8b_begin]
+Player:I could stare at this forever.
+Girl:laughs lightly Me too! Moments like this make everything else fade away… even festival stress.
+[newtalk start=Cutscene_9_begin break=Cutscene_9_end]
+[title=Cutscene_8_PlayerChoice_8b_end]
+
+[title=Cutscene_9_begin]
+Girl:sits on the sand I like sharing this with someone who notices the little things.
+Girl:[question=ReflectionResponse]?
+[choice]I notice them because I like being here with you.[newtalk start=Cutscene_9_PlayerChoice_9a_begin break=Cutscene_9_PlayerChoice_9a_end]
+[choice]I guess the sea just makes me more aware.[newtalk start=Cutscene_9_PlayerChoice_9b_begin break=Cutscene_9_PlayerChoice_9b_end]
+[title=Cutscene_9_end]
+
+[title=Cutscene_9_PlayerChoice_9a_begin]
+Player:I notice them because I like being here with you.
+Girl:blushes slightly That’s really sweet… the sea seems happier too!
+[newtalk start=Cutscene_10_begin break=Cutscene_10_end]
+[title=Cutscene_9_PlayerChoice_9a_end]
+
+[title=Cutscene_9_PlayerChoice_9b_begin]
+Player:I guess the sea just makes me more aware.
+Girl:grins Then let’s let it guide us tomorrow too… maybe for the festival too!
+[newtalk start=Cutscene_10_begin break=Cutscene_10_end]
+[title=Cutscene_9_PlayerChoice_9b_end]
+
+[title=Cutscene_10_begin]
+Scene: The tide is low; gentle waves brushing their feet.
+Girl:stands, stretching That was fun today, Ren.
+Girl:[question=GoodbyeBeachResponse]?
+[choice]I should head home too.[newtalk start=Cutscene_10_PlayerChoice_10a_begin break=Cutscene_10_PlayerChoice_10a_end]
+[choice]Can we stay a bit longer?[newtalk start=Cutscene_10_PlayerChoice_10b_begin break=Cutscene_10_PlayerChoice_10b_end]
+[title=Cutscene_10_end]
+
+[title=Cutscene_10_PlayerChoice_10a_begin]
+Player:I should head home too.
+Girl:smiles That’s okay! We’ll have tomorrow for festival adventures.
+Girl:waves See you then!
+[newtalk start=Cutscene_11_begin break=Cutscene_11_end]
+[title=Cutscene_10_PlayerChoice_10a_end]
+
+[title=Cutscene_10_PlayerChoice_10b_begin]
+Player:Can we stay a bit longer?
+Girl:laughs Light’s fading soon… but one more look at the waves won’t hurt.
+[newtalk start=Cutscene_11_begin break=Cutscene_11_end]
+[title=Cutscene_10_PlayerChoice_10b_end]
+
+[title=Cutscene_11_begin]
+Scene: The sun is almost set. Sora picks up a small seashell.
+Girl:Look at this little treasure! Want to keep it as a memory of today?
+Girl:[question=SeashellKeepResponse]?
+[choice]Yes! I’ll treasure it.[newtalk start=Cutscene_11_PlayerChoice_11a_begin break=Cutscene_11_PlayerChoice_11a_end]
+[choice]Maybe later, let’s just enjoy the moment.[newtalk start=Cutscene_11_PlayerChoice_11b_begin break=Cutscene_11_PlayerChoice_11b_end]
+[title=Cutscene_11_end]
+
+[title=Cutscene_11_PlayerChoice_11a_begin]
+Player:Yes! I’ll treasure it.
+Girl:grins Great! I’ll give it a little doodle too, so it’s uniquely yours.
+[newtalk start=Cutscene_12_begin break=Cutscene_12_end]
+[title=Cutscene_11_PlayerChoice_11a_end]
+
+[title=Cutscene_11_PlayerChoice_11b_begin]
+Player:Maybe later, let’s just enjoy the moment.
+Girl:nods I like that. Sometimes keeping things simple is the best memory.
+[newtalk start=Cutscene_12_begin break=Cutscene_12_end]
+[title=Cutscene_11_PlayerChoice_11b_end]
+
+[title=Cutscene_12_begin]
+Scene: The sky turns pink and orange. Sora looks out at the horizon.
+Girl:Tomorrow the festival will be full of life and colors… but I’m glad we had this quiet moment first.
+Girl:[question=FestivalThoughtsResponse]?
+[choice]Yeah, I feel ready for it now.[newtalk start=Cutscene_12_PlayerChoice_12a_begin break=Cutscene_12_PlayerChoice_12a_end]
+[choice]I hope it’s as fun as you say.[newtalk start=Cutscene_12_PlayerChoice_12b_begin break=Cutscene_12_PlayerChoice_12b_end]
+[title=Cutscene_12_end]
+
+[title=Cutscene_12_PlayerChoice_12a_begin]
+Player:Yeah, I feel ready for it now.
+Girl:smiles warmly Perfect! You’ll be great tomorrow. I can’t wait to see everything in action.
+[newtalk start=Cutscene_13_begin break=Cutscene_13_end]
+[title=Cutscene_12_PlayerChoice_12a_end]
+
+[title=Cutscene_12_PlayerChoice_12b_begin]
+Player:I hope it’s as fun as you say.
+Girl:grins You’ll see! I promise there’s laughter, games, and way too much delicious food.
+[newtalk start=Cutscene_13_begin break=Cutscene_13_end]
+[title=Cutscene_12_PlayerChoice_12b_end]
+
+[title=Cutscene_13_begin]
+Scene: Sora stands and brushes sand off her skirt.
+Girl:It’s getting late, Ren. You should head home before it gets dark.
+Girl:[question=HeadHomeResponse]?
+[choice]Yeah, I should go.[newtalk start=Cutscene_13_PlayerChoice_13a_begin break=Cutscene_13_PlayerChoice_13a_end]
+[choice]Just a few more minutes.[newtalk start=Cutscene_13_PlayerChoice_13b_begin break=Cutscene_13_PlayerChoice_13b_end]
+[title=Cutscene_13_end]
+
+[title=Cutscene_13_PlayerChoice_13a_begin]
+Player:Yeah, I should go.
+Girl:waves cheerfully That’s smart! Don’t forget to get some rest for tomorrow.
+Girl:smiles I’ll be thinking of new doodle ideas for you!
+[newtalk start=Cutscene_14_begin break=Cutscene_14_end]
+[title=Cutscene_13_PlayerChoice_13a_end]
+
+[title=Cutscene_13_PlayerChoice_13b_begin]
+Player:Just a few more minutes.
+Girl:laughs Okay, okay. But the last few minutes will be the sunset ones—promise!
+[newtalk start=Cutscene_14_begin break=Cutscene_14_end]
+[title=Cutscene_13_PlayerChoice_13b_end]
+
+[title=Cutscene_14_begin]
+Scene: The sun dips below the horizon. Sora watches quietly.
+Girl:It’s beautiful, isn’t it? Makes you forget everything else for a while.
+Girl:[question=ReflectionSunsetResponse]?
+[choice]It’s perfect. I’ll remember this.[newtalk start=Cutscene_14_PlayerChoice_14a_begin break=Cutscene_14_PlayerChoice_14a_end]
+[choice]I feel peaceful here.[newtalk start=Cutscene_14_PlayerChoice_14b_begin break=Cutscene_14_PlayerChoice_14b_end]
+[title=Cutscene_14_end]
+
+[title=Cutscene_14_PlayerChoice_14a_begin]
+Player:It’s perfect. I’ll remember this.
+Girl:grins softly Then the sea, the sand, and your memory are officially friends.
+[newtalk start=Cutscene_15_begin break=Cutscene_15_end]
+[title=Cutscene_14_PlayerChoice_14a_end]
+
+[title=Cutscene_14_PlayerChoice_14b_begin]
+Player:I feel peaceful here.
+Girl:smiles That’s what I hoped for. Sometimes quiet moments are the best preparation for festival chaos.
+[newtalk start=Cutscene_15_begin break=Cutscene_15_end]
+[title=Cutscene_14_PlayerChoice_14b_end]
+
+[title=Cutscene_15_begin]
+Scene: Sora picks up her backpack and sketches one last wave.
+Girl:Well, time for me to head home too. Don’t be late tomorrow!
+Girl:[question=GoodbyeBeachResponse]?
+[choice]See you tomorrow, Sora![newtalk start=Cutscene_15_PlayerChoice_15a_begin break=Cutscene_15_PlayerChoice_15a_end]
+[choice]Take care, Sora.[newtalk start=Cutscene_15_PlayerChoice_15b_begin break=Cutscene_15_PlayerChoice_15b_end]
+[title=Cutscene_15_end]
+
+[title=Cutscene_15_PlayerChoice_15a_begin]
+Player:See you tomorrow, Sora!
+Girl:waves happily Can’t wait to show you all the festival fun!
+[newtalk start=Cutscene_16_begin break=Cutscene_16_end]
+[title=Cutscene_15_PlayerChoice_15a_end]
+
+[title=Cutscene_15_PlayerChoice_15b_begin]
+Player:Take care, Sora.
+Girl:smiles Thanks! You too. Don’t forget your seashell keepsake!
+[newtalk start=Cutscene_16_begin break=Cutscene_16_end]
+[title=Cutscene_15_PlayerChoice_15b_end]
+
 [title=Cutscene_16_begin]
-Scene: *Ren walks along the seaside path toward home*.
-Narration: *The sky is fading to twilight. Today’s calm by the sea lingers in his mind.*
+Scene: Ren walks along the seaside path toward home.
+Narration: The sky is fading to twilight. Today’s calm by the sea lingers in his mind.
 Player:reflects I’ll see Sora again tomorrow. Can’t wait for the festival.
 [newtalk start=Cutscene_17_begin break=Cutscene_17_end]
 [title=Cutscene_16_end]
 
 [title=Cutscene_17_begin]
-Scene: *Ren reaches the last streetlight before home.*
-Narration: *Waves crash gently behind him, carrying the sounds of laughter and sketches.*
+Scene: Ren reaches the last streetlight before home.
+Narration: Waves crash gently behind him, carrying the sounds of laughter and sketches.
 Narration: A small seashell in his pocket reminds him of Sora’s cheerful presence.
 [title=Cutscene_17_end]
 
 [title=Cutscene_18_begin]
-Scene: Ren’s home in sight. *He takes a deep breath, smiling.*
+Scene: Ren’s home in sight. He takes a deep breath, smiling.
 Narration: Today was calm, cheerful, and full of gentle moments—perfect preparation for the festival tomorrow.
 [title=Cutscene_18_end]
 

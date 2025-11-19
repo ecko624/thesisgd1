@@ -1204,7 +1204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a694a23509dfbd49bdda485421fc5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nexr: DIAG34.1a
+  nexr: DIAG34
 --- !u!114 &1220619204
 MonoBehaviour:
   m_ObjectHideFlags: 0
