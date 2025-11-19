@@ -1,75 +1,98 @@
 [title=Cutscene_0_begin]
-Scene:The library is quiet. Mika sits at a table, sketchbook open, drawing.
-Girl:without looking up Oh. It’s you.
-Girl:[question=GreetingChoice]Hi
-[choice]Hey… you’re Mika, right?[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
-[choice]Hi… you’re Mika, right?[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
+Girl:Oh... hi. 
+Girl:[question=GreetingChoice]I didn’t think anyone else came here this early.
+[choice]Hey... I didn’t mean to bother you. I just needed a quiet place.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
+[choice]I didn’t expect to see someone here either... guess I’m not the only one who likes the quiet.[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
 [title=Cutscene_0_end]
 
 
 [title=Cutscene_0_PlayerChoice_0a_begin]
-Girl:glances up Yeah. And you’re standing in my light.
-Girl:closes sketchbook a bit I’m Mika. You?
-Player:Ren. Sorry about that.
-Girl:shrugs It’s fine. Sit if you want.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Girl:Oh, you’re not bothering me. The library’s usually empty this time of day.
+Girl:*pauses for a moment* Maybe that’s why I like it here.
+Girl:*softly* I’m Mika, by the way. We’re... in the same class, right?
+Girl:*smiles faintly* You always seemed like someone who appreciates the quiet too.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0a_end]
 
 
 [title=Cutscene_0_PlayerChoice_0b_begin]
-Girl:looks at you for a second Yep. That’s me.
-Girl:taps pencil I’m Mika. And you are?
-Player:Ren. Nice to meet you.
-Girl:Hm. Sure.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Girl:*smiles lightly* I guess not. The quiet ones always find each other somehow.
+Girl:*looks at him properly* I’m Mika. We’re in the same class... I think?
+Girl:*a small laugh* I never thought someone else would treat the library like a hiding spot too.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0b_end]
 
 
 [title=Cutscene_1_begin]
-Girl:goes back to drawing The library’s quiet today. I like it better this way.
-Girl:glances at you So… what are you doing here?
-Girl:[question=ReasonInLibrary]?
-[choice]Just looking for a quiet place.[newtalk start=Cutscene_1_PlayerChoice_a_begin break=Cutscene_1_PlayerChoice_a_end]
-[choice]I saw you here, so I came over.[newtalk start=Cutscene_1_PlayerChoice_b_begin break=Cutscene_1_PlayerChoice_b_end]
+Girl:*glances at the books around her* I come here a lot to read... or write, when no one’s looking.
+Girl:[question=FirstMeetResponse]How do you respond?
+[choice]You write? That’s... really cool. What kind of things?[newtalk start=Cutscene_0_PlayerChoice_1a_begin break=Cutscene_0_PlayerChoice_1a_end]
+[choice]That sounds peaceful. I could use a place like that too.[newtalk start=Cutscene_0_PlayerChoice_1b_begin break=Cutscene_0_PlayerChoice_1b_end]
 [title=Cutscene_1_end]
 
 
-[title=Cutscene_1_PlayerChoice_a_begin]
-Girl:nods Makes sense. Quiet is rare here.
-Girl:keeps drawing You can stay. Just don’t talk too loud.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
-[title=Cutscene_1_PlayerChoice_a_end]
+[title=Cutscene_0_PlayerChoice_1a_begin]
+Girl:*looks a bit shy* Mostly stories. Fantasy ones. About people who find magic in quiet places.
+Girl:*smiles a little* It sounds lonely, but... it keeps me company.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1a_end]
 
 
-[title=Cutscene_1_PlayerChoice_b_begin]
-Girl:pauses …Really?
-Girl:raises brow You’re bold. Or weird.
-Girl:shrugs Either way, sit.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
-[title=Cutscene_1_PlayerChoice_b_end]
+[title=Cutscene_0_PlayerChoice_1b_begin]
+Girl:*nods quietly* It is. The world fades out when you’re surrounded by books.
+Girl:*softly* That’s exactly why I come here.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+[title=Cutscene_0_PlayerChoice_1b_end]
 
 
 [title=Cutscene_2_begin]
-Girl:sketching You keep looking at my drawing. Why?
-Girl:[question=DrawingResponse]?
-[choice]It looks good. You’re talented.[newtalk start=Cutscene_2_PlayerChoice_a_begin break=Cutscene_2_PlayerChoice_a_end]
-[choice]I was just curious, that’s all.[newtalk start=Cutscene_2_PlayerChoice_b_begin break=Cutscene_2_PlayerChoice_b_end]
+Girl:*looks at him curiously* You come here often? I’ve never seen you around before.
+Girl:[question=FirstImpression]What do you say?
+[choice]First time, actually. I didn’t think I’d run into someone who understands the quiet.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+[choice]Not really... I usually keep to myself. Guess the library finally caught me.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_end]
 
 
-[title=Cutscene_2_PlayerChoice_a_begin]
-Girl:blinks lightly …Thanks.
-Girl:looks away for a second Didn’t expect that.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
-[title=Cutscene_2_PlayerChoice_a_end]
-
-
-[title=Cutscene_2_PlayerChoice_b_begin]
-Girl:Oh. Well, don’t stare too much.
-Girl:smirks lightly It’s distracting.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
-[title=Cutscene_2_PlayerChoice_b_end]
-
-
 [title=Cutscene_3_begin]
-Girl:closes sketchbook That’s enough drawing for now.
-Girl:stands I’m heading out. If you’re here again tomorrow… maybe I won’t ignore you.
-Girl:small shrug No promises though.
+Girl:[question=FirstThought]*studies him for a moment* So... what did you think when you saw me here?
+[choice]Honestly? You looked... like you belonged here. Peaceful.[newtalk start=Cutscene_0_PlayerChoice_3a_begin break=Cutscene_0_PlayerChoice_3a_end]
+[choice]You looked like you were somewhere else... lost in your own story.[newtalk start=Cutscene_0_PlayerChoice_3b_begin break=Cutscene_0_PlayerChoice_3b_end]
 [title=Cutscene_3_end]
 
 
+[title=Cutscene_0_PlayerChoice_3a_begin]
+Girl:*smiles softly* Peaceful... that’s a rare word for me. I like it.
+Girl:*glances away* Maybe I do belong here more than anywhere else.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3a_end]
+
+
+[title=Cutscene_0_PlayerChoice_3b_begin]
+Girl:*lets out a quiet laugh* You’re not wrong. My head’s always halfway inside a story.
+Girl:*tilts her head slightly* But maybe this one feels different.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+[title=Cutscene_0_PlayerChoice_3b_end]
+
+
+[title=Cutscene_4_begin]
+Girl:*sets her notebook down* Genuinely, it’s nice... talking like this. It’s been a long time since I’ve had a real conversation.
+Girl:[question=NextMeeting]Do you think we’ll talk again?
+[choice]If you’re here, I’d like to.[newtalk start=Cutscene_0_PlayerChoice_4a_begin break=Cutscene_0_PlayerChoice_4a_end]
+[choice]Maybe... if I don’t get lost in the shelves first.[newtalk start=Cutscene_0_PlayerChoice_4b_begin break=Cutscene_0_PlayerChoice_4b_end]
+[title=Cutscene_4_end]
+
+
+[title=Cutscene_0_PlayerChoice_4a_begin]
+Girl:*smiles warmly* Then I guess I’ll keep a book open... just in case you stop by.
+Girl:*softly* Thanks. For not breaking the quiet—just... joining it.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4a_end]
+
+
+[title=Cutscene_0_PlayerChoice_4b_begin]
+Girl:*chuckles quietly* I’ll leave a trail of paperbacks. Easier to find that way.
+Girl:*smiles faintly* Either way... I hope you do come back.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+[title=Cutscene_0_PlayerChoice_4b_end]
+
+
+[title=Cutscene_5_begin]
+Girl:*glances toward the window* The light’s fading... I should put these away soon.
+Girl:*looks back at him softly* You should come by again sometime. The library’s quieter when it’s shared.
+[title=Cutscene_5_end]
+
+
 [save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=-1]
+[title=Cutscene_0_end]

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TITLE.unity
     guid: 2147ead2033e66a44b3142dfb8660fe8
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/0 - Base/MainMenu.unity
     guid: 69b556b0da83b9a47927d6dd66a58d58
   - enabled: 1
     path: Assets/Scenes/Version1.unity
@@ -24,13 +24,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Quest1.1Cutscene.unity
     guid: 20c71f1ce5d723b418f02edcd3df0dbe
   - enabled: 1
+    path: Assets/Scenes/6 - Sora/DIAG34.1b.unity
+    guid: b5988e70d57844b4299cae9e9fdf315e
+  - enabled: 1
+    path: Assets/Scenes/5 - Aya/DIAG23.1b.unity
+    guid: 9a2c5d44d34f436489bf66ceb967d9ce
+  - enabled: 1
     path: Assets/Scenes/7 - Choose + Ending/AyaEnding3.1Cutscene.unity
     guid: 1a2f52ff729e0c040907375bdac05802
   - enabled: 1
-    path: Assets/Scenes/EndingCutscene.unity
+    path: Assets/Scenes/7 - Choose + Ending/EndingCutscene.unity
     guid: 7f30509d2f9b96946a0f26a8850f721f
   - enabled: 1
-    path: Assets/Scenes/IntroCutscene.unity
+    path: Assets/Scenes/0 - Base/IntroCutscene.unity
     guid: 0c06ec67e7376e14b8a18015b08881c7
   - enabled: 1
     path: Assets/Scenes/7 - Choose + Ending/MikaEnding3.2Cutscene.unity
@@ -87,7 +93,7 @@ EditorBuildSettings:
     path: Assets/Scenes/1 - Mika/DIAG1.unity
     guid: 979a36a9d5d08114a816f6b19b9e996c
   - enabled: 1
-    path: Assets/Scenes/1 - Mika/DIAG2.unity
+    path: Assets/Scenes/DIAG2.unity
     guid: 3c6b1db7bd8284a4ea92e704dff4e9a5
   - enabled: 1
     path: Assets/Scenes/2 - Aya/DIAG23.1.unity
@@ -96,10 +102,10 @@ EditorBuildSettings:
     path: Assets/Scenes/DIAG3 1.unity
     guid: 9d035d9c24046964f889027cd3307485
   - enabled: 1
-    path: Assets/Scenes/4-Mika/DIAG5 1.unity
+    path: Assets/Scenes/DIAG5 1.unity
     guid: 3cbd86b8a8340ba47aa5444ee0f65b0e
   - enabled: 1
-    path: Assets/Scenes/DIAG5.1.unity
+    path: Assets/Scenes/4-Mika/DIAG5.1.unity
     guid: 964d0928905d5a345b60dd3b93b8b5ce
   - enabled: 1
     path: Assets/Scenes/4-Mika/DIAG6.unity
@@ -153,8 +159,17 @@ EditorBuildSettings:
     path: Assets/Scenes/3 - Sora/DIAG33.unity
     guid: acde3e6aa559b2242860dfe421870aff
   - enabled: 1
-    path: Assets/Scenes/6 - Sora/DIAG34.unity
+    path: Assets/Scenes/3 - Sora/DIAG34.unity
+    guid: 6d450d37687d8ef46937f77d263fc4bc
+  - enabled: 1
+    path: Assets/Scenes/6 - Sora/DIAG34.1a.unity
+    guid: 731d4f4a6383f724aaa4ff270bd679fb
+  - enabled: 1
+    path: Assets/Scenes/6 - Sora/DIAG34.1.unity
     guid: a50b4d238c78f4f44a96429936ea5d1c
+  - enabled: 1
+    path: Assets/Scenes/6 - Sora/DIAG34.1c.unity
+    guid: a1cc417cc7bb0a3449c79cf3e2cc6c5a
   - enabled: 1
     path: Assets/Scenes/1 - Mika/DIAG4.1.unity
     guid: ff4453fa05cf92249b464f1e112779bb
