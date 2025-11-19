@@ -631,6 +631,7 @@ RectTransform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &86010730
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +697,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2116806028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
@@ -58131,6 +58134,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &738916784
 GameObject:
   m_ObjectHideFlags: 0
@@ -58224,6 +58228,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2116806028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
@@ -60182,6 +60188,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60440,6 +60447,8 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1079903494
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
@@ -61584,6 +61593,7 @@ SpriteRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1270165184
 GameObject:
   m_ObjectHideFlags: 0
@@ -61726,6 +61736,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
@@ -77642,6 +77654,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1506475826
 GameObject:
   m_ObjectHideFlags: 0
@@ -77673,6 +77686,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 86010731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
@@ -79745,6 +79760,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1680384120
 GameObject:
   m_ObjectHideFlags: 0
@@ -80040,6 +80056,8 @@ SpriteRenderer:
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 --- !u!1 &1723347197
 GameObject:
   m_ObjectHideFlags: 0
@@ -80074,7 +80092,11 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1777777832
+=======
+--- !u!1 &1814254125
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 --- !u!1 &1814254125
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
@@ -80091,6 +80113,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80133,6 +80156,8 @@ GameObject:
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
   - component: {fileID: 1814254126}
   - component: {fileID: 1814254129}
   - component: {fileID: 1814254128}
@@ -80141,6 +80166,9 @@ GameObject:
   m_Name: NPC_Grandpa
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
+=======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
@@ -80154,7 +80182,11 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &1787900121
+=======
+--- !u!4 &1814254126
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 --- !u!4 &1814254126
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
@@ -80169,6 +80201,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80313,6 +80346,8 @@ Animator:
   m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1848255238
 =======
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
@@ -81259,6 +81294,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1979037330
 GameObject:
   m_ObjectHideFlags: 0
@@ -81517,6 +81553,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 930238355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
@@ -82570,9 +82608,12 @@ SceneRoots:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 1270165187}
   - {fileID: 1569549866}
   - {fileID: 1625690896}
+=======
+>>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
 >>>>>>> parent of 1164b9d (music and cats, nagdagdag ako npc)
 =======
