@@ -78249,7 +78249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questUI: {fileID: 1852005567}
   questListParent: {fileID: 1571702001}
-  questEntryPrefab: {fileID: 750642978506919925, guid: 12a26c761c2c25541b02dfda1944a8a8, type: 3}
+  questEntryPrefab: {fileID: 5764877470830077404, guid: 12a26c761c2c25541b02dfda1944a8a8, type: 3}
   npcNames:
   - Aya
   - Mika
@@ -82114,9 +82114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472e18994fc1dc54f9d597f52ec56d6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questUI: {fileID: 1708271885}
+  questUI: {fileID: 1852005567}
   questListParent: {fileID: 1571702001}
-  questEntryPrefab: {fileID: 750642978506919925, guid: 12a26c761c2c25541b02dfda1944a8a8, type: 3}
+  questEntryPrefab: {fileID: 5764877470830077404, guid: 12a26c761c2c25541b02dfda1944a8a8, type: 3}
   npcNames:
   - Aya
   - Mika
