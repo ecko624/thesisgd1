@@ -10,7 +10,7 @@ Sora:[question=GreetingChoice]I thought I was the only one stealing colors from 
 Sora:*shakes her head lightly* You didn’t. The sea’s too loud to interrupt anyway.
 Sora:*leans slightly to peek at your notebook* You sketch too, huh? I can tell by how you’re watching the light move.
 Sora:*grins* I’m Sora. Art student, ocean addict, occasional runaway.
-Player:Ren. I just... come here when it’s quiet.
+Sora:*soft laugh* It’s kind of funny—quiet people always find the loudest places to think.
 Sora:*smiles softly* Quiet’s good. That’s when the world shows its real colors.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0a_end]
 
@@ -18,7 +18,7 @@ Sora:*smiles softly* Quiet’s good. That’s when the world shows its real colo
 Sora:*laughs under her breath* Guess the waves keep secrets better than people do.
 Sora:glances toward the water The late light’s the best part—it makes everything feel like it’s breathing.
 Sora:offers a small smile I’m Sora. You?
-Player:Ren. I usually just draw alone... didn’t think I’d run into anyone.
+Sora:*nods lightly* So you usually have this whole place to yourself, huh?
 Sora:*tilts her head* Maybe the sea got bored of your silence and sent me.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0b_end]
 
@@ -81,10 +81,9 @@ Sora:*steps back toward the path* Maybe next time, you’ll show me one of your 
 
 [title=Cutscene_5_begin]
 Sora:*pauses at the edge of the seawall* You’ve got a calm sort of energy, Ren. Like you draw the world just to understand it.
-Player:Maybe I do.
+Sora:*soft laugh* Maybe that’s why we crossed paths tonight.
 Sora:*smiles faintly* Then keep drawing. Maybe I’ll see what you find next time.
 [title=Cutscene_5_end]
-
 
 [save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=+2]
 [title=Cutscene_0_end]

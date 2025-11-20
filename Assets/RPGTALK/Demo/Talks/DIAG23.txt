@@ -6,17 +6,15 @@ Aya:[question=GreetingChoice]You must be the new transfer student, right?
 [title=Cutscene_0_end]
 
 [title=Cutscene_0_PlayerChoice_0a_begin]
-Aya:Nice to meet you too, Ren! Don’t worry — everyone’s friendly once you get to know them.
-Aya:If you ever get lost or need help, I’m your Girl, okay?
-Aya:You don’t have to be nervous around me. I’ll look out for you.
-Aya:Bother? Not at all! You’re part of the class now, so don’t hesitate to ask me anything, okay? We’re all here to help.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Aya:Nice to meet you too, Ren! You seem polite — I like that.
+Aya:If you ever get lost or need help, I’ve got you covered.
+Aya:And don’t worry, you’re not a bother. Helping classmates is kind of my thing.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0a_end]
 
 [title=Cutscene_0_PlayerChoice_0b_begin]
-Aya:Oh, so you’re the quiet type! That’s fine — I’ll make sure you feel at home here.
-Aya:*grins* You can count on me if you need anything. I like helping people settle in.
-Aya:It’s okay if things feel unfamiliar — you’ll get used to the pace soon.
-Aya:Then it’s a good thing you’ve got me as your class rep! You’ll fit right in soon enough.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Aya:Oh, so you’re still adjusting? That’s totally normal.
+Aya:*grins* I’ll help you get used to the place — it’s what I’m here for.
+Aya:Stick with me and you’ll feel at home faster than you think.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0b_end]
 
 [title=Cutscene_1_begin]
@@ -27,22 +25,19 @@ Aya:[question=FirstMeetResponse]Am I right?
 [title=Cutscene_1_end]
 
 [title=Cutscene_0_PlayerChoice_1a_begin]
-Aya:That’s the spirit! I love that attitude. You’ll do great here, Ren.
-Aya:Don’t worry about standing out — you have your own charm already.
-Aya:*smiles warmly* That’s okay. I’ll make sure you don’t fade into the background.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+Aya:That’s the spirit! Starting fresh can be exciting.
+Aya:*smiles warmly* And don’t worry — I’ll make sure you don’t fade into the background here.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_0_PlayerChoice_1a_end]
 
 [title=Cutscene_0_PlayerChoice_1b_begin]
-Aya:*laughs* That’s totally fine! You’ve got time to get comfortable.
-Aya:And don’t think you can stay a mystery forever — I’m already curious about you.
-Aya:*grins*It is one. And I’m definitely winning it.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+Aya:*laughs lightly* Hey, no rush. Everyone warms up at their own pace.
+Aya:*grins* But just so you know, I’m definitely going to get you talking eventually.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_0_PlayerChoice_1b_end]
 
 [title=Cutscene_2_begin]
 Aya:*leans forward slightly* So, what do you think of the class so far? Too loud? Too quiet?
-Aya:Ahh, lively, huh? That’s a good sign — means you’re paying attention.
-Aya:Yeah, it’s a little chaotic sometimes. But that’s what makes it fun.
-Aya:*smiles* You’ll get used to it — maybe even start enjoying it.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
+Aya:I get it — it can be a lot at first, but it’s lively in a fun way.
+Aya:*smiles* Give it a little time, and you might start enjoying the energy.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_end]
 
 [title=Cutscene_3_begin]
@@ -52,41 +47,40 @@ Aya:[question=FirstThought]*smiles playfully* So... be honest. What was your fir
 [title=Cutscene_3_end]
 
 [title=Cutscene_0_PlayerChoice_3a_begin]
-Aya:*grins* Confident, huh? I’ll take that as a compliment.
-Aya:But trust me, even I get nervous — I just hide it well.
-Aya:Heh, you’re sweet for saying that—but trust me, it takes practice.
-Aya:*smiles* Maybe one day you’ll show that same confidence too.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+Aya:*grins* Confident, huh? I’ll take it!
+Aya:But trust me, I have my moments too — I just hide them well.
+Aya:*smiles* Still, I’m glad I made a good first impression.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
 [title=Cutscene_0_PlayerChoice_3a_end]
 
 [title=Cutscene_0_PlayerChoice_3b_begin]
-Aya:*laughs* Outgoing, huh? I get that a lot.
-Aya:Then I’ll be your balance — you bring the calm, I’ll bring the energy.
-Aya:See? We already work well together.
-Aya:*smiles* See? We’re already a good team.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+Aya:*laughs* Outgoing? Guilty as charged!
+Aya:I just like making sure people feel welcome — especially someone new like you.
+Aya:*smiles* Looks like we already balance each other out.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
 [title=Cutscene_0_PlayerChoice_3b_end]
 
 [title=Cutscene_4_begin]
-Aya:*leans back happily* Well, Ren, I’m glad we got to talk. You seem really nice.
-Aya:[question=NextMeeting]Do you think you’ll join any of the class activities later?
+Aya:*leans back happily* Well, Ren, I’m really glad we got to talk today.
+Aya:[question=NextMeeting]Think you’ll join any class activities later?
 [choice]Maybe... if someone drags me into it.[newtalk start=Cutscene_0_PlayerChoice_4a_begin break=Cutscene_0_PlayerChoice_4a_end]
 [choice]I’ll think about it. Depends on what it is, I guess.[newtalk start=Cutscene_0_PlayerChoice_4b_begin break=Cutscene_0_PlayerChoice_4b_end]
 [title=Cutscene_4_end]
 
 [title=Cutscene_0_PlayerChoice_4a_begin]
-Aya:*grins* Then I guess I’ll be the one doing the dragging.
-Aya:*smiles gently* And don’t worry — I’m patient. I’ll bring you into the fun at your pace.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+Aya:*grins* Then I volunteer as the one who’ll drag you in — gently, of course.
+Aya:*smiles gently* Thanks for spending time with me today. You’re easier to talk to than you think.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
 [title=Cutscene_0_PlayerChoice_4a_end]
 
 [title=Cutscene_0_PlayerChoice_4b_begin]
-Aya:That’s fair! I’ll make sure it’s something fun, so you’ll have no excuse to skip.
-Aya:*smiles* I’m really glad you’re in our class, Ren. It already feels different with you here.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+Aya:That’s fair! I’ll make sure it’s something fun so you won’t regret joining.
+Aya:*smiles* Honestly? I’m really glad you’re in our class. It already feels brighter with you here.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
 [title=Cutscene_0_PlayerChoice_4b_end]
 
 [title=Cutscene_5_begin]
 Aya:*stands and waves slightly* Alright, class rep duties call! But don’t disappear on me, okay?
 Aya:*smiles warmly* See you tomorrow, Ren.
-Aya:I’m looking forward to talking again.
 [title=Cutscene_5_end]
 
 [save start=FollowUp_Cutscene_0_SaveNode_0_begin break=FollowUp_Cutscene_0_SaveNode_0_end data=FirstMeeting mod=+1]
 [title=Cutscene_0_end]
+
+

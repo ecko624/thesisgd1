@@ -71894,7 +71894,7 @@ MonoBehaviour:
   waypointParent: {fileID: 1648479148}
   speed: 2
   waitTime: 1
-  loopWaypoints: 1
+  loopWaypoints: 0
 --- !u!61 &2084095680
 BoxCollider2D:
   m_ObjectHideFlags: 0
