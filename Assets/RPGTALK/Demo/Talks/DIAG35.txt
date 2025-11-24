@@ -1,127 +1,127 @@
 [title=Cutscene_0_begin]
 Scene: Seaside pathway. *Sora is sketching waves. She notices Ren approaching.*
 Sora:*grins as she closes her sketchbook* Well, look who the tide carried back.
-Sora:smiles Ren, right? I was hoping you’d wander here again. The sea likes you.
-Sora:[question=RenResponse_0]?
+Sora:I was hoping you’d wander here again. 
+Sora:[question=RenResponse_0]The sea likes you.
 [choice]I like the quietness here… it’s calming.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
 [choice]I didn’t know the sea had preferences.[newtalk start=Cutscene_0_PlayerChoice_0b_begin break=Cutscene_0_PlayerChoice_0b_end]
 [title=Cutscene_0_end]
 
 [title=Cutscene_0_PlayerChoice_0a_begin]
-Player:I like the quietness here… it’s calming.
-Sora:Oh, it does. Everything has a personality if you pay attention.
+Sora:Me too. 
+Sora:That's why I'm always here. 
 Sora:*points her pencil at him* And you—your colors feel softer today.
 [newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0a_end]
 
 [title=Cutscene_0_PlayerChoice_0b_begin]
-Player:I didn’t know the sea had preferences.
-Sora:Really? The sea might surprise you sometimes.
+Sora:Oh, it does.
+Sora:Everything has a personality if you pay attention.
 Sora:*points her pencil at him* Today, your colors have a hint of mystery to them.
 [newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0b_end]
 
 [title=Cutscene_1_begin]
-Sora:[question=RenResponse_1]?
+Sora:[question=RenResponse_1]Very interesting.
 [choice]Colors?[newtalk start=Cutscene_1_PlayerChoice_1a_begin break=Cutscene_1_PlayerChoice_1a_end]
 [choice]Do I… change colors often?[newtalk start=Cutscene_1_PlayerChoice_1b_begin break=Cutscene_1_PlayerChoice_1b_end]
 [title=Cutscene_1_end]
 
 [title=Cutscene_1_PlayerChoice_1a_begin]
-Player:Colors?
-Sora:Mhm. Everyone does. Yesterday you felt like dusk. Today you feel more like morning fog.
+Sora:Mhm. 
+Sora:Everyone does. Yesterday you felt like dusk. Today you feel more like morning fog.
 Sora:*laughs lightly* It’s a compliment, by the way.
 [newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_1_PlayerChoice_1a_end]
 
 [title=Cutscene_1_PlayerChoice_1b_begin]
-Player:Do I… change colors often?
-Sora:Yes! Like the tide, you shift in ways that are noticeable if you look closely.
+Sora:Yes!
+Sora:Like the tide, you shift in ways that are noticeable if you look closely.
 Sora:*smiles* Today, you have a calm, misty vibe—quite soothing.
 [newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_1_PlayerChoice_1b_end]
 
 [title=Cutscene_2_begin]
-Sora:[question=RenResponse_2]?
+Sora:[question=RenResponse_2]What do you think about that?
 [choice]I’m… not sure how to feel about that.[newtalk start=Cutscene_2_PlayerChoice_2a_begin break=Cutscene_2_PlayerChoice_2a_end]
 [choice]So… fog is good?[newtalk start=Cutscene_2_PlayerChoice_2b_begin break=Cutscene_2_PlayerChoice_2b_end]
 [title=Cutscene_2_end]
 
 [title=Cutscene_2_PlayerChoice_2a_begin]
-Player:I’m… not sure how to feel about that.
-Sora:It means you’re calming but mysterious. People notice more than you think.
+Sora:It means you’re calming but mysterious.
+Sora:People notice more than you think.
 Sora:*taps her sketchbook* Speaking of noticing—I peeked at your drawing again yesterday. You have a gentle line style. It’s rare.
 [newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_PlayerChoice_2a_end]
 
 [title=Cutscene_2_PlayerChoice_2b_begin]
-Player:So… fog is good?
-Sora:Absolutely. Fog isn’t dull—it’s thoughtful, like you today.
+Sora:Absolutely.
+Sora:Fog isn’t dull—it’s thoughtful, like you today.
 Sora:*taps her sketchbook* Yesterday I noticed your shading was delicate… very intentional.
 [newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_PlayerChoice_2b_end]
 
 [title=Cutscene_3_begin]
-Sora:[question=RenResponse_3]?
+Sora:[question=RenResponse_3]I guess drawing isn't just a "hobby" for you.
 [choice]Drawing helps me stay grounded.[newtalk start=Cutscene_3_PlayerChoice_3a_begin break=Cutscene_3_PlayerChoice_3a_end]
 [choice]I didn’t think anyone cared about my style.[newtalk start=Cutscene_3_PlayerChoice_3b_begin break=Cutscene_3_PlayerChoice_3b_end]
 [title=Cutscene_3_end]
 
 [title=Cutscene_3_PlayerChoice_3a_begin]
-Player:Drawing helps me stay grounded.
-Sora:I do. And the sea does. And probably more people than you realize.
+Sora:Actually, I’ve been keeping an eye on it. 
+Sora:Your style has character and thoughtfulness.
 Sora:walks closer, looking curiously You’re holding back, though. Like you’re afraid your ideas are too loud.
 [newtalk start=Cutscene_4_begin break=Cutscene_4_end]
 [title=Cutscene_3_PlayerChoice_3a_end]
 
 [title=Cutscene_3_PlayerChoice_3b_begin]
-Player:I didn’t think anyone cared about my style.
-Sora:Actually, I’ve been keeping an eye on it. Your style has character and thoughtfulness.
+Sora:I do.
+Sora:And the sea does. And probably more people than you realize.
 Sora:*walks closer, smiling subtly* It’s quietly impressive.
 [newtalk start=Cutscene_4_begin break=Cutscene_4_end]
 [title=Cutscene_3_PlayerChoice_3b_end]
 
 [title=Cutscene_4_begin]
-Sora:[question=RenResponse_4]?
+Sora:[question=RenResponse_4]You should be sharing youre talent more.
 [choice]I… prefer staying in the background.[newtalk start=Cutscene_4_PlayerChoice_4a_begin break=Cutscene_4_PlayerChoice_4a_end]
 [choice]I’m still learning to open up.[newtalk start=Cutscene_4_PlayerChoice_4b_begin break=Cutscene_4_PlayerChoice_4b_end]
 [title=Cutscene_4_end]
 
 [title=Cutscene_4_PlayerChoice_4a_begin]
-Player:I… prefer staying in the background.
-Sora:That’s okay. Opening up is like breathing underwater—scary until you realize you won’t drown.
+Sora:That’s okay. 
+Sora:Opening up is like breathing underwater—scary until you realize you won’t drown.
 Sora:*stretches, looking at the horizon* The school festival is coming soon. People usually go with someone whose colors vibe with theirs.
 [newtalk start=Cutscene_5_begin break=Cutscene_5_end]
 [title=Cutscene_4_PlayerChoice_4a_end]
 
 [title=Cutscene_4_PlayerChoice_4b_begin]
-Player:I’m still learning to open up.
-Sora:It’s fine. Even small steps can make a big difference.
+Sora:It’s fine. 
+Sora:Even small steps can make a big difference.
 Sora:*stretches, looking at the horizon* At the festival, you’ll see how your colors mix with others—gradually.
 [newtalk start=Cutscene_5_begin break=Cutscene_5_end]
 [title=Cutscene_4_PlayerChoice_4b_end]
 
 [title=Cutscene_5_begin]
-Sora:[question=RenFinalChoice]?
+Sora:[question=RenFinalChoice]Do you have anyone to go with?
 [choice]I’m still thinking about it.[newtalk start=Cutscene_5_PlayerChoice_5a_begin break=Cutscene_5_PlayerChoice_5a_end]
 [choice]I don’t know yet.[newtalk start=Cutscene_5_PlayerChoice_5b_begin break=Cutscene_5_PlayerChoice_5b_end]
 [title=Cutscene_5_end]
 
 [title=Cutscene_5_PlayerChoice_5a_begin]
-Player:I’m still thinking about it.
-Sora:*grins* Then think carefully… the sea might nudge you toward the right choice.
+Sora:*grins* Then think carefully…
+Sora:The sea might nudge you toward the right choice.
 [newtalk start=Cutscene_16_begin break=Cutscene_16_end]
 [title=Cutscene_5_PlayerChoice_5a_end]
 
 [title=Cutscene_5_PlayerChoice_5b_begin]
-Player:I don’t know yet.
-Sora:*smiles* That’s fine! Sometimes letting the tide guide you is the best way.
+Sora:*smiles* That’s fine!
+Sora:Sometimes letting the tide guide you is the best way.
 [title=Cutscene_5_PlayerChoice_5b_end]
 
 [title=Cutscene_16_begin]
 Scene: *Ren walks along the seaside path toward home*.
-Narration: *The sky is fading to twilight. Today’s calm by the sea lingers in his mind.*
-Player:reflects I’ll see Sora again tomorrow. Can’t wait for the festival.
+Narration: *The sky is fading to twilight.*
+Narration:*Today’s calm by the sea lingers in his mind.*
 [newtalk start=Cutscene_17_begin break=Cutscene_17_end]
 [title=Cutscene_16_end]
 

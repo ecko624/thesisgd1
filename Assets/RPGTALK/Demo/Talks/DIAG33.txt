@@ -25,7 +25,7 @@ Sora:*tilts her head* Maybe the sea got bored of your silence and sent me.[newta
 
 [title=Cutscene_1_begin]
 Sora:*looks back at the horizon* The light keeps changing, doesn’t it? You can’t hold on to it, no matter how fast you draw.
-Sora:[question=FirstMeetResponse]What do you say?
+Sora:[question=FirstMeetResponse]Just like how life is.
 [choice]Yeah... it’s hard to keep something that’s meant to move.[newtalk start=Cutscene_0_PlayerChoice_1a_begin break=Cutscene_0_PlayerChoice_1a_end]
 [choice]I guess that’s what makes it worth chasing, even if you never catch it.[newtalk start=Cutscene_0_PlayerChoice_1b_begin break=Cutscene_0_PlayerChoice_1b_end]
 [title=Cutscene_1_end]
@@ -41,8 +41,8 @@ Sora:*eyes linger on him* I like that.[newtalk start=Cutscene_2_begin break=Cuts
 [title=Cutscene_0_PlayerChoice_1b_end]
 
 [title=Cutscene_2_begin]
-Sora:*flips a page in her sketchbook* So... what do you draw for? Practice? Or peace?
-Sora:[question=FirstImpression]What do you say?
+Sora:*flips a page in her sketchbook* So... what do you draw for? 
+Sora:[question=FirstImpression]Practice? Or peace?
 [choice]Mostly to quiet my thoughts. The sea helps with that.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [choice]I don’t really know. I just... feel better when I draw.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_end]
