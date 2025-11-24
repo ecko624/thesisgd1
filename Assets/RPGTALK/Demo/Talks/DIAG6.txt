@@ -1,8 +1,7 @@
 [title=Cutscene_0_begin]
-Scene: Library’s quiet corner. Mika is writing in her notebook. She notices Ren.
-Mika:Oh… Ren. You’re back.
+Mika:*looks up from her notebook* Oh… Ren. You’re back.
 Mika:*closes her notebook gently* It’s nice to see you again.
-Mika:I wasn’t sure if you’d stop by.
+Mika:I wasn’t sure if you’d stop by today.
 Mika:[question=GreetingChoice]?
 [choice]I like it here… it’s peaceful.[newtalk start=Cutscene_0_PlayerChoice_0a_begin break=Cutscene_0_PlayerChoice_0a_end]
 [choice]I wasn’t sure if you’d want company again.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
@@ -10,13 +9,13 @@ Mika:[question=GreetingChoice]?
 
 
 [title=Cutscene_0_PlayerChoice_0a_begin]
-Mika:Peaceful… yes. That’s why I like this corner too.
-Mika:I’m glad you feel the same way.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
+Mika:Peaceful… yes. I’m glad this corner feels that way to you too.
+Mika:That makes me happy to hear.[newtalk start=Cutscene_1_begin break=Cutscene_1_end]
 [title=Cutscene_0_PlayerChoice_0a_end]
 
 
 [title=Cutscene_1_begin]
-Mika:I don’t mind your company. You’re quiet… in a comfortable way.
+Mika:I don’t mind your company at all. You’re quiet… in a comfortable way.
 Mika:*brushes a strand of hair behind her ear* Most people who come here talk too much.
 Mika:[question=SilenceChoice]?
 [choice]I feel the same. Silence isn’t awkward for me.[newtalk start=Cutscene_1_PlayerChoice_a_begin break=Cutscene_1_PlayerChoice_a_end]
@@ -25,8 +24,8 @@ Mika:[question=SilenceChoice]?
 
 
 [title=Cutscene_1_PlayerChoice_a_begin]
-Mika:It’s nice… isn’t it? When silence doesn’t feel heavy.
-Mika:I like that you understand that.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
+Mika:It’s nice… when silence doesn’t feel heavy.
+Mika:I’m glad you understand that feeling.[newtalk start=Cutscene_2_begin break=Cutscene_2_end]
 [title=Cutscene_1_PlayerChoice_a_end]
 
 
@@ -37,8 +36,8 @@ Mika:They treat the library like a group study café sometimes.[newtalk start=Cu
 
 
 [title=Cutscene_2_begin]
-Mika:*taps her notebook* I was actually thinking about something for my story.
-Mika:When I’m stuck, I come here to get inspired.
+Mika:*taps her notebook* I was actually working on something for my story.
+Mika:When I’m stuck, I come here to clear my thoughts.
 Mika:[question=StoryChoice]?
 [choice]What kind of story are you writing?[newtalk start=Cutscene_2_PlayerChoice_a_begin break=Cutscene_2_PlayerChoice_a_end]
 [choice]Does the library help you think?[newtalk start=Cutscene_2_PlayerChoice_b_begin break=Cutscene_2_PlayerChoice_b_end]
@@ -52,16 +51,16 @@ Mika:I’m still figuring out the emotional parts. Characters are harder than ma
 
 
 [title=Cutscene_2_PlayerChoice_b_begin]
-Mika:Yes. The quiet helps me think.
+Mika:Yes. The quiet really does help me think.
 Mika:Anyway… I’m writing a fantasy story about a traveler who finds a lost city hidden between worlds.[newtalk start=Cutscene_3_begin break=Cutscene_3_end]
 [title=Cutscene_2_PlayerChoice_b_end]
 
 
 [title=Cutscene_3_begin]
 Mika:…Maybe you’re right about emotions being important.
-Mika:*glances at his bag* Are you still drawing?
-Mika:I thought about what you showed me yesterday. Your art feels… thoughtful.
-Mika:Like you’re observing things most people overlook.
+Mika:*glances at his bag* Are you still drawing lately?
+Mika:I remembered what you showed me yesterday… your art felt thoughtful.
+Mika:Like you notice things others miss.
 Mika:[question=DrawingChoice]?
 [choice]Drawing helps me express things I can’t say.[newtalk start=Cutscene_3_PlayerChoice_a_begin break=Cutscene_3_PlayerChoice_a_end]
 [choice]I don’t know if it’s that deep… but thanks.[newtalk start=Cutscene_3_PlayerChoice_b_begin break=Cutscene_3_PlayerChoice_b_end]
@@ -70,7 +69,7 @@ Mika:[question=DrawingChoice]?
 
 [title=Cutscene_3_PlayerChoice_a_begin]
 Mika:…I thought so.
-Mika:Your drawings feel honest. Like they’re saying something quietly.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
+Mika:Your drawings feel honest. Like they’re quietly telling a story.[newtalk start=Cutscene_4_begin break=Cutscene_4_end]
 [title=Cutscene_3_PlayerChoice_a_end]
 
 
@@ -90,14 +89,14 @@ Mika:[question=QuietChoice]?
 
 
 [title=Cutscene_4_PlayerChoice_a_begin]
-Mika:…That makes me happy. Really.
+Mika:…That makes me really happy.
 Mika:I didn’t think anyone would feel that way about me.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
 [title=Cutscene_4_PlayerChoice_a_end]
 
 
 [title=Cutscene_4_PlayerChoice_b_begin]
 Mika:Why would I mind? Your quietness feels… gentle.
-Mika:It’s comforting.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
+Mika:It’s comforting to me.[newtalk start=Cutscene_5_begin break=Cutscene_5_end]
 [title=Cutscene_4_PlayerChoice_b_end]
 
 
@@ -113,13 +112,13 @@ Mika:[question=FestivalChoice]?
 
 [title=Cutscene_5_PlayerChoice_a_begin]
 Mika:Thinking about it…?
-Mika:That means… there might be someone you want to go with.[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
+Mika:Then… maybe there’s someone special you have in mind.[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
 [title=Cutscene_5_PlayerChoice_a_end]
 
 
 [title=Cutscene_5_PlayerChoice_b_begin]
-Mika:That’s okay. Festivals can be overwhelming to plan for.
-Mika:If you need company… you can tell me sometime.[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
+Mika:That’s okay. Festivals take time to decide on.
+Mika:If you need company… you can tell me anytime.[newtalk start=Cutscene_6_begin break=Cutscene_6_end]
 [title=Cutscene_5_PlayerChoice_b_end]
 
 

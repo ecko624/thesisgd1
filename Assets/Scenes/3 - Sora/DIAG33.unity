@@ -1932,12 +1932,12 @@ MonoBehaviour:
   shouldStayOnScreen: 0
   textAudio: {fileID: 8300000, guid: 49c855462770641229c932e59dd505e5, type: 3}
   passAudio: {fileID: 8300000, guid: a8b5ae316e8c14602bc3114d2d5e8302, type: 3}
-  passWithMouse: 1
+  passWithMouse: 0
   passWithInputButton: 
   passWithKey: 27
   enablePass: 1
-  autoPass: 0
-  secondsAutoPass: 3
+  autoPass: 1
+  secondsAutoPass: 4
   lineToStart: Cutscene_0_begin
   lineToBreak: Cutscene_0_end
   wordWrap: 1
