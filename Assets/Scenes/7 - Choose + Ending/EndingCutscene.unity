@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 10
-  nextSceneName: TITLE
+  nextSceneName: MainMenu
 --- !u!4 &1766793011
 Transform:
   m_ObjectHideFlags: 0

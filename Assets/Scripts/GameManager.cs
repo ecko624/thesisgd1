@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Timeline;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -85,7 +86,15 @@ public class GameManager : MonoBehaviour
                 _ => ""
             };
 
-            SceneManager.LoadScene(sceneName);
+            if (!string.IsNullOrEmpty(sceneName))
+            {
+                SceneManager.sceneLoaded += OnCutsceneSceneLoaded;
+                SceneManager.LoadScene(sceneName);
+            }
+            else
+            {
+                Debug.LogWarning("[GameManager] No cutscene mapped for personality: " + personality);
+            }
         }
     }
 
@@ -93,17 +102,73 @@ public class GameManager : MonoBehaviour
     {
         // Unsubscribe so it only runs once
         SceneManager.sceneLoaded -= OnCutsceneSceneLoaded;
+        Debug.Log("[GameManager] Cutscene scene loaded. Starting timeline on scene-specific director...");
 
-        PlayableDirector director = FindObjectOfType<PlayableDirector>();
-        if (director != null)
+        StartCoroutine(ForcePlayTimeline(scene));
+    }
+
+    private IEnumerator ForcePlayTimeline(Scene cutsceneScene)
+    {
+        // give the scene a few frames to finish Awake/Start
+        for (int i = 0; i < 3; i++)
+            yield return new WaitForEndOfFrame();
+
+        // find director only in the loaded scene
+        PlayableDirector director = null;
+        var roots = cutsceneScene.GetRootGameObjects();
+        foreach (var root in roots)
         {
-            Debug.Log("[GameManager] Found PlayableDirector, playing cutscene.");
-            director.Play();
+            var directors = root.GetComponentsInChildren<PlayableDirector>(true);
+            foreach (var d in directors)
+            {
+                if (d != null && d.playableAsset != null)
+                {
+                    director = d;
+                    break;
+                }
+            }
+            if (director != null) break;
         }
-        else
+
+        if (director == null)
         {
-            Debug.LogError("[GameManager] No PlayableDirector found in scene!");
+            Debug.LogError("[GameManager] No PlayableDirector found in the cutscene scene.");
+            yield break;
         }
+
+        Debug.Log($"[GameManager] Found scene-specific director '{director.gameObject.name}'. Forcing play (unscaled time)...");
+
+        // ensure director's GameObject is active
+        if (!director.gameObject.activeInHierarchy)
+            director.gameObject.SetActive(true);
+
+        // Use unscaled time so timeline plays even if timeScale == 0
+        director.timeUpdateMode = DirectorUpdateMode.UnscaledGameTime;
+
+        // reset to start, evaluate and play
+        director.time = 0;
+        director.Evaluate();
+        director.Play();
+
+        // wait a few frames to let it start
+        for (int f = 0; f < 5; f++)
+            yield return null;
+
+        // If it's not playing, attempt retries and manual time advancement as a last resort
+        int attempts = 0;
+        while (attempts < 120 && director.state != PlayState.Playing)
+        {
+            // advance director time manually using unscaled delta so we see progress
+            director.time += Time.unscaledDeltaTime;
+            director.Evaluate();
+            director.Play(); // try to kick it into Playing state
+            attempts++;
+            yield return null;
+        }
+
+        Debug.Log($"[GameManager] Director final state: {director.state} (attempts={attempts})");
+        if (director.state != PlayState.Playing)
+            Debug.LogError("[GameManager] Timeline still not visibly playing. Check for scripts in the cutscene scene that might immediately deactivate or reset animated objects (SaveController, etc.), or check Time.timeScale and bindings.");
     }
 
 

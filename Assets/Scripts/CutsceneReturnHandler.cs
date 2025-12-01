@@ -28,10 +28,10 @@ public class CutsceneReturnHandler : MonoBehaviour
         if (player == null) return;
 
         // Restore player position
-        // float x = PlayerPrefs.GetFloat("PlayerX", player.transform.position.x);
-        // float y = PlayerPrefs.GetFloat("PlayerY", player.transform.position.y);
-        // float z = PlayerPrefs.GetFloat("PlayerZ", player.transform.position.z);
-        // player.transform.position = new Vector3(x, y, z);
+        float x = PlayerPrefs.GetFloat("PlayerX", player.transform.position.x);
+        float y = PlayerPrefs.GetFloat("PlayerY", player.transform.position.y);
+        float z = PlayerPrefs.GetFloat("PlayerZ", player.transform.position.z);
+        player.transform.position = new Vector3(x, y, z);
 
         // Reattach camera
         CinemachineVirtualCamera vcam = FindObjectOfType<CinemachineVirtualCamera>();
